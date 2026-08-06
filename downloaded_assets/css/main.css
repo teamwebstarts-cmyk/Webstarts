@@ -2261,6 +2261,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   margin-right: auto;
   width: 100%;
 }
+
 .ag-header-1-main .ag-pr-btn-1 {
   background-color: var(--ag-clr-h-1);
   color: #fff;
@@ -2630,7 +2631,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   margin-bottom: 0;
 }
 .ag-hero-1-title-elm span {
-  color: var(--ag-clr-pr-1);
+  color: black;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .ag-hero-1-title-elm {

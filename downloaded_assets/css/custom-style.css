@@ -1,0 +1,125 @@
+/* Exact Aigora Navbar Dimensions, Spacing, Height & Alignment */
+.ag-header-1-main {
+    max-width: 636px !important;
+    padding: 8px 8px 8px 20px !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* WebStarts Logo crisp alignment & color invert to black */
+.ag-header-1-logo img,
+.logo_site-size {
+    max-height: 38px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    filter: brightness(0) !important;
+}
+
+/* Offcanvas Hamburger Button exact square sizing */
+.ag-offcanvas-btn-1 {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Exact Aigora Hover & Sub-Dropdown Menu Styling */
+
+/* Main Header Navbar Links Text Size & Spacing */
+.ag-main-navigation .navbar-nav {
+    gap: 28px !important;
+}
+
+.ag-main-navigation .navbar-nav li a {
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    color: #1b1c1e !important;
+    padding: 14px 0 !important;
+}
+
+/* Fix dropdown arrow icon overlap */
+.ag-main-navigation .navbar-nav li:is(.dropdown) > a {
+    padding-right: 18px !important;
+}
+
+.ag-main-navigation .navbar-nav li:hover > a {
+    color: #e94625 !important;
+}
+
+/* Sub-Dropdown Menu Container Card (Increased Width & Clean Single Line Text) */
+.ag-main-navigation .navbar-nav li .dropdown-menu {
+    min-width: 270px !important;
+    width: max-content !important;
+    padding: 10px !important;
+    border-radius: 14px !important;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08) !important;
+    border: none !important;
+    background: #ffffff !important;
+}
+
+/* Sub-Dropdown Menu List Items */
+.ag-main-navigation .navbar-nav li .dropdown-menu li {
+    margin-bottom: 3px !important;
+    border-radius: 8px !important;
+    transition: all 0.2s ease !important;
+}
+
+.ag-main-navigation .navbar-nav li .dropdown-menu li:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Sub-Dropdown Menu Item Links (No Line Break / Single Line) */
+.ag-main-navigation .navbar-nav li .dropdown-menu li a {
+    white-space: nowrap !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #1b1c1e !important;
+    padding: 10px 18px !important;
+    border-radius: 8px !important;
+    transition: all 0.2s ease !important;
+}
+
+/* Sub-Dropdown Item Hover State (Orange Pill + White Text) */
+.ag-main-navigation .navbar-nav li .dropdown-menu li:hover {
+    background-color: #e94625 !important;
+}
+
+.ag-main-navigation .navbar-nav li .dropdown-menu li:hover > a {
+    color: #ffffff !important;
+    background-color: #e94625 !important;
+}
+
+
+/* 1. Highlight Word in Brand Orange Color */
+.ag-hero-1-title-elm span {
+    color: #e94625 !important;
+}
+
+/* 2. Lock Heading strictly to 2 Clean Lines without Overlap */
+.ag-hero-1-title-elm:nth-child(1) {
+    font-size: 75px !important;
+    line-height: 1.05 !important;
+}
+
+.ag-hero-1-title-elm:nth-child(2) {
+    font-size: 75px !important;
+    line-height: 1.05 !important;
+}
+
+/* 3. Fix Robot Image Position (Peeche overlap hona band) */
+.ag-hero-1-img {
+    width: 32% !important;
+    right: 5% !important;
+    bottom: 0 !important;
+    z-index: 1 !important;
+}
+
+.ag-hero-1-area {
+    padding-top: 150px !important;
+}
