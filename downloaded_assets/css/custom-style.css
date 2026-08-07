@@ -1,7 +1,7 @@
 /* Exact Aigora Navbar Dimensions, Spacing, Height & Alignment */
 .ag-header-1-main {
     max-width: 636px !important;
-    padding: 8px 8px 8px 20px !important;
+    padding: 10px 10px 10px 22px !important;
     border-radius: 12px !important;
     display: flex !important;
     align-items: center !important;
@@ -9,14 +9,41 @@
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05) !important;
 }
 
-/* WebStarts Logo crisp alignment & color invert to black */
+/* WebStarts Logo crisp alignment with equal top and bottom spacing */
+.ag-header-1-logo {
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 .ag-header-1-logo img,
 .logo_site-size {
-    max-height: 38px !important;
+    max-height: 32px !important;
+    height: 32px !important;
     width: auto !important;
     object-fit: contain !important;
     display: block !important;
     filter: brightness(0) !important;
+    margin: 0 !important;
+}
+
+/* Remove Plus (+) Icon & Hover Overlay from all Grids, Gallery and Card Hovers */
+.ph-plus,
+.fa-plus,
+i.ph-plus,
+i.fa-plus,
+.popup-img i,
+.ag-project-card:hover .icon,
+.ag-portfolio-card:hover .icon,
+.ag-projects-1-card .img-elm .logo-img,
+.ag-projects-1-card:hover .img-elm .logo-img,
+.wa-offcanvas-gallery-item::before,
+.wa-offcanvas-gallery-item::after {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
 }
 
 /* Offcanvas Hamburger Button exact square sizing */
@@ -101,25 +128,63 @@
     color: #e94625 !important;
 }
 
-/* 2. Lock Heading strictly to 2 Clean Lines without Overlap */
+/* 2. Lock Heading strictly to 2 Clean Lines with Equal Top/Bottom Spacing */
+.ag-hero-1-title {
+    margin-bottom: 50px !important;
+}
+
 .ag-hero-1-title-elm:nth-child(1) {
-    font-size: 75px !important;
-    line-height: 1.05 !important;
+    font-size: 72px !important;
+    line-height: 1.1 !important;
+    margin-bottom: 12px !important;
 }
 
 .ag-hero-1-title-elm:nth-child(2) {
-    font-size: 75px !important;
-    line-height: 1.05 !important;
+    font-size: 88px !important;
+    line-height: 1.1 !important;
 }
 
 /* 3. Fix Robot Image Position (Peeche overlap hona band) */
 .ag-hero-1-img {
-    width: 32% !important;
-    right: 5% !important;
+    width: 32% !important;        /* Reduces size to fit within the container */
+    right: 5% !important;       /* Pulls the image inward away from the right edge */
+    top: 50% !important;         /* Centers vertically inside the hero section */
+    transform: translateY(-50%) !important;
     bottom: 0 !important;
     z-index: 1 !important;
 }
 
+.ag-hero-1-img img {
+    width: 100%;
+    border-radius: 16px;         /* Gives the graphic sleek, rounded corners */
+}
+
+.ag-hero-1-bottom {
+    margin-top: 50px !important;
+}
+
+/* Feature Section Dome Logo Centering, Spacing & Red Area Containment */
+.ag-features-1-content .logo-favicon {
+    margin-top: 95px !important;
+    margin-bottom: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.ag-features-1-content .logo-favicon img {
+    max-height: 22px !important;
+    max-width: 95px !important;
+    width: auto !important;
+    height: auto !important;
+    filter: brightness(0) invert(1) !important;
+    display: block !important;
+    margin: 0 auto !important;
+    object-fit: contain !important;
+}
+
 .ag-hero-1-area {
-    padding-top: 150px !important;
+    padding-top: 135px !important;
 }
