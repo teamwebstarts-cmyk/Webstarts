@@ -188,3 +188,100 @@ i.fa-plus,
 .ag-hero-1-area {
     padding-top: 135px !important;
 }
+
+/* Advance Section Dark Overlay & High-Contrast Typography */
+.ag-choose-1-advance {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.ag-choose-1-advance::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(180deg, rgba(12, 12, 12, 0.45) 0%, rgba(18, 18, 18, 0.3) 100%) !important;
+    border-radius: 32px !important;
+    z-index: 1 !important;
+}
+
+.ag-choose-1-advance > * {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+/* Right Side Client Card Dark Overlay & Contrast Fix */
+.ag-choose-1-client {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.ag-choose-1-client::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.75) 0%, rgba(15, 15, 15, 0.6) 100%) !important;
+    border-radius: 32px !important;
+    z-index: 1 !important;
+}
+
+.ag-choose-1-client > * {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+/* Contact Section - Solid Orange Compact Card (Idea 3) */
+.ag-contact-1-book-card {
+    background: #E94625 !important;
+    border-radius: 24px !important;
+    padding: 32px 28px !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    display: block !important;
+    box-shadow: 0 15px 35px rgba(233, 70, 37, 0.25) !important;
+}
+
+.ag-contact-1-book-card .content-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    background: transparent !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+
+.ag-contact-1-book-card .title {
+    color: #ffffff !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    margin-bottom: 8px !important;
+}
+
+.ag-contact-1-book-card .disc {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 15px !important;
+    margin-bottom: 24px !important;
+}
+
+.ag-contact-1-book-card .ag-pr-btn-1 {
+    background: #ffffff !important;
+    color: #1b1c1e !important;
+    border-radius: 12px !important;
+    width: 100% !important;
+    text-align: center !important;
+    display: inline-block !important;
+    font-weight: 600 !important;
+    padding: 14px 20px !important;
+    transition: all 0.3s ease !important;
+}
+
+.ag-contact-1-book-card .ag-pr-btn-1 .text {
+    color: #1b1c1e !important;
+    transition: color 0.3s ease !important;
+}
+
+.ag-contact-1-book-card .ag-pr-btn-1:hover {
+    background: #1b1c1e !important;
+}
+
+.ag-contact-1-book-card .ag-pr-btn-1:hover .text {
+    color: #ffffff !important;
+}
