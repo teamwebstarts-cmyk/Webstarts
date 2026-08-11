@@ -18,7 +18,7 @@
 }
 
 .ag-header-1-logo img,
-.logo_site-size {
+.ag-header-1-logo .logo_site-size {
     max-height: 32px !important;
     height: 32px !important;
     width: auto !important;
@@ -26,6 +26,36 @@
     display: block !important;
     filter: brightness(0) !important;
     margin: 0 !important;
+}
+
+/* WebStarts Footer Logo size & width increased with pure black filter */
+.ag-footer-1-brand .logo,
+.ag-footer-1-brand img,
+.ag-footer-1-brand .logo_site-size {
+    width: 250px !important;
+    max-width: 280px !important;
+    height: auto !important;
+    max-height: 95px !important;
+    margin-bottom: 16px !important;
+    filter: brightness(0) !important;
+}
+
+/* Decrease description content size under logo */
+.ag-footer-1-brand .disc {
+    font-size: 13.5px !important;
+    line-height: 1.45 !important;
+    max-width: 290px !important;
+    margin-bottom: 20px !important;
+    color: #555555 !important;
+}
+
+/* Shift footer widgets (Useful Links, Services, Contact Info) towards the right with balanced spacing */
+.ag-footer-1-top {
+    gap: 30px 90px !important;
+}
+
+.ag-footer-1-brand {
+    margin-right: 30px !important;
 }
 
 /* Remove Plus (+) Icon & Hover Overlay from all Grids, Gallery and Card Hovers */

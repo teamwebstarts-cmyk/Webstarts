@@ -4939,7 +4939,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
   display: grid;
   gap: 12px;
   grid-template-columns: 1fr 1fr 1fr;
-  align-items: start;
+  align-items: stretch;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px),
@@ -4958,10 +4958,28 @@ only screen and (min-width: 768px) and (max-width: 991px),
   gap: 8px;
 }
 
+.ag-choose-1-wrap .col-elm:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.ag-choose-1-wrap .col-elm:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  height: 100%;
+}
+
 .ag-choose-1-advance {
-  min-height: 460px;
+  min-height: 440px;
   border-radius: 32px;
   padding: 32px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 @media only screen and (min-width: 1400px) and (max-width: 1599px),
@@ -4993,7 +5011,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 .ag-choose-1-features {
   background-color: #1D1D1D;
   border-radius: 40px;
-  padding: 30px;
+  padding: 36px 32px;
 }
 
 @media only screen and (min-width: 1400px) and (max-width: 1599px),
@@ -5016,7 +5034,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 .ag-choose-1-features-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
 }
 
 .ag-choose-1-features-list li {
@@ -5036,16 +5054,20 @@ only screen and (min-width: 768px) and (max-width: 991px),
   display: flex;
   flex-direction: column;
   gap: 12px;
+  height: 100%;
+  justify-content: center;
 }
 
 .ag-choose-1-card-single {
   position: relative;
   z-index: 1;
   background-color: #18181B;
-  border-radius: 40px;
-  padding: 31px 32px;
-  position: relative;
-  z-index: 1;
+  border-radius: 32px;
+  padding: 24px 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media only screen and (min-width: 1400px) and (max-width: 1599px),
@@ -5109,6 +5131,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
   align-items: center;
   padding: 40px 20px;
   gap: 16px;
+  justify-content: center;
 }
 
 .ag-choose-1-client .author {
@@ -5141,7 +5164,6 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
 .ag-choose-1-client .title {
   color: #fff;
-  margin-top: auto;
   font-size: 30px;
 }
 
@@ -5464,22 +5486,9 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
 
 .ag-projects-1-wrap {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 250px;
   gap: 16px;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .ag-projects-1-wrap {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .ag-projects-1-wrap {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
 }
 
 .ag-projects-1-card {
@@ -5489,37 +5498,86 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
   background-color: #0c0c0d;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
-  height: 270px;
+  height: 100%;
 }
 
+/* Reference Diagram Layout Mapping (Desktop) */
 @media only screen and (min-width: 992px) {
-  .ag-projects-1-card.bento-span-7 {
-    grid-column: span 7;
-    height: 285px;
+  /* Card 01: Tall Left (Spans Rows 1 to 3 on Column 1) */
+  .ag-projects-1-card.bento-card-1 {
+    grid-column: 1;
+    grid-row: 1 / span 3;
   }
-  .ag-projects-1-card.bento-span-5 {
-    grid-column: span 5;
-    height: 285px;
+
+  /* Card 02: Wide Top-Middle (Spans Columns 2 & 3 on Row 1) */
+  .ag-projects-1-card.bento-card-2 {
+    grid-column: 2 / span 2;
+    grid-row: 1;
   }
-  .ag-projects-1-card.bento-span-6 {
-    grid-column: span 6;
-    height: 270px;
+
+  /* Card 03: Top-Right (Column 4, Row 1) */
+  .ag-projects-1-card.bento-card-3 {
+    grid-column: 4;
+    grid-row: 1;
+  }
+
+  /* Card 04: Middle Left-Center (Column 2, Row 2) */
+  .ag-projects-1-card.bento-card-4 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  /* Card 05: Middle Right-Center (Column 3, Row 2) */
+  .ag-projects-1-card.bento-card-5 {
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  /* Card 06: Tall Right (Spans Rows 2 & 3 on Column 4) */
+  .ag-projects-1-card.bento-card-6 {
+    grid-column: 4;
+    grid-row: 2 / span 2;
+  }
+
+  /* Card 07: Bottom Left-Center (Column 2, Row 3) */
+  .ag-projects-1-card.bento-card-7 {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  /* Card 08: Bottom Right-Center (Column 3, Row 3) */
+  .ag-projects-1-card.bento-card-8 {
+    grid-column: 3;
+    grid-row: 3;
   }
 }
 
+/* Tablet Responsiveness */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ag-projects-1-wrap {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 250px;
+    gap: 14px;
+  }
   .ag-projects-1-card {
     grid-column: span 1 !important;
-    height: 260px;
+    grid-row: auto !important;
   }
 }
 
+/* Mobile Responsiveness */
 @media only screen and (max-width: 767px) {
+  .ag-projects-1-wrap {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 240px;
+    gap: 14px;
+  }
   .ag-projects-1-card {
     grid-column: span 1 !important;
-    height: 245px;
+    grid-row: auto !important;
   }
 }
+
 
 .ag-projects-1-card:hover {
   transform: translateY(-4px);
@@ -7016,6 +7074,44 @@ only screen and (min-width: 768px) and (max-width: 991px),
   white-space: nowrap;
 }
 
+/* Repeatable Scroll Float-Up Animation */
+.ag-features-1-area .skill-card,
+.ag-features-1-area .ag-features-1-content-wrap {
+  opacity: 0;
+  transform: translate(-50%, calc(-50% + 80px)) scale(0.9);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+              transform 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+              filter 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  filter: blur(4px);
+}
+
+.ag-features-1-area .ag-features-1-content-wrap {
+  transform: translateY(60px);
+}
+
+/* Active State when User reaches section */
+.ag-features-1-area.in-view .skill-card {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  filter: blur(0px);
+}
+
+.ag-features-1-area.in-view .ag-features-1-content-wrap {
+  opacity: 1;
+  transform: translateY(0px);
+  filter: blur(0px);
+}
+
+/* Staggered Delays for all 8 Cards */
+.ag-features-1-area.in-view .skill-card-1 { transition-delay: 0.1s; }
+.ag-features-1-area.in-view .skill-card-2 { transition-delay: 0.2s; }
+.ag-features-1-area.in-view .skill-card-3 { transition-delay: 0.3s; }
+.ag-features-1-area.in-view .skill-card-4 { transition-delay: 0.4s; }
+.ag-features-1-area.in-view .skill-card-5 { transition-delay: 0.5s; }
+.ag-features-1-area.in-view .skill-card-6 { transition-delay: 0.6s; }
+.ag-features-1-area.in-view .skill-card-7 { transition-delay: 0.7s; }
+.ag-features-1-area.in-view .skill-card-8 { transition-delay: 0.8s; }
+
 /* 8 Orbital Positions around 720px circle (R = 360px) */
 .skill-card-1 { top: calc(50% - 360px); left: 50%; }
 .skill-card-2 { top: calc(50% - 255px); left: calc(50% + 255px); }
@@ -7064,6 +7160,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
   color: #111111;
   margin-bottom: 0;
   line-height: 1.2;
+  text-align:center;
 }
 
 .ag-features-1-content .bg-clr {
@@ -7074,7 +7171,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
   z-index: 1;
 }
 
-}
+
 
 /* Tablet Responsiveness */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -9038,30 +9135,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 .ag-faqs-2-booking {
   background-color: #fff;
   border-radius: 32px;
-  padding: 40px 40px;
-}
-
-@media only screen and (min-width: 1200px) and (max-width: 1399px),
-only screen and (min-width: 992px) and (max-width: 1199px),
-only screen and (min-width: 768px) and (max-width: 991px),
-(max-width: 767px) {
-  .ag-faqs-2-booking {
-    padding: 40px 20px;
-  }
-}
-
-.ag-faqs-2-booking .favicon-elm {
-  position: absolute;
-  right: -50px;
-  top: -30px;
-  z-index: -1;
-}
-
-.ag-faqs-2-booking .img-elm {
-  width: 72px;
-  height: 72px;
-  border-radius: 16px;
-  margin-bottom: 31px;
+  padding: 48px 40px;
 }
 
 .ag-faqs-2-booking .title {
@@ -9659,10 +9733,10 @@ only screen and (min-width: 768px) and (max-width: 991px),
 .ag-footer-1-watermark {
   text-align: center;
   font-family: var(--ag-font-2);
-  font-size: 424px;
+  font-size: 15.5vw;
   font-weight: 700;
   line-height: 0.8;
-  letter-spacing: -20px;
+  letter-spacing: -6px;
   text-transform: uppercase;
   white-space: nowrap;
   pointer-events: none;
@@ -9726,8 +9800,8 @@ only screen and (min-width: 768px) and (max-width: 991px),
   border: 1px solid #F0F2F4;
   border-radius: 48px;
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.06);
-  padding: 99px 100px;
-  padding-bottom: 45px;
+  padding: 56px 60px;
+  padding-bottom: 40px;
 }
 
 @media (min-width: 1800px) {
@@ -9755,8 +9829,8 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 .ag-footer-1-top {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
-  gap: 50px 100px;
+  justify-content: flex-start;
+  gap: 30px 60px;
   flex-wrap: wrap;
   margin-bottom: 48px;
 }
@@ -9768,7 +9842,7 @@ only screen and (min-width: 992px) and (max-width: 1199px),
 only screen and (min-width: 768px) and (max-width: 991px),
 (max-width: 767px) {
   .ag-footer-1-top {
-    gap: 50px 50px;
+    gap: 40px 50px;
   }
 }
 
@@ -9784,7 +9858,7 @@ only screen and (min-width: 992px) and (max-width: 1199px),
 only screen and (min-width: 768px) and (max-width: 991px),
 (max-width: 767px) {
   .ag-footer-1-brand {
-    max-width: 251px;
+    max-width: 380px;
   }
 }
 
@@ -9805,6 +9879,17 @@ only screen and (min-width: 768px) and (max-width: 991px),
   .ag-footer-1-brand .disc {
     margin-bottom: 32px;
   }
+}
+.ag-footer-1-brand {
+  max-width: 380px;                /* <--- Fill empty space */
+  width: 100%;
+}
+
+.ag-footer-1-brand .logo {
+  width: 210px;                    /* <--- Logo size increased */
+  max-width: 230px;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 .ag-footer-1-social {
@@ -9834,7 +9919,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 }
 
 .ag-footer-1-widget:nth-child(1) {
-  margin-right: auto;
+  margin-right: 0;
 }
 
 .ag-footer-1-widget-title {

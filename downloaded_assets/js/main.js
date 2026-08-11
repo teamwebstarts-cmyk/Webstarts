@@ -284,6 +284,21 @@ function afterPageLoad() {
 		wow.init();
 	};
 
+	// Re-trigger Skills Animation Every Time Section is Scrolled Into View
+	const skillSection = document.querySelector('.ag-features-1-area');
+	if (skillSection) {
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					skillSection.classList.add('in-view');
+				} else {
+					skillSection.classList.remove('in-view');
+				}
+			});
+		}, { threshold: 0.2 });
+		observer.observe(skillSection);
+	}
+
 
 
 
