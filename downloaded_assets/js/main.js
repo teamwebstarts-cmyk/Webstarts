@@ -439,36 +439,152 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 	  },"<")
 }
 
-// features-1-animation
-if (window.matchMedia("(min-width: 1200px)").matches) {
+// Dynamic Aigora-Style Parallel Vertical Upward Entrance Animation
+function initAigoraScrollAnimation() {
+	const area = document.querySelector('.ag-features-1-area');
+	if (!area) return;
 
+	const cards = Array.from(area.querySelectorAll('.skill-card'));
+	if (!cards.length) return;
 
-	var features1tl = gsap.timeline({
-		scrollTrigger: {
-			trigger: ".ag-features-1-height",
-			start: "top 20%",
-			end: "bottom bottom",
-			toggleActions: "play none none reverse",
-			scrub: true,
-			markers: false,
-		},
-	});
+	if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+		cards.forEach(c => { c.style.opacity = '1'; c.style.transform = 'none'; });
+		return;
+	}
 
-	features1tl.from(".ag-features-1-content-wrap .circle-1", {
-		scale: .5,
-	});
+	if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
 
-	features1tl.from(".ag-features-1-content-wrap .circle-2", {
-		scale: .5,
-	},"<50%");
+	gsap.registerPlugin(ScrollTrigger);
 
-	features1tl.from(".ag-features-1-card-single", {
-		// autoAlpha: 0,
-		yPercent: 300,
-		stagger: .1
-	},"<");
-	
-	
+	const isDesktop = window.matchMedia('(min-width: 992px)').matches;
+
+	if (isDesktop) {
+		// 1. Center Hub: 100% stable anchor (un-faded, un-scaled)
+		const centerWrap = area.querySelector('.ag-features-1-content-wrap');
+		if (centerWrap) {
+			gsap.set(centerWrap, { opacity: 1, scale: 1, filter: "none" });
+		}
+
+		const rings = area.querySelector('.concentric-rings');
+
+		const radius = 360; // Destination orbital radius
+		const totalCards = cards.length;
+		const verticalOffset = 600; // Large positive Y offset for straight upward travel
+
+		// Calculate destination coordinates (finalX, finalY) for ALL detected cards
+		const cardData = cards.map((card, index) => {
+			const angle = (-Math.PI / 2) + (index * (2 * Math.PI / totalCards));
+			const finalX = Math.round(radius * Math.cos(angle));
+			const finalY = Math.round(radius * Math.sin(angle));
+
+			// Initial starting Y position (strictly aligned with finalX, starting 600px below)
+			const startY = finalY + verticalOffset;
+
+			return { card, finalX, finalY, startY };
+		});
+
+		// Position cards with absolute centering and destination X alignment
+		cardData.forEach(({ card, finalX, finalY }) => {
+			gsap.set(card, {
+				position: 'absolute',
+				top: '50%',
+				left: '50%',
+				xPercent: -50,
+				yPercent: -50,
+				x: finalX,
+				opacity: 1
+			});
+
+			// Hover uplift effect relative to final destination
+			card.addEventListener('mouseenter', () => {
+				gsap.to(card, {
+					y: finalY - 12,
+					scale: 1.08,
+					duration: 0.3,
+					ease: "power2.out",
+					overwrite: "auto"
+				});
+			});
+
+			card.addEventListener('mouseleave', () => {
+				gsap.to(card, {
+					y: finalY,
+					scale: 1,
+					duration: 0.3,
+					ease: "power2.out",
+					overwrite: "auto"
+				});
+			});
+		});
+
+		// 2. Create GSAP ScrollTrigger Pinned Timeline
+		const mainTimeline = gsap.timeline({
+			scrollTrigger: {
+				trigger: area,
+				start: "top top",
+				end: "+=2000", // Pinned scroll distance
+				pin: true,
+				pinSpacing: true,
+				scrub: 1,
+				anticipatePin: 1,
+				invalidateOnRefresh: true
+			}
+		});
+
+		// Expand SVG concentric rings smoothly alongside card entrance
+		if (rings) {
+			mainTimeline.fromTo(rings,
+				{ scale: 0.55, opacity: 0.6 },
+				{ scale: 1.25, opacity: 1, duration: 1, ease: "power1.out" },
+				0
+			);
+		}
+
+		// Animate each card straight UPWARD along its own destination X column
+		cardData.forEach(({ card, finalX, finalY, startY }, index) => {
+			mainTimeline.fromTo(card,
+				{
+					x: finalX, // X STAYS CONSTANT & ALIGNED WITH DESTINATION
+					y: startY, // Starts 600px below finalY
+					opacity: 0.85
+				},
+				{
+					x: finalX, // X STAYS CONSTANT
+					y: finalY, // Travels straight UP to finalY
+					opacity: 1,
+					duration: 1,
+					ease: "power1.out"
+				},
+				index * 0.05 // Subtle stagger for parallel upward movement
+			);
+		});
+
+	} else {
+		// Mobile Layout: Responsive vertical scroll scrub
+		cards.forEach((card) => {
+			gsap.fromTo(card,
+				{ opacity: 0, y: 70, scale: 0.85 },
+				{
+					opacity: 1,
+					y: 0,
+					scale: 1,
+					duration: 0.6,
+					scrollTrigger: {
+						trigger: card,
+						start: "top 85%",
+						end: "top 60%",
+						scrub: 0.8
+					}
+				}
+			);
+		});
+	}
+}
+
+if (document.readyState === 'loading') {
+	document.addEventListener('DOMContentLoaded', initAigoraScrollAnimation);
+} else {
+	initAigoraScrollAnimation();
 }
 
 // projects-1-animation

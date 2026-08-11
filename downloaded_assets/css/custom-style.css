@@ -29,6 +29,10 @@
 }
 
 /* WebStarts Footer Logo size & width increased with pure black filter */
+.ag-footer-1-brand a {
+    display: block !important;
+}
+
 .ag-footer-1-brand .logo,
 .ag-footer-1-brand img,
 .ag-footer-1-brand .logo_site-size {
@@ -37,6 +41,8 @@
     height: auto !important;
     max-height: 95px !important;
     margin-bottom: 16px !important;
+    margin-left: -15px !important;
+    display: block !important;
     filter: brightness(0) !important;
 }
 
@@ -51,11 +57,16 @@
 
 /* Shift footer widgets (Useful Links, Services, Contact Info) towards the right with balanced spacing */
 .ag-footer-1-top {
-    gap: 30px 90px !important;
+    justify-content: flex-start !important;
+    gap: 30px 50px !important;
 }
 
-.ag-footer-1-brand {
-    margin-right: 30px !important;
+.ag-footer-1-widget:nth-child(1) {
+    margin-right: auto !important;
+}
+
+.ag-footer-1-widget:nth-child(2) {
+    margin-left: auto !important;
 }
 
 /* Remove Plus (+) Icon & Hover Overlay from all Grids, Gallery and Card Hovers */
@@ -223,7 +234,17 @@ i.fa-plus,
 .ag-choose-1-advance {
     position: relative !important;
     overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    text-align: left !important;
 }
+
+.ag-choose-1-advance .title {
+    margin-bottom: 0 !important;
+}
+
 
 .ag-choose-1-advance::before {
     content: "" !important;
@@ -314,4 +335,104 @@ i.fa-plus,
 
 .ag-contact-1-book-card .ag-pr-btn-1:hover .text {
     color: #ffffff !important;
+}
+
+/* Aigora-Style Features Pinned Scroll Section & Strong Center Hub */
+.ag-features-1-area {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Center Content & Concentric Rings: 100% Stable, High-Contrast & Fully Visible */
+.ag-features-1-content-wrap,
+.ag-features-1-content,
+.ag-features-1-content-wrap .circle-1,
+.ag-features-1-content-wrap .circle-2,
+.ag-features-1-content .bg-clr {
+    opacity: 1 !important;
+    visibility: visible !important;
+    filter: none !important;
+}
+
+@media only screen and (min-width: 992px) {
+    .ag-features-1-area {
+        min-height: 100vh;
+    }
+
+    .ag-features-1-wrap {
+        position: relative;
+        width: 100%;
+        min-height: 720px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ag-features-1-card {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+    }
+
+    .skill-card {
+        position: absolute;
+        pointer-events: auto;
+        will-change: transform;
+        transition: box-shadow 0.3s ease, border-color 0.3s ease !important;
+    }
+
+    .skill-card:hover {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35) !important;
+        z-index: 99 !important;
+    }
+}
+
+/* Mobile Layout (max-width: 991px) */
+@media only screen and (max-width: 991px) {
+    .ag-features-1-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .ag-features-1-card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .skill-card {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        margin: 0 !important;
+    }
+}
+
+/* Concentric Dotted/Dashed SVG Rings (Aigora Reference Style) */
+.concentric-rings {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    height: 1200px;
+    max-width: 95vw;
+    max-height: 95vw;
+    pointer-events: none;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.concentric-rings-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
 }
