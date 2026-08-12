@@ -120,46 +120,49 @@
     <div class="container ag-container-2">
 
         <!-- SECTION TITLE -->
-        <div class="ag-projects-3-sec-title text-center mb-45">
+        <div class="ag-projects-3-sec-title text-center mb-30">
             <h2 class="elementor-gt-heading ag-sec-title-1 wa_title_ani_1">Real <br> <span>Products &amp; Projects</span></h2>
+            <p class="ws-portfolio-intro">A selection of digital products, platforms and experiences we've designed and built.</p>
         </div>
 
-        <!-- FILTER BAR (icon + 4 dropdowns, no per-field labels) -->
+        <!-- FILTER BAR (3 dropdowns: Category, Domain, Technology) -->
         <div class="ws-filter-bar">
-            <span class="ws-filter-icon"><i class="ph ph-funnel"></i></span>
-            <select class="ws-filter-select" id="f-category">
+            <span class="ws-filter-icon" aria-hidden="true"><i class="ph ph-funnel"></i></span>
+            <select class="ws-filter-select" id="f-category" aria-label="Filter by Category">
                 <option value="all">All Categories</option>
                 <option value="saas">SaaS Platform</option>
                 <option value="web">Web App</option>
                 <option value="mobile">Mobile App</option>
-                <option value="ai">AI / Automation</option>
+                <option value="ai">AI Product</option>
                 <option value="client">Client Project</option>
             </select>
-            <select class="ws-filter-select" id="f-domain">
+            <select class="ws-filter-select" id="f-domain" aria-label="Filter by Domain">
                 <option value="all">All Domains</option>
+                <option value="avatar">Realtime Avatar Companion</option>
+                <option value="crm">CRM / Business</option>
                 <option value="erp">Education / ERP</option>
                 <option value="fintech">Finance / Trading</option>
-                <option value="matrimony">Matrimony / Social</option>
-                <option value="crm">CRM / Business</option>
                 <option value="geo">SEO / GEO</option>
             </select>
-            <select class="ws-filter-select" id="f-tech">
+            <select class="ws-filter-select" id="f-tech" aria-label="Filter by Technology">
                 <option value="all">All Technologies</option>
-                <option value="angular">Angular</option>
-                <option value="nestjs">NestJS</option>
-                <option value="node">Node.js</option>
-                <option value="express">Express</option>
-                <option value="flutter">Flutter</option>
+                <option value="typescript">TypeScript</option>
                 <option value="react">React</option>
                 <option value="python">Python</option>
-                <option value="mongodb">MongoDB</option>
+                <option value="node">Node.js</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
                 <option value="postgres">PostgreSQL</option>
+                <option value="mongodb">MongoDB</option>
+                <option value="shopify">Shopify</option>
+                <option value="expo">Expo</option>
             </select>
-            <select class="ws-filter-select" id="f-engage">
-                <option value="all">All</option>
-                <option value="product">Real Product</option>
-                <option value="client">Client Project</option>
-            </select>
+        </div>
+
+        <!-- PROJECT COUNT -->
+        <div class="ws-filter-count" id="ws-filter-count">
+            Showing <span id="ws-count-visible">9</span> of <span id="ws-count-total">9</span> projects
         </div>
 
         <!-- GRID — 6 REAL GitHub projects (teamwebstarts-cmyk) -->
@@ -194,7 +197,7 @@
             </article>
 
             <!-- 3: AI-Companion / AURA -->
-            <article class="ws-pcard" data-category="ai" data-domain="crm" data-tech="typescript react python supabase webrtc" data-engagement="product">
+            <article class="ws-pcard" data-category="ai" data-domain="avatar" data-tech="typescript react python supabase webrtc" data-engagement="product">
                 <div class="ws-pcard-img ws-theme-orange">
                     <span class="ws-pcard-tag">AI Product</span>
                     <span class="ws-pcard-sub">Realtime Avatar Companion</span>
@@ -236,7 +239,7 @@
             </article>
 
             <!-- 6: clint-website-exora -->
-            <article class="ws-pcard" data-category="web" data-domain="crm" data-tech="html css javascript" data-engagement="client">
+            <article class="ws-pcard" data-category="client" data-domain="crm" data-tech="html css javascript" data-engagement="client">
                 <div class="ws-pcard-img ws-theme-blue">
                     <span class="ws-pcard-tag">Client Project</span>
                     <span class="ws-pcard-sub">Corporate Website</span>
@@ -250,7 +253,7 @@
             </article>
 
             <!-- 7: pharma-audit -->
-            <article class="ws-pcard" data-category="web" data-domain="crm" data-tech="typescript react node mongodb" data-engagement="product">
+            <article class="ws-pcard" data-category="web" data-domain="erp" data-tech="typescript react node mongodb" data-engagement="product">
                 <div class="ws-pcard-img ws-theme-purple">
                     <span class="ws-pcard-tag">Web App</span>
                     <span class="ws-pcard-sub">Pharmacy Vendor Portal</span>
@@ -264,7 +267,7 @@
             </article>
 
             <!-- 8: race-service -->
-            <article class="ws-pcard" data-category="mobile" data-domain="crm" data-tech="typescript reactnative expo" data-engagement="product">
+            <article class="ws-pcard" data-category="mobile" data-domain="crm" data-tech="typescript react reactnative expo" data-engagement="product">
                 <div class="ws-pcard-img ws-theme-green">
                     <span class="ws-pcard-tag">Mobile App</span>
                     <span class="ws-pcard-sub">Roadside Assistance</span>
@@ -278,7 +281,7 @@
             </article>
 
             <!-- 9: shopify pharmacy -->
-            <article class="ws-pcard" data-category="web" data-domain="crm" data-tech="shopify python" data-engagement="client">
+            <article class="ws-pcard" data-category="client" data-domain="fintech" data-tech="shopify python" data-engagement="client">
                 <div class="ws-pcard-img ws-theme-orange">
                     <span class="ws-pcard-tag">Client Project</span>
                     <span class="ws-pcard-sub">Shopify Pharmacy Store</span>
@@ -291,7 +294,11 @@
                 </div>
             </article>
 
-            <p class="ws-no-results" id="ws-noresults" style="display:none;">No projects match the selected filters.</p>
+            <div class="ws-no-results" id="ws-noresults" style="display:none;">
+                <div class="ws-empty-icon" aria-hidden="true"><i class="ph ph-magnifying-glass"></i></div>
+                <p class="ws-empty-text">No projects match your selected filters.</p>
+                <button type="button" class="ws-clear-btn" id="ws-clear-filters"><i class="ph ph-arrows-counter-clockwise"></i> Clear Filters</button>
+            </div>
 
         </div>
     </div>
@@ -352,29 +359,70 @@ window.setTimeout(function () {
     var cat = document.getElementById('f-category');
     var dom = document.getElementById('f-domain');
     var tech = document.getElementById('f-tech');
-    var eng = document.getElementById('f-engage');
     var cards = Array.prototype.slice.call(document.querySelectorAll('#ws-grid .ws-pcard'));
     var noRes = document.getElementById('ws-noresults');
+    var countVis = document.getElementById('ws-count-visible');
+    var countTotal = document.getElementById('ws-count-total');
+    var clearBtn = document.getElementById('ws-clear-filters');
+
+    if (!cat || !dom || !tech || !cards.length) return;
+
+    if (countTotal) {
+        countTotal.textContent = cards.length;
+    }
 
     function applyFilter() {
-        var c = cat.value, d = dom.value, t = tech.value, e = eng.value;
+        var c = cat.value.toLowerCase();
+        var d = dom.value.toLowerCase();
+        var t = tech.value.toLowerCase();
         var visible = 0;
+
         cards.forEach(function (card) {
-            var cm = (c === 'all') || card.dataset.category === c;
-            var dm = (d === 'all') || card.dataset.domain === d;
-            var tm = (t === 'all') || (card.dataset.tech || '').split(' ').indexOf(t) !== -1;
-            var em = (e === 'all') || card.dataset.engagement === e;
-            var show = cm && dm && tm && em;
-            card.classList.toggle('is-hidden', !show);
-            if (show) visible++;
+            var cardCat = (card.dataset.category || '').toLowerCase();
+            var cardDom = (card.dataset.domain || '').toLowerCase();
+            var cardTechStr = (card.dataset.tech || '').toLowerCase();
+            var cardTechs = cardTechStr.split(/\s+/);
+
+            var cm = (c === 'all') || cardCat.indexOf(c) !== -1;
+            var dm = (d === 'all') || cardDom.indexOf(d) !== -1;
+            var tm = (t === 'all') || cardTechs.some(function(item) {
+                return item === t || item.indexOf(t) !== -1;
+            });
+
+            var show = cm && dm && tm;
+            if (show) {
+                card.style.display = '';
+                card.classList.remove('is-hidden');
+                visible++;
+            } else {
+                card.style.display = 'none';
+                card.classList.add('is-hidden');
+            }
         });
-        noRes.style.display = visible === 0 ? 'block' : 'none';
+
+        if (countVis) {
+            countVis.textContent = visible;
+        }
+
+        if (noRes) {
+            noRes.style.display = visible === 0 ? 'block' : 'none';
+        }
     }
 
     cat.addEventListener('change', applyFilter);
     dom.addEventListener('change', applyFilter);
     tech.addEventListener('change', applyFilter);
-    eng.addEventListener('change', applyFilter);
+
+    if (clearBtn) {
+        clearBtn.addEventListener('click', function() {
+            cat.value = 'all';
+            dom.value = 'all';
+            tech.value = 'all';
+            applyFilter();
+        });
+    }
+
+    applyFilter();
 })();
 </script>
 </body>

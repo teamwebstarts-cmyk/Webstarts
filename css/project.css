@@ -1,4 +1,16 @@
-/* ===== WebStarts Portfolio — Filterable Grid (screenshot-matched) ===== */
+/* ===== WebStarts Portfolio — Filterable Grid ===== */
+
+/* Intro Text */
+.ws-portfolio-intro {
+    font-size: 17px;
+    color: #6b7280;
+    max-width: 640px;
+    margin: 16px auto 0;
+    text-align: center;
+    line-height: 1.6;
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
+}
 
 /* Filter bar */
 .ws-filter-bar {
@@ -7,36 +19,60 @@
     align-items: center;
     gap: 16px;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-top: 36px;
+    margin-bottom: 18px;
 }
 .ws-filter-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 42px;
-    height: 42px;
-    border-radius: 10px;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
     background: #fd3f00;
     color: #fff;
     font-size: 18px;
+    box-shadow: 0 4px 14px rgba(253,63,0,.22);
+    flex-shrink: 0;
 }
 .ws-filter-select {
     appearance: none;
     -webkit-appearance: none;
-    background: #f3f4f6 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='3'><path d='M6 9l6 6 6-6'/></svg>") no-repeat right 14px center;
-    border: 1px solid #e2e5ea;
-    border-radius: 10px;
-    padding: 11px 40px 11px 16px;
-    font-size: 14px;
-    color: #444;
+    background: #ffffff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23666666' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M6 9l6 6 6-6'/></svg>") no-repeat right 16px center;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    height: 46px;
+    padding: 0 42px 0 18px;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: #1e293b;
     cursor: pointer;
-    min-width: 185px;
-    transition: border-color .2s, box-shadow .2s;
+    min-width: 210px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+}
+.ws-filter-select:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
 }
 .ws-filter-select:focus {
     outline: none;
     border-color: #fd3f00;
-    box-shadow: 0 0 0 3px rgba(253,63,0,.12);
+    box-shadow: 0 0 0 3px rgba(253, 63, 0, 0.15);
+}
+
+/* Dynamic Project Count */
+.ws-filter-count {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #64748b;
+    margin-bottom: 40px;
+    font-family: "Inter", sans-serif;
+}
+.ws-filter-count span {
+    font-weight: 700;
+    color: #0f172a;
 }
 
 /* Grid */
@@ -125,9 +161,59 @@
 .ws-no-results {
     grid-column: 1 / -1;
     text-align: center;
-    color: #888;
-    padding: 40px;
-    font-size: 15px;
+    padding: 50px 24px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px dashed #cbd5e1;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+    margin: 10px 0 30px;
+}
+.ws-empty-icon {
+    font-size: 38px;
+    color: #fd3f00;
+    margin-bottom: 12px;
+}
+.ws-empty-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #334155;
+    margin: 0 0 20px;
+    font-family: "Inter", sans-serif;
+}
+.ws-clear-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fd3f00;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 11px 24px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 14px rgba(253, 63, 0, 0.25);
+    font-family: "Inter", sans-serif;
+}
+.ws-clear-btn:hover {
+    background: #e03700;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(253, 63, 0, 0.35);
+}
+
+@media (max-width: 768px) {
+    .ws-filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .ws-filter-select {
+        width: 100%;
+        min-width: 0;
+    }
+    .ws-filter-icon {
+        align-self: center;
+    }
 }
 
 .ag-projects-3-area.pt-100.pb-100 {
