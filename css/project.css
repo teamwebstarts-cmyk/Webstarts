@@ -193,6 +193,19 @@
 .ws-detail-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(253,63,0,.3); }
 .ws-detail-cta .arrow { transition: transform .2s; }
 .ws-detail-cta-row { margin-top: 28px; }
+.ws-detail-links { display: flex; flex-wrap: wrap; gap: 14px; }
+.ws-detail-cta {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 13px 26px; border-radius: 10px;
+    background: #fd3f00; color: #fff; font-weight: 600; font-size: 15px;
+    text-decoration: none; transition: transform .2s, box-shadow .2s;
+}
+.ws-detail-cta i { font-size: 18px; }
+.ws-detail-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(253,63,0,.3); }
+.ws-detail-cta .arrow { transition: transform .2s; }
+.ws-detail-cta:hover .arrow { transform: translateX(4px); }
+.ws-detail-cta-ghost { background: #fff; color: #1a1a2e; border: 1.5px solid #e2e5ea; box-shadow: 0 4px 14px rgba(17,24,39,.05); }
+.ws-detail-cta-ghost:hover { box-shadow: 0 8px 20px rgba(17,24,39,.1); border-color: #fd3f00; color: #fd3f00; }
 
 /* Stats band under images (fills the gap below thumbnails) */
 .ws-detail-stats {
