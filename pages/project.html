@@ -119,51 +119,60 @@
 <section class="ag-projects-3-area pt-100 pb-100">
     <div class="container ag-container-2">
 
-        <!-- section-title -->
-        <div class="ag-projects-3-sec-title text-center mb-45">
-                            <h4 class="ag-subtitle-1 has-v3">
-                    Our Work                </h4>
-                        <h2 class="elementor-gt-heading ag-sec-title-1 wa_title_ani_1">Real <br> <span>Products & Projects</span></h2>
-        </div>
-
-        <!-- FILTER BAR -->
+        <!-- FILTER BAR (pixel-matched to reference: per-dropdown uppercase labels, 4 filters) -->
         <div class="ws-filter-bar">
-            <span class="ws-filter-label"><i class="ph ph-funnel"></i> Filter By:</span>
-            <select class="ws-filter-select" id="f-category">
-                <option value="all">All Categories</option>
-                <option value="saas">SaaS Platform</option>
-                <option value="web">Web App</option>
-                <option value="mobile">Mobile App</option>
-                <option value="ai">AI / Automation</option>
-                <option value="client">Client Project</option>
-            </select>
-            <select class="ws-filter-select" id="f-domain">
-                <option value="all">All Domains</option>
-                <option value="erp">Education / ERP</option>
-                <option value="fintech">Finance / Trading</option>
-                <option value="matrimony">Matrimony / Social</option>
-                <option value="crm">CRM / Business</option>
-                <option value="geo">SEO / GEO</option>
-            </select>
-            <select class="ws-filter-select" id="f-tech">
-                <option value="all">All Technologies</option>
-                <option value="angular">Angular</option>
-                <option value="nestjs">NestJS</option>
-                <option value="node">Node.js</option>
-                <option value="express">Express</option>
-                <option value="flutter">Flutter</option>
-                <option value="react">React</option>
-                <option value="python">Python</option>
-                <option value="mongodb">MongoDB</option>
-                <option value="postgres">PostgreSQL</option>
-            </select>
+            <div class="ws-filter-field">
+                <label class="ws-filter-lbl" for="f-category">Category</label>
+                <select class="ws-filter-select" id="f-category">
+                    <option value="all">All Categories</option>
+                    <option value="saas">SaaS Platform</option>
+                    <option value="web">Web App</option>
+                    <option value="mobile">Mobile App</option>
+                    <option value="ai">AI / Automation</option>
+                    <option value="client">Client Project</option>
+                </select>
+            </div>
+            <div class="ws-filter-field">
+                <label class="ws-filter-lbl" for="f-domain">Domain</label>
+                <select class="ws-filter-select" id="f-domain">
+                    <option value="all">All Domains</option>
+                    <option value="erp">Education / ERP</option>
+                    <option value="fintech">Finance / Trading</option>
+                    <option value="matrimony">Matrimony / Social</option>
+                    <option value="crm">CRM / Business</option>
+                    <option value="geo">SEO / GEO</option>
+                </select>
+            </div>
+            <div class="ws-filter-field">
+                <label class="ws-filter-lbl" for="f-tech">Technology</label>
+                <select class="ws-filter-select" id="f-tech">
+                    <option value="all">All Technologies</option>
+                    <option value="angular">Angular</option>
+                    <option value="nestjs">NestJS</option>
+                    <option value="node">Node.js</option>
+                    <option value="express">Express</option>
+                    <option value="flutter">Flutter</option>
+                    <option value="react">React</option>
+                    <option value="python">Python</option>
+                    <option value="mongodb">MongoDB</option>
+                    <option value="postgres">PostgreSQL</option>
+                </select>
+            </div>
+            <div class="ws-filter-field">
+                <label class="ws-filter-lbl" for="f-engage">Engagement</label>
+                <select class="ws-filter-select" id="f-engage">
+                    <option value="all">All</option>
+                    <option value="product">Real Product</option>
+                    <option value="client">Client Project</option>
+                </select>
+            </div>
         </div>
 
         <!-- GRID -->
         <div class="ws-portfolio-grid" id="ws-grid">
 
             <!-- 1 -->
-            <article class="ws-pcard" data-category="saas" data-domain="crm" data-tech="react node postgres">
+            <article class="ws-pcard" data-category="saas" data-domain="crm" data-tech="react node postgres" data-engagement="product">
                 <div class="ws-pcard-img ws-theme-blue">
                     <span class="ws-pcard-tag">SaaS Platform</span>
                     <span class="ws-pcard-sub">WhatsApp CRM & Automation</span>
@@ -177,7 +186,7 @@
             </article>
 
             <!-- 2 -->
-            <article class="ws-pcard" data-category="ai" data-domain="geo" data-tech="python react">
+            <article class="ws-pcard" data-category="ai" data-domain="geo" data-tech="python react" data-engagement="product">
                 <div class="ws-pcard-img ws-theme-purple">
                     <span class="ws-pcard-tag">AI / Automation</span>
                     <span class="ws-pcard-sub">Generative Engine Optimization</span>
@@ -191,7 +200,7 @@
             </article>
 
             <!-- 3 -->
-            <article class="ws-pcard" data-category="ai" data-domain="crm" data-tech="python react">
+            <article class="ws-pcard" data-category="ai" data-domain="crm" data-tech="python react" data-engagement="product">
                 <div class="ws-pcard-img ws-theme-orange">
                     <span class="ws-pcard-tag">AI Product</span>
                     <span class="ws-pcard-sub">Conversational AI Companion</span>
@@ -205,7 +214,7 @@
             </article>
 
             <!-- 4 -->
-            <article class="ws-pcard" data-category="client" data-domain="erp" data-tech="angular nestjs mysql">
+            <article class="ws-pcard" data-category="client" data-domain="erp" data-tech="angular nestjs mysql" data-engagement="client">
                 <div class="ws-pcard-img ws-theme-light">
                     <span class="ws-pcard-tag">Client Project</span>
                     <span class="ws-pcard-sub">School Management Solution</span>
@@ -219,7 +228,7 @@
             </article>
 
             <!-- 5 -->
-            <article class="ws-pcard" data-category="client" data-domain="fintech" data-tech="node express mongodb">
+            <article class="ws-pcard" data-category="client" data-domain="fintech" data-tech="node express mongodb" data-engagement="client">
                 <div class="ws-pcard-img ws-theme-dark">
                     <span class="ws-pcard-tag">Client Project</span>
                     <span class="ws-pcard-sub">Trading API Platform</span>
@@ -233,7 +242,7 @@
             </article>
 
             <!-- 6 -->
-            <article class="ws-pcard" data-category="client" data-domain="matrimony" data-tech="flutter mongodb">
+            <article class="ws-pcard" data-category="client" data-domain="matrimony" data-tech="flutter mongodb" data-engagement="client">
                 <div class="ws-pcard-img ws-theme-green">
                     <span class="ws-pcard-tag">Client Project</span>
                     <span class="ws-pcard-sub">Matrimony Mobile App</span>
@@ -306,17 +315,19 @@ window.setTimeout(function () {
     var cat = document.getElementById('f-category');
     var dom = document.getElementById('f-domain');
     var tech = document.getElementById('f-tech');
+    var eng = document.getElementById('f-engage');
     var cards = Array.prototype.slice.call(document.querySelectorAll('#ws-grid .ws-pcard'));
     var noRes = document.getElementById('ws-noresults');
 
     function applyFilter() {
-        var c = cat.value, d = dom.value, t = tech.value;
+        var c = cat.value, d = dom.value, t = tech.value, e = eng.value;
         var visible = 0;
         cards.forEach(function (card) {
             var cm = (c === 'all') || card.dataset.category === c;
             var dm = (d === 'all') || card.dataset.domain === d;
             var tm = (t === 'all') || (card.dataset.tech || '').split(' ').indexOf(t) !== -1;
-            var show = cm && dm && tm;
+            var em = (e === 'all') || card.dataset.engagement === e;
+            var show = cm && dm && tm && em;
             card.classList.toggle('is-hidden', !show);
             if (show) visible++;
         });
@@ -326,6 +337,7 @@ window.setTimeout(function () {
     cat.addEventListener('change', applyFilter);
     dom.addEventListener('change', applyFilter);
     tech.addEventListener('change', applyFilter);
+    eng.addEventListener('change', applyFilter);
 })();
 </script>
 </body>

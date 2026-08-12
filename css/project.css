@@ -4,20 +4,23 @@
 .ws-filter-bar {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    gap: 16px;
+    align-items: flex-end;
+    gap: 18px;
     justify-content: center;
     margin-bottom: 50px;
 }
-.ws-filter-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 600;
-    color: #1a1a2e;
-    font-size: 16px;
+.ws-filter-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
-.ws-filter-label i { color: #fd3f00; font-size: 18px; }
+.ws-filter-lbl {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    color: #6b7280;
+}
 .ws-filter-select {
     appearance: none;
     -webkit-appearance: none;
@@ -28,7 +31,7 @@
     font-size: 14px;
     color: #444;
     cursor: pointer;
-    min-width: 180px;
+    min-width: 185px;
     transition: border-color .2s, box-shadow .2s;
 }
 .ws-filter-select:focus {
@@ -49,11 +52,11 @@
 /* Card */
 .ws-pcard {
     background: #fff;
-    border: 1px solid #eceef1;
-    border-radius: 16px;
+    border-radius: 14px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 4px 20px rgba(17,24,39,.06);
     transition: transform .25s ease, box-shadow .25s ease;
 }
 .ws-pcard:hover {
@@ -100,15 +103,13 @@
 .ws-pcard-body { padding: 22px 22px 24px; display: flex; flex-direction: column; flex: 1; }
 .ws-pcard-title { font-size: 18px; font-weight: 700; color: #1a1a2e; margin: 0 0 8px; line-height: 1.3; }
 .ws-pcard-desc { font-size: 13.5px; color: #6b7280; line-height: 1.55; margin: 0 0 14px; flex: 1; }
-.ws-pcard-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+.ws-pcard-tags { display: flex; flex-wrap: wrap; gap: 4px 6px; margin-bottom: 16px; }
 .ws-pcard-tags span {
-    background: #f3f4f6;
-    color: #555;
-    font-size: 11.5px;
-    padding: 4px 10px;
-    border-radius: 6px;
+    color: #8a909c;
+    font-size: 12px;
     font-family: ui-monospace,SFMono-Regular,Menlo,monospace;
 }
+.ws-pcard-tags span + span::before { content: "· "; color: #c0c4cc; }
 .ws-pcard-link {
     color: #0693e3;
     font-weight: 600;
@@ -130,6 +131,9 @@
     font-size: 15px;
 }
 
+.ag-projects-3-area.pt-100.pb-100 {
+    background: #f7f8fa;
+}
 /* fade animation on filter */
 .ws-pcard.is-hidden { display: none; }
 .ws-pcard { animation: wsFade .35s ease; }
