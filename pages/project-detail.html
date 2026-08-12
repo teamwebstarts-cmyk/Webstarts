@@ -179,7 +179,7 @@ window.setTimeout(function () {
 
 <script>
 /* ===== Real projects (teamwebstarts-cmyk GitHub repos) ===== */
-var WS_ORDER = ["webstarts","samyoj","aura","aiworker","samyojweb","exora"];
+var WS_ORDER = ["webstarts","samyoj","aura","aiworker","samyojweb","exora","pharmaaudit","raceservice","shopipharm"];
 var WS_PROJECTS = {
     webstarts: {
         name: "Webstarts — Agency Site", tag: "Company Site", subtitle: "Marketing website & brand for WebStarts",
@@ -252,6 +252,42 @@ var WS_PROJECTS = {
         cta: "https://github.com/teamwebstarts-cmyk/clint-website-exora",
         live: "",
         stats: [["Language","HTML/CSS"],["Size","71 MB"]]
+    },
+    pharmaaudit: {
+        name: "Pharma Audit — Vendor Portal", tag: "Web App", subtitle: "Pharmacy vendor & compliance portal",
+        category: "Web App", domain: "Healthcare / Vendor", year: "2026", stack: "MERN",
+        overview: "A pharmacy vendor & compliance portal built as a client/server monorepo. The backend is a Node/Express + Mongoose API; the frontend is a Vite/React SPA with a clean, Cal.com-inspired design system — white canvas, soft-rounded cards, product UI shown in-card. Designed for vendor onboarding, document audits and compliance tracking.",
+        features: ["Node/Express API with controllers & routes","Mongoose schemas for vendors/products","React + Vite frontend (Tailwind)","Cal.com-inspired design system","Vendor onboarding & audit workflows","Role-scoped access (auth middleware)"],
+        tech: ["TypeScript", "React", "Vite", "Node.js", "Express", "MongoDB", "Mongoose", "Tailwind"],
+        hero: "../downloaded_images/grid-erp.jpg",
+        thumbs: ["../downloaded_images/grid-erp.jpg", "../downloaded_images/grid-cloud.jpg", "../downloaded_images/grid-website.jpg"],
+        cta: "#",
+        live: "",
+        stats: [["Frontend","React+Vite"],["Backend","Express"]]
+    },
+    raceservice: {
+        name: "RACE Service — Towing App", tag: "Mobile App", subtitle: "Premium roadside assistance platform",
+        category: "Mobile App", domain: "Mobility / Services", year: "2026", stack: "Expo RN",
+        overview: "A premium roadside-assistance / towing platform built with Expo (React Native). The foundation layer ships a complete design system, hand-rolled inline-SVG icon set and illustrations, file-based routing (expo-router), a Zustand auth store and a floating-nav shell — ready for downstream feature subagents to build real screens on top.",
+        features: ["Expo SDK 52 + expo-router (typed routes)","TypeScript strict mode","Zustand auth store","Hand-rolled inline-SVG icons & illustrations","react-native-reanimated ready","Floating nav shell (expo-blur)"],
+        tech: ["TypeScript", "React Native", "Expo", "Zustand", "react-native-svg", "expo-router"],
+        hero: "../downloaded_images/grid-mobile.jpg",
+        thumbs: ["../downloaded_images/grid-mobile.jpg", "../downloaded_images/grid-uiux.png", "../downloaded_images/grid-cloud.jpg"],
+        cta: "#",
+        live: "",
+        stats: [["Framework","Expo SDK 52"],["Language","TypeScript"]]
+    },
+    shopipharm: {
+        name: "Pharmacy Shopify Store", tag: "Client Project", subtitle: "Shopify pharmacy on the Ella theme",
+        category: "Client Project", domain: "E-commerce / Pharmacy", year: "2026", stack: "Shopify",
+        overview: "End-to-end Shopify pharmacy build on the Ella theme. We structured a Ranbaxy / Sun Pharmaceuticals / Ranbaxy Generic Division catalogue (45 product groups, 58 product/variant rows), defined a safe prescription-vs-OTC workflow, authored legal/compliance pages and generated clean product content — all driven by Python automation scripts for bulk CSV import and image mapping.",
+        features: ["Ella Shopify theme setup","Ranbaxy/Sun Pharma catalogue (45 groups)","Prescription vs OTC dual-flow workflow","Compliance & legal pages","Python bulk-import & image-mapping scripts","Razorpay pharmacy KYC guidance"],
+        tech: ["Shopify", "Liquid", "Python", "CSV", "Razorpay"],
+        hero: "../downloaded_images/grid_ecommerce.png",
+        thumbs: ["../downloaded_images/grid_ecommerce.png", "../downloaded_images/grid-website.jpg", "../downloaded_images/grid-landing.png"],
+        cta: "#",
+        live: "",
+        stats: [["Catalogue","45 groups"],["Import rows","58"]]
     }
 };
 
