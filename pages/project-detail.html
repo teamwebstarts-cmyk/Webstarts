@@ -32,7 +32,7 @@
             </div>
         </div>
 		<div class="wa-back-to-top wa_backToTop">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="injected-svg" data-src="../downloaded_images/app-back-to-top-arrow-4.svg"><path d="M8 6.74 11.748 2l3.75 4.74h-3l.001 14.998H11V6.74z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="injected-svg"><path d="M8 6.74 11.748 2l3.75 4.74h-3l.001 14.998H11V6.74z"></path></svg>
         </div>
 
 		<header class="ag-header-1-area wa_sticky_header">
@@ -83,39 +83,48 @@
         <a href="project.html" class="ws-back-link"><i class="ph ph-arrow-left"></i> Back to Portfolio</a>
         <div class="ws-detail-grid">
 
-            <!-- LEFT: content -->
             <div class="ws-detail-content">
                 <span class="ws-detail-tag" id="ws-tag">Product</span>
                 <h1 class="ws-detail-h1" id="ws-name">Project Name</h1>
                 <p class="ws-detail-sub" id="ws-subtitle">Short tagline for the project.</p>
 
                 <div class="ws-detail-meta" id="ws-meta">
-                    <div class="ws-meta-item"><span class="ws-meta-k">Category</span><span class="ws-meta-v" id="ws-cat">—</span></div>
+                    <div class="ws-meta-item"><span class="ws-meta-k">Type</span><span class="ws-meta-v" id="ws-cat">—</span></div>
                     <div class="ws-meta-item"><span class="ws-meta-k">Domain</span><span class="ws-meta-v" id="ws-dom">—</span></div>
                     <div class="ws-meta-item"><span class="ws-meta-k">Year</span><span class="ws-meta-v" id="ws-year">—</span></div>
-                    <div class="ws-meta-item"><span class="ws-meta-k">Engagement</span><span class="ws-meta-v" id="ws-eng">—</span></div>
+                    <div class="ws-meta-item"><span class="ws-meta-k">Stack</span><span class="ws-meta-v" id="ws-eng">—</span></div>
                 </div>
 
                 <h3 class="ws-detail-h3">Overview</h3>
                 <p class="ws-detail-p" id="ws-overview">—</p>
 
-                <h3 class="ws-detail-h3">Key Features</h3>
+                <h3 class="ws-detail-h3">What We Built</h3>
                 <ul class="ws-feature-list" id="ws-features"></ul>
 
                 <h3 class="ws-detail-h3">Tech Stack</h3>
                 <div class="ws-detail-tags" id="ws-tech"></div>
 
-                <a href="#" class="ws-detail-cta" id="ws-cta">Visit Live <span class="arrow">&rarr;</span></a>
+                <div class="ws-detail-cta-row">
+                    <div class="ws-detail-links" id="ws-links"></div>
+                </div>
             </div>
 
-            <!-- RIGHT: images -->
             <div class="ws-detail-media">
                 <div class="ws-detail-main-img">
                     <img id="ws-hero" src="" alt="Project hero">
                 </div>
                 <div class="ws-detail-thumbs" id="ws-thumbs"></div>
+                <div class="ws-detail-stats" id="ws-stats"></div>
             </div>
 
+        </div>
+
+        <div class="ws-next-project" id="ws-next">
+            <span class="ws-next-label">Next Project</span>
+            <a href="#" class="ws-next-link" id="ws-next-link">
+                <span class="ws-next-name" id="ws-next-name">—</span>
+                <i class="ph ph-arrow-right"></i>
+            </a>
         </div>
     </div>
 </section>
@@ -169,104 +178,128 @@ window.setTimeout(function () {
 </script>
 
 <script>
-/* ===== Project data (single source of truth) ===== */
+/* ===== Real projects (teamwebstarts-cmyk GitHub repos) ===== */
+var WS_ORDER = ["webstarts","samyoj","aura","aiworker","samyojweb","exora","pharmaaudit","raceservice","shopipharm"];
 var WS_PROJECTS = {
-    samyoj: {
-        name: "Samyoj — WhatsApp CRM", tag: "SaaS Platform", subtitle: "WhatsApp CRM & Automation for SMBs",
-        category: "SaaS Platform", domain: "CRM / Business", year: "2026", engagement: "Real Product",
-        overview: "Full-stack WhatsApp CRM that lets small and mid-size businesses run broadcast campaigns, build no-code chatbot flows, manage a shared ticket inbox, and track analytics — all from a single WhatsApp number. Built and operated by the WebStarts / teamwebstarts stack.",
-        features: ["Broadcast campaigns with anti-ban pacing", "Drag-and-drop chatbot flow builder", "Shared team inbox with assignment", "CSAT + analytics dashboard", "Webhook & API integrations"],
-        tech: ["React", "Node.js", "PostgreSQL", "Redis", "Socket.IO", "WebRTC"],
-        hero: "../downloaded_images/grid-crm.jpg",
-        thumbs: ["../downloaded_images/grid-crm.jpg", "../downloaded_images/grid-ai.jpg", "../downloaded_images/grid-api.jpg"],
-        cta: "#"
-    },
-    verbotix: {
-        name: "Verbotix — GEO Audit Tool", tag: "AI / Automation", subtitle: "Generative Engine Optimization",
-        category: "AI / Automation", domain: "SEO / GEO", year: "2026", engagement: "Real Product",
-        overview: "AI tool that audits how a brand appears across generative engines (ChatGPT, Perplexity, Gemini), then auto-generates actionable optimization reports so teams can rank in AI answers, not just search results.",
-        features: ["Cross-engine brand visibility score", "Citation & source gap analysis", "Auto-generated optimization report", "Scheduled re-audits", "Competitor benchmarking"],
-        tech: ["Python", "React", "FastAPI", "LLM Orchestration"],
-        hero: "../downloaded_images/grid-seo.jpg",
-        thumbs: ["../downloaded_images/grid-seo.jpg", "../downloaded_images/ai_automation_clean_ui.png", "../downloaded_images/grid-ai.jpg"],
-        cta: "#"
-    },
-    aura: {
-        name: "AURA — AI Companion", tag: "AI Product", subtitle: "Conversational AI Companion",
-        category: "AI / Automation", domain: "CRM / Business", year: "2026", engagement: "Real Product",
-        overview: "Voice + chat AI companion with long-term memory, task execution and a realtime avatar layer for human-like interaction. Designed as a white-label companion engine for consumer and enterprise use.",
-        features: ["Voice + text multimodal chat", "Long-term memory & personalization", "Task execution layer", "Realtime avatar (WebRTC)", "Plugin / tool calling"],
-        tech: ["Python", "React", "WebRTC", "LLM"],
-        hero: "../downloaded_images/grid-ai.jpg",
-        thumbs: ["../downloaded_images/grid-ai.jpg", "../downloaded_images/ai_automation_clean_ui.png", "../downloaded_images/grid-cloud.jpg"],
-        cta: "#"
-    },
-    academix360: {
-        name: "Academix360 — Unified School ERP", tag: "Client Project", subtitle: "School Management Solution",
-        category: "Web App", domain: "Education / ERP", year: "2025", engagement: "Client Project",
-        overview: "End-to-end school ERP covering admissions, attendance, examinations, fee collection and a parent portal. Currently serving 12+ institutions with role-based dashboards for admin, staff, students and parents.",
-        features: ["Admissions & enrollment", "Attendance & leave", "Exams & report cards", "Fee management & invoicing", "Parent mobile portal"],
-        tech: ["Angular", "NestJS", "MySQL", "TypeScript", "RxJS"],
-        hero: "../downloaded_images/grid-erp.jpg",
-        thumbs: ["../downloaded_images/grid-erp.jpg", "../downloaded_images/grid-website.jpg", "../downloaded_images/c1-img.jpg"],
-        cta: "#"
-    },
-    tradeconnect: {
-        name: "TradeConnect — Trading API", tag: "Client Project", subtitle: "Trading API Platform",
-        category: "Web App", domain: "Finance / Trading", year: "2025", engagement: "Client Project",
-        overview: "Broker-grade trading API platform with websocket market-data feeds, smart order routing and a developer sandbox for algorithmic strategies. Built for a fintech client serving retail + pro traders.",
-        features: ["Real-time websocket feeds", "Smart order routing", "Developer sandbox", " position & P&L tracking", "Webhook alerts"],
-        tech: ["Node.js", "Express", "MongoDB", "WebSocket", "Redis"],
-        hero: "../downloaded_images/grid-api.jpg",
-        thumbs: ["../downloaded_images/grid-api.jpg", "../downloaded_images/grid-cloud.jpg", "../downloaded_images/grid-mobile.jpg"],
-        cta: "#"
-    },
-    matrimony: {
-        name: "Matrimony Connect Platform", tag: "Client Project", subtitle: "Matrimony Mobile App",
-        category: "Mobile App", domain: "Matrimony / Social", year: "2025", engagement: "Client Project",
-        overview: "Cross-platform matrimony app with verified profiles, AI match suggestions and in-app messaging. Helps users discover compatible matches with privacy-first controls.",
-        features: ["Verified KYC profiles", "AI match suggestions", "In-app messaging", "Privacy controls", "Premium subscriptions"],
-        tech: ["Flutter", "MongoDB", "Node.js", "Firebase"],
-        hero: "../downloaded_images/grid-mobile.jpg",
-        thumbs: ["../downloaded_images/grid-mobile.jpg", "../downloaded_images/grid-uiux.png", "../downloaded_images/grid-cloud.jpg"],
-        cta: "#"
-    },
-    exora: {
-        name: "Exora — Client Website", tag: "Client Project", subtitle: "Corporate Website & Brand",
-        category: "Web App", domain: "CRM / Business", year: "2026", engagement: "Client Project",
-        overview: "Corporate website and brand presence built for the Exora client (clint-website-exora). Modern, fast, conversion-focused marketing site with CMS-driven content.",
-        features: ["Responsive marketing site", "CMS-driven content", "Lead capture forms", "SEO-ready structure", "Analytics & events"],
+    webstarts: {
+        name: "Webstarts — Agency Site", tag: "Company Site", subtitle: "Marketing website & brand for WebStarts",
+        category: "Agency Site", domain: "Web / Brand", year: "2026", stack: "Static",
+        overview: "The WebStarts marketing site is the front door to everything we build — a hand-crafted, blazing-fast static showcase for our software, mobile and AI services. Rebranded from a generic template into a confident WebStarts identity that turns visitors into conversations.",
+        features: ["Rebranded template into a distinct WebStarts identity","Filterable portfolio across 4 dimensions (category, domain, tech, engagement)","Per-project case-study pages with real repo links","Pixel-tuned responsive layout for desktop & mobile","Zero-backend static hosting for instant load"],
         tech: ["HTML", "CSS", "JavaScript", "Bootstrap"],
         hero: "../downloaded_images/grid-website.jpg",
         thumbs: ["../downloaded_images/grid-website.jpg", "../downloaded_images/grid-landing.png", "../downloaded_images/grid-seo.jpg"],
-        cta: "#"
+        cta: "https://github.com/teamwebstarts-cmyk/Webstarts",
+        live: "",
+        stats: [["Language","HTML"],["Size","46 MB"]]
     },
-    fingo: {
-        name: "Fingo — Finance App", tag: "Real Product", subtitle: "Personal Finance & Budgeting",
-        category: "Mobile App", domain: "Finance / Trading", year: "2026", engagement: "Real Product",
-        overview: "Fingo is a personal finance app that helps users track spending, set budgets and reach savings goals with automated insights and friendly nudges.",
-        features: ["Auto expense tracking", "Budgets & goals", "Insightful reports", "Bank sync (planned)", "Smart nudges"],
-        tech: ["Flutter", "Node.js", "PostgreSQL"],
+    samyoj: {
+        name: "Samyoj — WhatsApp CRM", tag: "SaaS Platform", subtitle: "WhatsApp automation on the official Meta Cloud API",
+        category: "SaaS Platform", domain: "CRM / Business", year: "2026", stack: "PERN + Redis",
+        overview: "Samyoj turns a business WhatsApp number into a full customer-operation hub. Built on the official Meta Cloud API with a PERN stack, it handles multi-number inboxes, broadcast campaigns and chatbots — so SMBs can automate support without losing the human touch.",
+        features: ["JWT auth with org-based, multi-team accounts","Meta Embedded Signup + webhook verification","Shared team inbox with realtime Socket.IO messaging","Keyword replies & business-hours automation","Queue-based broadcasts via BullMQ (no rate-limit bans)","Delivery / read-rate analytics dashboard"],
+        tech: ["TypeScript", "React 18", "Node.js", "PostgreSQL", "Prisma", "Redis", "BullMQ", "Socket.IO"],
+        hero: "../downloaded_images/grid-crm.jpg",
+        thumbs: ["../downloaded_images/grid-crm.jpg", "../downloaded_images/grid-api.jpg", "../downloaded_images/grid-cloud.jpg"],
+        cta: "https://github.com/teamwebstarts-cmyk/Samyoj",
+        live: "",
+        stats: [["Language","TypeScript"],["DB","PostgreSQL"]]
+    },
+    aura: {
+        name: "AURA — AI Companion", tag: "AI Product", subtitle: "Photorealistic realtime voice avatar companion",
+        category: "AI Product", domain: "Conversational AI", year: "2026", stack: "React Native + Express",
+        overview: "AURA is a companion you can actually talk to — a photorealistic, realtime avatar that listens, thinks, shows emotion and remembers who you are across sessions. Built as a monorepo spanning a React Native client, Express gateway, Next.js admin and a pgvector memory store.",
+        features: ["Face-to-face avatar via Anam WebRTC pipeline","Multi-persona memory backed by pgvector","Voice + text multimodal conversation","Express orchestration with BullMQ workers","Next.js 15 admin portal for content & config","Firebase push (FCM) for always-on reach"],
+        tech: ["TypeScript", "React Native", "Express", "Next.js", "Supabase", "pgvector", "WebRTC", "OpenAI"],
+        hero: "../downloaded_images/grid-ai.jpg",
+        thumbs: ["../downloaded_images/grid-ai.jpg", "../downloaded_images/ai_automation_clean_ui.png", "../downloaded_images/grid-cloud.jpg"],
+        cta: "https://github.com/teamwebstarts-cmyk/AI-Companion",
+        live: "",
+        stats: [["Language","TypeScript"],["Memory","pgvector"]]
+    },
+    aiworker: {
+        name: "AI-worker-2 — Automation Engine", tag: "AI / Automation", subtitle: "Autonomous background worker for AI tasks",
+        category: "AI / Automation", domain: "Backend / Tooling", year: "2026", stack: "Python + TS",
+        overview: "AI-worker-2 is the autonomous engine behind our product suite — a containerised background worker that plans and runs AI tasks end-to-end, orchestrating LLM calls, job queues and tool use so features just work.",
+        features: ["LLM orchestration with tool calling","Queue-based, fault-tolerant job processing","Dockerised for reproducible runs anywhere","Pluggable task definitions","Structured logs & live status observability"],
+        tech: ["Python", "TypeScript", "Docker", "Shell"],
+        hero: "../downloaded_images/grid-api.jpg",
+        thumbs: ["../downloaded_images/grid-api.jpg", "../downloaded_images/grid-cloud.jpg", "../downloaded_images/grid-ai.jpg"],
+        cta: "https://github.com/teamwebstarts-cmyk/AI-worker-2",
+        live: "",
+        stats: [["Language","Python"],["Packaging","Docker"]]
+    },
+    samyojweb: {
+        name: "Samyoj Website v0.2", tag: "Marketing Site", subtitle: "Public landing page for the Samyoj CRM",
+        category: "Marketing Site", domain: "Web / Brand", year: "2026", stack: "Static",
+        overview: "The public face of Samyoj — a conversion-focused landing site that turns curious visitors into trial sign-ups. Clean feature tours, transparent pricing and lead-capture forms, all delivered as a fast static site.",
+        features: ["Guided feature-tour sections","Pricing & CTA blocks that convert","Lead-capture forms wired to the CRM","SEO-ready structure & metadata","Instant static delivery worldwide"],
+        tech: ["HTML", "CSS", "JavaScript"],
+        hero: "../downloaded_images/grid-landing.png",
+        thumbs: ["../downloaded_images/grid-landing.png", "../downloaded_images/grid-website.jpg", "../downloaded_images/grid-seo.jpg"],
+        cta: "https://github.com/teamwebstarts-cmyk/samyoj-website-0.2",
+        live: "",
+        stats: [["Language","HTML"],["Size","172 MB"]]
+    },
+    exora: {
+        name: "Exora — Client Website", tag: "Client Project", subtitle: "Corporate website for the Exora brand",
+        category: "Client Project", domain: "Web / Brand", year: "2026", stack: "Static",
+        overview: "A corporate website and brand presence for the Exora client — fast, responsive and CMS-driven, engineered to capture leads and look sharp on every screen.",
+        features: ["Responsive marketing site, mobile-first","CMS-driven content the client controls","Lead-capture forms with validation","Analytics & event tracking wired in","Brand-consistent visual system"],
+        tech: ["HTML", "CSS", "JavaScript", "Python"],
+        hero: "../downloaded_images/grid-website.jpg",
+        thumbs: ["../downloaded_images/grid-website.jpg", "../downloaded_images/grid-landing.png", "../downloaded_images/grid-uiux.png"],
+        cta: "https://github.com/teamwebstarts-cmyk/clint-website-exora",
+        live: "",
+        stats: [["Language","HTML/CSS"],["Size","71 MB"]]
+    },
+    pharmaaudit: {
+        name: "Pharma Audit — Vendor Portal", tag: "Web App", subtitle: "Pharmacy vendor & compliance portal",
+        category: "Web App", domain: "Healthcare / Vendor", year: "2026", stack: "MERN",
+        overview: "A pharmacy vendor & compliance portal built as a client/server monorepo. The backend is a Node/Express + Mongoose API; the frontend is a Vite/React SPA with a clean, Cal.com-inspired design system — white canvas, soft-rounded cards, product UI shown in-card. Designed for vendor onboarding, document audits and compliance tracking.",
+        features: ["Node/Express API with controllers & routes","Mongoose schemas for vendors/products","React + Vite frontend (Tailwind)","Cal.com-inspired design system","Vendor onboarding & audit workflows","Role-scoped access (auth middleware)"],
+        tech: ["TypeScript", "React", "Vite", "Node.js", "Express", "MongoDB", "Mongoose", "Tailwind"],
+        hero: "../downloaded_images/grid-erp.jpg",
+        thumbs: ["../downloaded_images/grid-erp.jpg", "../downloaded_images/grid-cloud.jpg", "../downloaded_images/grid-website.jpg"],
+        cta: "#",
+        live: "",
+        stats: [["Frontend","React+Vite"],["Backend","Express"]]
+    },
+    raceservice: {
+        name: "RACE Service — Towing App", tag: "Mobile App", subtitle: "Premium roadside assistance platform",
+        category: "Mobile App", domain: "Mobility / Services", year: "2026", stack: "Expo RN",
+        overview: "A premium roadside-assistance / towing platform built with Expo (React Native). The foundation layer ships a complete design system, hand-rolled inline-SVG icon set and illustrations, file-based routing (expo-router), a Zustand auth store and a floating-nav shell — ready for downstream feature subagents to build real screens on top.",
+        features: ["Expo SDK 52 + expo-router (typed routes)","TypeScript strict mode","Zustand auth store","Hand-rolled inline-SVG icons & illustrations","react-native-reanimated ready","Floating nav shell (expo-blur)"],
+        tech: ["TypeScript", "React Native", "Expo", "Zustand", "react-native-svg", "expo-router"],
         hero: "../downloaded_images/grid-mobile.jpg",
-        thumbs: ["../downloaded_images/grid-mobile.jpg", "../downloaded_images/grid-api.jpg", "../downloaded_images/grid-cloud.jpg"],
-        cta: "#"
+        thumbs: ["../downloaded_images/grid-mobile.jpg", "../downloaded_images/grid-uiux.png", "../downloaded_images/grid-cloud.jpg"],
+        cta: "#",
+        live: "",
+        stats: [["Framework","Expo SDK 52"],["Language","TypeScript"]]
     },
-    find: {
-        name: "Find — Discovery App", tag: "Real Product", subtitle: "Local Discovery & Search",
-        category: "Mobile App", domain: "Matrimony / Social", year: "2026", engagement: "Real Product",
-        overview: "Find is a discovery app that helps users find nearby places, services and people with smart filters and a clean, fast interface.",
-        features: ["Location-based discovery", "Smart filters", "Save & share", "Maps integration", "Realtime results"],
-        tech: ["Flutter", "MongoDB", "Node.js", "Maps API"],
-        hero: "../downloaded_images/grid-uiux.png",
-        thumbs: ["../downloaded_images/grid-uiux.png", "../downloaded_images/grid-mobile.jpg", "../downloaded_images/grid-cloud.jpg"],
-        cta: "#"
+    shopipharm: {
+        name: "Pharmacy Shopify Store", tag: "Client Project", subtitle: "Shopify pharmacy on the Ella theme",
+        category: "Client Project", domain: "E-commerce / Pharmacy", year: "2026", stack: "Shopify",
+        overview: "End-to-end Shopify pharmacy build on the Ella theme. We structured a Ranbaxy / Sun Pharmaceuticals / Ranbaxy Generic Division catalogue (45 product groups, 58 product/variant rows), defined a safe prescription-vs-OTC workflow, authored legal/compliance pages and generated clean product content — all driven by Python automation scripts for bulk CSV import and image mapping.",
+        features: ["Ella Shopify theme setup","Ranbaxy/Sun Pharma catalogue (45 groups)","Prescription vs OTC dual-flow workflow","Compliance & legal pages","Python bulk-import & image-mapping scripts","Razorpay pharmacy KYC guidance"],
+        tech: ["Shopify", "Liquid", "Python", "CSV", "Razorpay"],
+        hero: "../downloaded_images/grid_ecommerce.png",
+        thumbs: ["../downloaded_images/grid_ecommerce.png", "../downloaded_images/grid-website.jpg", "../downloaded_images/grid-landing.png"],
+        cta: "#",
+        live: "",
+        stats: [["Catalogue","45 groups"],["Import rows","58"]]
     }
 };
 
 (function () {
     function render(key) {
+        var order = WS_ORDER;
+        if (!WS_PROJECTS[key]) { key = order[0]; }
         var p = WS_PROJECTS[key];
-        if (!p) { p = WS_PROJECTS.samyoj; }
+        var idx = order.indexOf(key);
+        var nextKey = order[(idx + 1) % order.length];
+        var next = WS_PROJECTS[nextKey];
+
         document.getElementById('ws-detail-title').textContent = p.name;
         document.getElementById('ws-detail-crumb').textContent = p.name;
         document.getElementById('ws-tag').textContent = p.tag;
@@ -275,22 +308,43 @@ var WS_PROJECTS = {
         document.getElementById('ws-cat').textContent = p.category;
         document.getElementById('ws-dom').textContent = p.domain;
         document.getElementById('ws-year').textContent = p.year;
-        document.getElementById('ws-eng').textContent = p.engagement;
+        document.getElementById('ws-eng').textContent = p.stack;
         document.getElementById('ws-overview').textContent = p.overview;
-        document.getElementById('ws-cta').setAttribute('href', p.cta);
-        // features
+
+        var lk = document.getElementById('ws-links'); lk.innerHTML = '';
+        if (p.cta && p.cta !== '#') {
+            var gh = document.createElement('a');
+            gh.className = 'ws-detail-cta'; gh.href = p.cta; gh.target = '_blank'; gh.rel = 'noopener';
+            gh.innerHTML = '<i class="ph ph-github-logo"></i> View Repository <span class="arrow">&rarr;</span>';
+            lk.appendChild(gh);
+        }
+        if (p.live && p.live !== '') {
+            var lv = document.createElement('a');
+            lv.className = 'ws-detail-cta ws-detail-cta-ghost'; lv.href = p.live; lv.target = '_blank'; lv.rel = 'noopener';
+            lv.innerHTML = '<i class="ph ph-arrow-square-out"></i> Live Site <span class="arrow">&rarr;</span>';
+            lk.appendChild(lv);
+        }
+
         var fl = document.getElementById('ws-features'); fl.innerHTML = '';
         (p.features || []).forEach(function (f) {
             var li = document.createElement('li');
             li.innerHTML = '<i class="ph ph-check-circle"></i> ' + f;
             fl.appendChild(li);
         });
-        // tech
+
         var tt = document.getElementById('ws-tech'); tt.innerHTML = '';
         (p.tech || []).forEach(function (t) {
             var s = document.createElement('span'); s.textContent = t; tt.appendChild(s);
         });
-        // images
+
+        var st = document.getElementById('ws-stats'); st.innerHTML = '';
+        (p.stats || []).forEach(function (row) {
+            var d = document.createElement('div');
+            d.className = 'ws-stat';
+            d.innerHTML = '<span class="ws-stat-v">' + row[1] + '</span><span class="ws-stat-k">' + row[0] + '</span>';
+            st.appendChild(d);
+        });
+
         document.getElementById('ws-hero').setAttribute('src', p.hero);
         document.getElementById('ws-hero').setAttribute('alt', p.name + ' hero');
         var th = document.getElementById('ws-thumbs'); th.innerHTML = '';
@@ -305,9 +359,14 @@ var WS_PROJECTS = {
             });
             th.appendChild(img);
         });
+
+        document.getElementById('ws-next-name').textContent = next.name;
+        document.getElementById('ws-next-link').setAttribute('href', 'project-detail.html#' + nextKey);
+
         document.title = p.name + ' — WebStarts';
+        window.scrollTo(0, 0);
     }
-    var key = (location.hash || '').replace('#', '') || 'samyoj';
+    var key = (location.hash || '').replace('#', '') || WS_ORDER[0];
     render(key);
 })();
 </script>
