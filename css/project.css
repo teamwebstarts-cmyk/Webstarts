@@ -9,15 +9,17 @@
     justify-content: center;
     margin-bottom: 50px;
 }
-.ws-filter-label {
+.ws-filter-icon {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    font-weight: 600;
-    color: #1a1a2e;
-    font-size: 16px;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: #fd3f00;
+    color: #fff;
+    font-size: 18px;
 }
-.ws-filter-label i { color: #fd3f00; font-size: 18px; }
 .ws-filter-select {
     appearance: none;
     -webkit-appearance: none;
@@ -28,7 +30,7 @@
     font-size: 14px;
     color: #444;
     cursor: pointer;
-    min-width: 180px;
+    min-width: 185px;
     transition: border-color .2s, box-shadow .2s;
 }
 .ws-filter-select:focus {
@@ -49,11 +51,11 @@
 /* Card */
 .ws-pcard {
     background: #fff;
-    border: 1px solid #eceef1;
-    border-radius: 16px;
+    border-radius: 14px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 4px 20px rgba(17,24,39,.06);
     transition: transform .25s ease, box-shadow .25s ease;
 }
 .ws-pcard:hover {
@@ -100,15 +102,13 @@
 .ws-pcard-body { padding: 22px 22px 24px; display: flex; flex-direction: column; flex: 1; }
 .ws-pcard-title { font-size: 18px; font-weight: 700; color: #1a1a2e; margin: 0 0 8px; line-height: 1.3; }
 .ws-pcard-desc { font-size: 13.5px; color: #6b7280; line-height: 1.55; margin: 0 0 14px; flex: 1; }
-.ws-pcard-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+.ws-pcard-tags { display: flex; flex-wrap: wrap; gap: 4px 6px; margin-bottom: 16px; }
 .ws-pcard-tags span {
-    background: #f3f4f6;
-    color: #555;
-    font-size: 11.5px;
-    padding: 4px 10px;
-    border-radius: 6px;
+    color: #8a909c;
+    font-size: 12px;
     font-family: ui-monospace,SFMono-Regular,Menlo,monospace;
 }
+.ws-pcard-tags span + span::before { content: "· "; color: #c0c4cc; }
 .ws-pcard-link {
     color: #0693e3;
     font-weight: 600;
@@ -130,7 +130,91 @@
     font-size: 15px;
 }
 
-/* fade animation on filter */
-.ws-pcard.is-hidden { display: none; }
+.ag-projects-3-area.pt-100.pb-100 {
+    background: #f7f8fa;
+}
+/* ===== DETAIL PAGE ===== */
+.ws-detail-area { background: #f7f8fa; }
+.ws-back-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: #6b7280; font-weight: 600; font-size: 14px; text-decoration: none;
+    margin-bottom: 28px;
+}
+.ws-back-link:hover { color: #fd3f00; gap: 11px; }
+.ws-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+.ws-detail-content { position: sticky; top: 100px; }
+.ws-detail-tag {
+    display: inline-block; background: rgba(253,63,0,.1); color: #fd3f00;
+    font-size: 12px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase;
+    padding: 6px 14px; border-radius: 20px; margin-bottom: 16px;
+}
+.ws-detail-h1 {
+    font-family: "Space Grotesk", "Inter", sans-serif;
+    font-size: 38px; font-weight: 700; color: #1a1a2e; line-height: 1.15; margin: 0 0 10px;
+}
+.ws-detail-sub { font-size: 17px; color: #6b7280; margin: 0 0 24px; font-family: "Inter", sans-serif; }
+.ws-detail-meta {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
+    background: #fff; border-radius: 14px; padding: 20px 22px; margin-bottom: 28px;
+    box-shadow: 0 4px 20px rgba(17,24,39,.05);
+}
+.ws-meta-item { display: flex; flex-direction: column; gap: 3px; }
+.ws-meta-k { font-size: 11px; text-transform: uppercase; letter-spacing: .5px; color: #9aa1ad; font-weight: 600; }
+.ws-meta-v { font-size: 15px; color: #1a1a2e; font-weight: 600; }
+.ws-detail-h3 {
+    font-family: "Space Grotesk", "Inter", sans-serif;
+    font-size: 20px; font-weight: 700; color: #1a1a2e; margin: 26px 0 12px;
+}
+.ws-detail-p { font-size: 15px; line-height: 1.7; color: #4b5563; margin: 0; font-family: "Inter", sans-serif; }
+.ws-feature-list { list-style: none; padding: 0; margin: 0; }
+.ws-feature-list li {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 15px; color: #4b5563; padding: 7px 0; font-family: "Inter", sans-serif;
+}
+.ws-feature-list li i { color: #fd3f00; font-size: 18px; }
+.ws-detail-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.ws-detail-tags span {
+    background: #fff; border: 1px solid #e6e8ec; color: #374151;
+    font-size: 13px; padding: 6px 14px; border-radius: 8px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.ws-detail-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 30px; background: #fd3f00; color: #fff;
+    font-weight: 700; font-size: 15px; padding: 14px 28px; border-radius: 10px;
+    text-decoration: none; transition: transform .2s, box-shadow .2s;
+    font-family: "Space Grotesk", "Inter", sans-serif;
+}
+.ws-detail-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(253,63,0,.3); }
+.ws-detail-cta .arrow { transition: transform .2s; }
+.ws-detail-cta:hover .arrow { transform: translateX(4px); }
+
+/* RIGHT media */
+.ws-detail-media { display: flex; flex-direction: column; gap: 16px; }
+.ws-detail-main-img {
+    border-radius: 16px; overflow: hidden; background: #fff;
+    box-shadow: 0 8px 30px rgba(17,24,39,.08); aspect-ratio: 16/10;
+}
+.ws-detail-main-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ws-detail-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.ws-thumb {
+    border-radius: 12px; overflow: hidden; cursor: pointer; aspect-ratio: 4/3;
+    border: 2px solid transparent; transition: border-color .2s, transform .2s; background:#fff;
+}
+.ws-thumb img, .ws-thumb { width: 100%; }
+.ws-thumb { object-fit: cover; }
+.ws-thumb.is-active { border-color: #fd3f00; }
+.ws-thumb:hover { transform: translateY(-3px); }
+
+@media (max-width: 900px) {
+    .ws-detail-grid { grid-template-columns: 1fr; gap: 36px; }
+    .ws-detail-content { position: static; }
+    .ws-detail-h1 { font-size: 30px; }
+}
 .ws-pcard { animation: wsFade .35s ease; }
 @keyframes wsFade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
