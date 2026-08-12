@@ -439,7 +439,7 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 	  },"<")
 }
 
-// Multi-Ring Orbital Skills Reveal (rings 3/4/5 staged on scroll; ring 2 empty)
+// Multi-Ring Orbital Skills Reveal (rings 3/4/5 staged bottom-to-top on scroll; ring 2 empty)
 function initAigoraScrollAnimation() {
 	const area = document.querySelector('.ag-features-1-area');
 	if (!area) return;
@@ -458,6 +458,8 @@ function initAigoraScrollAnimation() {
 
 	const isDesktop = window.matchMedia('(min-width: 992px)').matches;
 
+	// Ring 2 (r=240) is intentionally EMPTY (decorative dots only).
+	// Skills live on rings 3/4/5 in an exact 360° circular pattern.
 	const ringRadii = { 3: 330, 4: 430, 5: 530 };
 	const ringGroups = {
 		3: cards.slice(0, 6),
@@ -472,26 +474,28 @@ function initAigoraScrollAnimation() {
 		const ringsSvg = area.querySelector('.concentric-rings-svg');
 		if (ringsSvg) gsap.set(ringsSvg, { transformOrigin: '500px 500px' });
 
+		// Every card computes its FINAL circular position (exact 360° around hub).
 		const cardData = [];
 		Object.keys(ringGroups).forEach(ring => {
 			const r = ringRadii[ring];
 			const group = ringGroups[ring];
 			const n = group.length;
 			group.forEach((card, i) => {
-				const angle = (-Math.PI / 2) + (i * (2 * Math.PI / n));
+				const angle = (-Math.PI / 2) + (i * (2 * Math.PI / n)); // start at top, go clockwise
 				const finalX = Math.round(r * Math.cos(angle));
 				const finalY = Math.round(r * Math.sin(angle));
-				const startY = finalY + 520;
-				cardData.push({ card, ring: +ring, finalX, finalY, startY });
+				cardData.push({ card, ring: +ring, finalX, finalY });
 			});
 		});
 
-		cardData.forEach(({ card, finalX, finalY, startY }) => {
+		// All cards START at the BOTTOM of the wrap (constant bottom offset) -> true bottom-to-top rise.
+		const BOTTOM = 560;
+		cardData.forEach(({ card, finalX, finalY }) => {
 			gsap.set(card, {
 				position: 'absolute',
 				top: '50%', left: '50%',
 				xPercent: -50, yPercent: -50,
-				x: finalX, y: startY, opacity: 0
+				x: finalX, y: BOTTOM, opacity: 0
 			});
 			card.addEventListener('mouseenter', () => {
 				gsap.to(card, { y: finalY - 12, scale: 1.08, duration: 0.3, ease: 'power2.out', overwrite: 'auto' });
@@ -501,25 +505,27 @@ function initAigoraScrollAnimation() {
 			});
 		});
 
+		// Pinned, reversible (scrub) timeline: scroll down -> cards rise to rings; scroll up -> return to bottom.
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: area,
 				start: 'top top',
-				end: '+=2200',
+				end: '+=2400',
 				pin: true, pinSpacing: true, scrub: 1, anticipatePin: 1, invalidateOnRefresh: true
 			}
 		});
 
 		if (ringsSvg) tl.fromTo(ringsSvg, { scale: 0.4, opacity: 0.5 }, { scale: 1.1, opacity: 0.95, duration: 1, ease: 'power1.out' }, 0);
 
-		const stages = { 3: 0.02, 4: 0.36, 5: 0.70 };
+		// Staged per ring: ring 3 first (closest), then 4, then 5 (outermost).
+		const stages = { 3: 0.02, 4: 0.38, 5: 0.72 };
 		Object.keys(stages).forEach(ring => {
 			const at = stages[ring];
-			cardData.filter(d => d.ring === +ring).forEach(({ card, finalX, finalY, startY }, i) => {
+			cardData.filter(d => d.ring === +ring).forEach(({ card, finalX, finalY }, i) => {
 				tl.fromTo(card,
-					{ x: finalX, y: startY, opacity: 0 },
-					{ x: finalX, y: finalY, opacity: 1, duration: 0.9, ease: 'power1.out' },
-					at + i * 0.03
+					{ x: finalX, y: BOTTOM, opacity: 0 },
+					{ x: finalX, y: finalY, opacity: 1, duration: 1.0, ease: 'power1.out' },
+					at + i * 0.025
 				);
 			});
 		});
