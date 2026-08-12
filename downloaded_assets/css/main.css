@@ -6964,8 +6964,8 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
 .ag-features-1-wrap {
   width: 100%;
-  max-width: 1150px;
-  height: 1020px;
+  max-width: 1180px;
+  height: 1160px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -7117,22 +7117,26 @@ only screen and (min-width: 768px) and (max-width: 991px),
 .ag-features-1-area.in-view .skill-card-12 { transition-delay: 1.2s; }
 .ag-features-1-area.in-view .skill-card-13 { transition-delay: 1.3s; }
 
-/* Inner Orbit Positions (Cards 1 to 8, R = 300px - all 8 cards aligned precisely on 300px circle line) */
-.skill-card-1 { top: calc(50% - 300px); left: 50%; }
-.skill-card-2 { top: calc(50% - 212px); left: calc(50% + 212px); }
-.skill-card-3 { top: 50%; left: calc(50% + 300px); }
-.skill-card-4 { top: calc(50% + 212px); left: calc(50% + 212px); }
-.skill-card-5 { top: calc(50% + 300px); left: 50%; }
-.skill-card-6 { top: calc(50% + 212px); left: calc(50% - 212px); }
-.skill-card-7 { top: 50%; left: calc(50% - 300px); }
-.skill-card-8 { top: calc(50% - 212px); left: calc(50% - 212px); }
+/* ===== Multi-Ring Orbital Layout ===== */
+/* Ring 2 (r=240): EMPTY decorative dots only — no skill cards */
+/* Ring 3 (r=330): 6 skills — skill-card-1..6 */
+.skill-card-1 { top: calc(50% - 330px); left: 50%; }
+.skill-card-2 { top: calc(50% - 165px); left: calc(50% + 286px); }
+.skill-card-3 { top: calc(50% + 165px); left: calc(50% + 286px); }
+.skill-card-4 { top: calc(50% + 330px); left: 50%; }
+.skill-card-5 { top: calc(50% + 165px); left: calc(50% - 286px); }
+.skill-card-6 { top: calc(50% - 165px); left: calc(50% - 286px); }
 
-/* Outer Concentric Circle Positions (Cards 9 to 13, R = 410px - PostgreSQL, Docker, GCP, Azure, AWS) */
-.skill-card-9  { top: calc(50% - 332px); left: calc(50% - 241px); }
-.skill-card-10 { top: calc(50% - 332px); left: calc(50% + 241px); }
-.skill-card-11 { top: calc(50% + 127px); left: calc(50% + 390px); }
-.skill-card-12 { top: calc(50% + 410px); left: 50%; }
-.skill-card-13 { top: calc(50% + 127px); left: calc(50% - 390px); }
+/* Ring 4 (r=430): 4 skills — skill-card-7..10 */
+.skill-card-7 { top: calc(50% - 430px); left: 50%; }
+.skill-card-8 { top: 50%; left: calc(50% + 430px); }
+.skill-card-9 { top: calc(50% + 430px); left: 50%; }
+.skill-card-10 { top: 50%; left: calc(50% - 430px); }
+
+/* Ring 5 (r=530): 3 skills — skill-card-11..13 */
+.skill-card-11 { top: calc(50% - 530px); left: 50%; }
+.skill-card-12 { top: calc(50% + 265px); left: calc(50% + 459px); }
+.skill-card-13 { top: calc(50% + 265px); left: calc(50% - 459px); }
 
 /* Center Hub Styling */
 .ag-features-1-content {

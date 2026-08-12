@@ -439,7 +439,7 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 	  },"<")
 }
 
-// Dynamic Aigora-Style Parallel Vertical Upward Entrance Animation
+// Multi-Ring Orbital Skills Reveal (rings 3/4/5 staged on scroll; ring 2 empty)
 function initAigoraScrollAnimation() {
 	const area = document.querySelector('.ag-features-1-area');
 	if (!area) return;
@@ -458,139 +458,77 @@ function initAigoraScrollAnimation() {
 
 	const isDesktop = window.matchMedia('(min-width: 992px)').matches;
 
+	const ringRadii = { 3: 330, 4: 430, 5: 530 };
+	const ringGroups = {
+		3: cards.slice(0, 6),
+		4: cards.slice(6, 10),
+		5: cards.slice(10, 13)
+	};
+
 	if (isDesktop) {
-		// 1. Center Hub: 100% stable anchor (un-faded, un-scaled)
 		const centerWrap = area.querySelector('.ag-features-1-content-wrap');
-		if (centerWrap) {
-			gsap.set(centerWrap, { opacity: 1, scale: 1, filter: "none" });
-		}
+		if (centerWrap) gsap.set(centerWrap, { opacity: 1, scale: 1, filter: 'none' });
 
-		const rings = area.querySelector('.concentric-rings');
-
-		// Separate original inner cards (1 to 8) and outer concentric circle cards (9 to 13)
-		const innerCards = cards.slice(0, 8);
-		const outerCards = cards.slice(8);
-
-		const innerRadius = 300; // Middle 300px ring for 8 inner cards
-		const outerRadius = 410; // Outer 410px concentric circle ring for 5 cloud/infra cards (AWS, Docker, GCP, Azure, PostgreSQL)
-		const verticalOffset = 600; // Positive Y offset for straight upward travel
+		const ringsSvg = area.querySelector('.concentric-rings-svg');
+		if (ringsSvg) gsap.set(ringsSvg, { transformOrigin: '500px 500px' });
 
 		const cardData = [];
-
-		// Calculate destination coordinates for Inner Circle cards (1 to 8)
-		innerCards.forEach((card, index) => {
-			const angle = (-Math.PI / 2) + (index * (2 * Math.PI / innerCards.length));
-			const finalX = Math.round(innerRadius * Math.cos(angle));
-			const finalY = Math.round(innerRadius * Math.sin(angle));
-			const startY = finalY + verticalOffset;
-			cardData.push({ card, finalX, finalY, startY });
+		Object.keys(ringGroups).forEach(ring => {
+			const r = ringRadii[ring];
+			const group = ringGroups[ring];
+			const n = group.length;
+			group.forEach((card, i) => {
+				const angle = (-Math.PI / 2) + (i * (2 * Math.PI / n));
+				const finalX = Math.round(r * Math.cos(angle));
+				const finalY = Math.round(r * Math.sin(angle));
+				const startY = finalY + 520;
+				cardData.push({ card, ring: +ring, finalX, finalY, startY });
+			});
 		});
 
-		// Calculate destination coordinates for Outer Concentric Circle cards (PostgreSQL, Docker, GCP, Azure, AWS)
-		// Offset starting angle so all 5 cards spread evenly along the outer ring (Top-Left, Top-Right, Mid-Right, Bottom, Mid-Left)
-		outerCards.forEach((card, index) => {
-			const angle = (-Math.PI / 2 - Math.PI / 5) + (index * (2 * Math.PI / outerCards.length));
-			const finalX = Math.round(outerRadius * Math.cos(angle));
-			const finalY = Math.round(outerRadius * Math.sin(angle));
-			const startY = finalY + verticalOffset;
-			cardData.push({ card, finalX, finalY, startY });
-		});
-
-		// Position cards with absolute centering and destination X alignment
-		cardData.forEach(({ card, finalX, finalY }) => {
+		cardData.forEach(({ card, finalX, finalY, startY }) => {
 			gsap.set(card, {
 				position: 'absolute',
-				top: '50%',
-				left: '50%',
-				xPercent: -50,
-				yPercent: -40, // Visual midpoint adjustment for top icon + card body combined
-				x: finalX,
-				opacity: 1
+				top: '50%', left: '50%',
+				xPercent: -50, yPercent: -50,
+				x: finalX, y: startY, opacity: 0
 			});
-
-			// Hover uplift effect relative to final destination
 			card.addEventListener('mouseenter', () => {
-				gsap.to(card, {
-					y: finalY - 12,
-					scale: 1.08,
-					duration: 0.3,
-					ease: "power2.out",
-					overwrite: "auto"
-				});
+				gsap.to(card, { y: finalY - 12, scale: 1.08, duration: 0.3, ease: 'power2.out', overwrite: 'auto' });
 			});
-
 			card.addEventListener('mouseleave', () => {
-				gsap.to(card, {
-					y: finalY,
-					scale: 1,
-					duration: 0.3,
-					ease: "power2.out",
-					overwrite: "auto"
-				});
+				gsap.to(card, { y: finalY, scale: 1, duration: 0.3, ease: 'power2.out', overwrite: 'auto' });
 			});
 		});
 
-		// 2. Create GSAP ScrollTrigger Pinned Timeline
-		const mainTimeline = gsap.timeline({
+		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: area,
-				start: "top top",
-				end: "+=2000", // Pinned scroll distance
-				pin: true,
-				pinSpacing: true,
-				scrub: 1,
-				anticipatePin: 1,
-				invalidateOnRefresh: true
+				start: 'top top',
+				end: '+=2200',
+				pin: true, pinSpacing: true, scrub: 1, anticipatePin: 1, invalidateOnRefresh: true
 			}
 		});
 
-		// Expand SVG concentric rings smoothly from fixed center (500px, 500px)
-		const ringsSvg = area.querySelector('.concentric-rings-svg');
-		if (ringsSvg) {
-			gsap.set(ringsSvg, { transformOrigin: "500px 500px" });
-			mainTimeline.fromTo(ringsSvg,
-				{ scale: 0.4, opacity: 0.5 },
-				{ scale: 1.15, opacity: 0.95, duration: 1, ease: "power1.out" },
-				0
-			);
-		}
+		if (ringsSvg) tl.fromTo(ringsSvg, { scale: 0.4, opacity: 0.5 }, { scale: 1.1, opacity: 0.95, duration: 1, ease: 'power1.out' }, 0);
 
-		// Animate each card straight UPWARD along its own destination X column
-		cardData.forEach(({ card, finalX, finalY, startY }, index) => {
-			mainTimeline.fromTo(card,
-				{
-					x: finalX, // X STAYS CONSTANT & ALIGNED WITH DESTINATION
-					y: startY, // Starts 600px below finalY
-					opacity: 0.85
-				},
-				{
-					x: finalX, // X STAYS CONSTANT
-					y: finalY, // Travels straight UP to finalY
-					opacity: 1,
-					duration: 1,
-					ease: "power1.out"
-				},
-				index * 0.05 // Subtle stagger for parallel upward movement
-			);
+		const stages = { 3: 0.02, 4: 0.36, 5: 0.70 };
+		Object.keys(stages).forEach(ring => {
+			const at = stages[ring];
+			cardData.filter(d => d.ring === +ring).forEach(({ card, finalX, finalY, startY }, i) => {
+				tl.fromTo(card,
+					{ x: finalX, y: startY, opacity: 0 },
+					{ x: finalX, y: finalY, opacity: 1, duration: 0.9, ease: 'power1.out' },
+					at + i * 0.03
+				);
+			});
 		});
 
 	} else {
-		// Mobile Layout: Responsive vertical scroll scrub
 		cards.forEach((card) => {
 			gsap.fromTo(card,
 				{ opacity: 0, y: 70, scale: 0.85 },
-				{
-					opacity: 1,
-					y: 0,
-					scale: 1,
-					duration: 0.6,
-					scrollTrigger: {
-						trigger: card,
-						start: "top 85%",
-						end: "top 60%",
-						scrub: 0.8
-					}
-				}
+				{ opacity: 1, y: 0, scale: 1, duration: 0.6, scrollTrigger: { trigger: card, start: 'top 85%', end: 'top 60%', scrub: 0.8 } }
 			);
 		});
 	}
