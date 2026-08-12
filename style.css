@@ -200,17 +200,52 @@ html, body {
   margin-bottom: 0;
 }
 
-/* Skills / Technologies Section Layering & Occlusion (Aigora Style Depth) */
+/* Skills / Technologies Section Aigora Layering Hierarchy & Fixed-Center Concentric Rings */
+.ag-features-1-content-wrap {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 10 !important;
+  pointer-events: none;
+}
+
+.concentric-rings {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 0 !important;
+  height: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.concentric-rings-svg {
+  position: absolute !important;
+  left: -500px !important;
+  top: -500px !important;
+  width: 1000px !important;
+  height: 1000px !important;
+  min-width: 1000px !important;
+  min-height: 1000px !important;
+  overflow: visible !important;
+  transform-origin: 500px 500px !important;
+}
+
 .ag-features-1-card {
   z-index: 2 !important;
 }
+
 .skill-card {
   z-index: 2 !important;
-}
-
-.ag-features-1-content-wrap {
-  z-index: 10 !important;
-  pointer-events: none;
 }
 
 .ag-features-1-content {
@@ -222,12 +257,8 @@ html, body {
   box-shadow: 0px 14px 36px rgba(0, 0, 0, 0.08) !important;
 }
 
-/* Completely Remove Extra Static Decorative Concentric Rings */
-.concentric-rings,
-.concentric-rings-svg,
+/* Hide static decorative div circles so only scroll-driven SVG rings animate */
 .circle-1,
 .circle-2 {
   display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
 }

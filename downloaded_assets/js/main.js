@@ -531,11 +531,13 @@ function initAigoraScrollAnimation() {
 			}
 		});
 
-		// Expand SVG concentric rings smoothly alongside card entrance
-		if (rings) {
-			mainTimeline.fromTo(rings,
-				{ scale: 0.55, opacity: 0.6 },
-				{ scale: 1.25, opacity: 1, duration: 1, ease: "power1.out" },
+		// Expand SVG concentric rings smoothly from fixed center (500px, 500px)
+		const ringsSvg = area.querySelector('.concentric-rings-svg');
+		if (ringsSvg) {
+			gsap.set(ringsSvg, { transformOrigin: "500px 500px" });
+			mainTimeline.fromTo(ringsSvg,
+				{ scale: 0.4, opacity: 0.5 },
+				{ scale: 1.15, opacity: 0.95, duration: 1, ease: "power1.out" },
 				0
 			);
 		}
