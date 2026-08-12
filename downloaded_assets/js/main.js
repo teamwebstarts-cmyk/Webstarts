@@ -467,20 +467,33 @@ function initAigoraScrollAnimation() {
 
 		const rings = area.querySelector('.concentric-rings');
 
-		const radius = 360; // Destination orbital radius
-		const totalCards = cards.length;
-		const verticalOffset = 600; // Large positive Y offset for straight upward travel
+		// Separate original inner cards (1 to 8) and outer concentric circle cards (9 to 13)
+		const innerCards = cards.slice(0, 8);
+		const outerCards = cards.slice(8);
 
-		// Calculate destination coordinates (finalX, finalY) for ALL detected cards
-		const cardData = cards.map((card, index) => {
-			const angle = (-Math.PI / 2) + (index * (2 * Math.PI / totalCards));
-			const finalX = Math.round(radius * Math.cos(angle));
-			const finalY = Math.round(radius * Math.sin(angle));
+		const innerRadius = 300; // Middle 300px ring for 8 inner cards
+		const outerRadius = 410; // Outer 410px concentric circle ring for 5 cloud/infra cards (AWS, Docker, GCP, Azure, PostgreSQL)
+		const verticalOffset = 600; // Positive Y offset for straight upward travel
 
-			// Initial starting Y position (strictly aligned with finalX, starting 600px below)
+		const cardData = [];
+
+		// Calculate destination coordinates for Inner Circle cards (1 to 8)
+		innerCards.forEach((card, index) => {
+			const angle = (-Math.PI / 2) + (index * (2 * Math.PI / innerCards.length));
+			const finalX = Math.round(innerRadius * Math.cos(angle));
+			const finalY = Math.round(innerRadius * Math.sin(angle));
 			const startY = finalY + verticalOffset;
+			cardData.push({ card, finalX, finalY, startY });
+		});
 
-			return { card, finalX, finalY, startY };
+		// Calculate destination coordinates for Outer Concentric Circle cards (PostgreSQL, Docker, GCP, Azure, AWS)
+		// Offset starting angle so all 5 cards spread evenly along the outer ring (Top-Left, Top-Right, Mid-Right, Bottom, Mid-Left)
+		outerCards.forEach((card, index) => {
+			const angle = (-Math.PI / 2 - Math.PI / 5) + (index * (2 * Math.PI / outerCards.length));
+			const finalX = Math.round(outerRadius * Math.cos(angle));
+			const finalY = Math.round(outerRadius * Math.sin(angle));
+			const startY = finalY + verticalOffset;
+			cardData.push({ card, finalX, finalY, startY });
 		});
 
 		// Position cards with absolute centering and destination X alignment
@@ -490,7 +503,7 @@ function initAigoraScrollAnimation() {
 				top: '50%',
 				left: '50%',
 				xPercent: -50,
-				yPercent: -50,
+				yPercent: -40, // Visual midpoint adjustment for top icon + card body combined
 				x: finalX,
 				opacity: 1
 			});

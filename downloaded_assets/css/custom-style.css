@@ -55,18 +55,82 @@
     color: #555555 !important;
 }
 
-/* Shift footer widgets (Useful Links, Services, Contact Info) towards the right with balanced spacing */
+/* Center-align FAQ section content */
+.ag-faqs-2-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    max-width: 850px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+}
+
+.ag-faqs-2-left {
+    width: 100% !important;
+}
+
+.ag-faqs-2-sec-title {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.ag-faqs-2-sec-title .ag-sec-title-1 {
+    max-width: 100% !important;
+    text-align: center !important;
+}
+
+.ag-accordion {
+    text-align: left !important;
+}
+
+/* Footer Top Layout & Right-Side Booking Card */
 .ag-footer-1-top {
-    justify-content: flex-start !important;
-    gap: 30px 50px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    flex-wrap: wrap !important;
+    gap: 30px 25px !important;
 }
 
 .ag-footer-1-widget:nth-child(1) {
-    margin-right: auto !important;
+    margin-right: 10px !important;
 }
 
 .ag-footer-1-widget:nth-child(2) {
+    margin-left: 0 !important;
+}
+
+.ag-footer-booking-widget {
     margin-left: auto !important;
+    max-width: 320px !important;
+}
+
+.ag-footer-booking-widget .ag-faqs-2-booking {
+    background-color: #F8F8F8 !important;
+    border: 1px solid #EAEAEA !important;
+    border-radius: 20px !important;
+    padding: 24px 20px !important;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.04) !important;
+}
+
+.ag-footer-booking-widget .ag-faqs-2-booking .title {
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+    color: #111111 !important;
+    margin-bottom: 8px !important;
+}
+
+.ag-footer-booking-widget .ag-faqs-2-booking .disc {
+    font-size: 12.5px !important;
+    line-height: 1.4 !important;
+    color: #555555 !important;
+    margin-bottom: 16px !important;
+}
+
+.ag-footer-booking-widget .ag-faqs-2-booking .btn-wrap {
+    gap: 10px !important;
 }
 
 /* Remove Plus (+) Icon & Hover Overlay from all Grids, Gallery and Card Hovers */

@@ -6964,8 +6964,8 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
 .ag-features-1-wrap {
   width: 100%;
-  max-width: 1000px;
-  height: 820px;
+  max-width: 1150px;
+  height: 1020px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -7102,7 +7102,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
   filter: blur(0px);
 }
 
-/* Staggered Delays for all 8 Cards */
+/* Staggered Delays for all 13 Cards */
 .ag-features-1-area.in-view .skill-card-1 { transition-delay: 0.1s; }
 .ag-features-1-area.in-view .skill-card-2 { transition-delay: 0.2s; }
 .ag-features-1-area.in-view .skill-card-3 { transition-delay: 0.3s; }
@@ -7111,16 +7111,28 @@ only screen and (min-width: 768px) and (max-width: 991px),
 .ag-features-1-area.in-view .skill-card-6 { transition-delay: 0.6s; }
 .ag-features-1-area.in-view .skill-card-7 { transition-delay: 0.7s; }
 .ag-features-1-area.in-view .skill-card-8 { transition-delay: 0.8s; }
+.ag-features-1-area.in-view .skill-card-9 { transition-delay: 0.9s; }
+.ag-features-1-area.in-view .skill-card-10 { transition-delay: 1.0s; }
+.ag-features-1-area.in-view .skill-card-11 { transition-delay: 1.1s; }
+.ag-features-1-area.in-view .skill-card-12 { transition-delay: 1.2s; }
+.ag-features-1-area.in-view .skill-card-13 { transition-delay: 1.3s; }
 
-/* 8 Orbital Positions around 720px circle (R = 360px) */
-.skill-card-1 { top: calc(50% - 360px); left: 50%; }
-.skill-card-2 { top: calc(50% - 255px); left: calc(50% + 255px); }
-.skill-card-3 { top: 50%; left: calc(50% + 360px); }
-.skill-card-4 { top: calc(50% + 255px); left: calc(50% + 255px); }
-.skill-card-5 { top: calc(50% + 360px); left: 50%; }
-.skill-card-6 { top: calc(50% + 255px); left: calc(50% - 255px); }
-.skill-card-7 { top: 50%; left: calc(50% - 360px); }
-.skill-card-8 { top: calc(50% - 255px); left: calc(50% - 255px); }
+/* Inner Orbit Positions (Cards 1 to 8, R = 300px - all 8 cards aligned precisely on 300px circle line) */
+.skill-card-1 { top: calc(50% - 300px); left: 50%; }
+.skill-card-2 { top: calc(50% - 212px); left: calc(50% + 212px); }
+.skill-card-3 { top: 50%; left: calc(50% + 300px); }
+.skill-card-4 { top: calc(50% + 212px); left: calc(50% + 212px); }
+.skill-card-5 { top: calc(50% + 300px); left: 50%; }
+.skill-card-6 { top: calc(50% + 212px); left: calc(50% - 212px); }
+.skill-card-7 { top: 50%; left: calc(50% - 300px); }
+.skill-card-8 { top: calc(50% - 212px); left: calc(50% - 212px); }
+
+/* Outer Concentric Circle Positions (Cards 9 to 13, R = 410px - PostgreSQL, Docker, GCP, Azure, AWS) */
+.skill-card-9  { top: calc(50% - 332px); left: calc(50% - 241px); }
+.skill-card-10 { top: calc(50% - 332px); left: calc(50% + 241px); }
+.skill-card-11 { top: calc(50% + 127px); left: calc(50% + 390px); }
+.skill-card-12 { top: calc(50% + 410px); left: 50%; }
+.skill-card-13 { top: calc(50% + 127px); left: calc(50% - 390px); }
 
 /* Center Hub Styling */
 .ag-features-1-content {
