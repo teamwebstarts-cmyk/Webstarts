@@ -30,11 +30,11 @@ $('a[href^="#"]').on('click', function (e) {
 
 	if (target.length) {
         lenis.scrollTo(target[0], {
-            duration: 1.15,
-            easing: (t) => 1 - Math.pow(1 - t, 3),
+            immediate: true // Instantly jump to section without scroll animation
         });
 	}
 });
+
 
 
 CustomEase.create("ease1", "0.16,1,0.3,1");

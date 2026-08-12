@@ -54,4 +54,180 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 						background-image: none !important;
 					}
 				}
+html, body {
+  scroll-behavior: auto !important;
+}
 
+/* Custom Hierarchy Split Team Section Layout (Matching Mockup Design) */
+.team-featured-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(233, 70, 37, 0.4);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 0 25px rgba(233, 70, 37, 0.08);
+  transition: all 0.3s ease;
+}
+.team-featured-card:hover {
+  border-color: #E94625;
+  box-shadow: 0 0 30px rgba(233, 70, 37, 0.25);
+}
+.featured-img-wrap {
+  border-radius: 18px;
+  border: 1.5px solid rgba(233, 70, 37, 0.6);
+  overflow: hidden;
+  height: 250px;
+}
+.featured-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.role-icon-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+.action-circle-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #E94625;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+.action-circle-btn:hover {
+  transform: scale(1.1);
+  color: #fff;
+}
+.member-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+  font-family: var(--aigora-heading-font, 'Clash Grotesk', sans-serif);
+}
+.member-role {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 12px;
+}
+.member-quote {
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 16px;
+}
+.btn-orange-sm {
+  display: inline-block;
+  background: #E94625;
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.btn-orange-sm:hover {
+  background: #ff5634;
+  color: #ffffff;
+}
+
+/* Compact Category Cards (Bottom Row) */
+.team-compact-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(233, 70, 37, 0.35);
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(233, 70, 37, 0.05);
+  transition: all 0.3s ease;
+}
+.team-compact-card:hover {
+  border-color: #E94625;
+  box-shadow: 0 0 25px rgba(233, 70, 37, 0.2);
+  transform: translateY(-4px);
+}
+.category-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.compact-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+}
+.compact-img-wrap {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  height: 200px;
+}
+.compact-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.compact-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.compact-role {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.compact-desc {
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0;
+}
+
+/* Skills / Technologies Section Layering & Occlusion (Aigora Style Depth) */
+.ag-features-1-card {
+  z-index: 2 !important;
+}
+.skill-card {
+  z-index: 2 !important;
+}
+
+.ag-features-1-content-wrap {
+  z-index: 10 !important;
+  pointer-events: none;
+}
+
+.ag-features-1-content {
+  z-index: 10 !important;
+  position: relative !important;
+  background-color: #FFFFFF !important;
+  opacity: 1 !important;
+  pointer-events: auto;
+  box-shadow: 0px 14px 36px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Completely Remove Extra Static Decorative Concentric Rings */
+.concentric-rings,
+.concentric-rings-svg,
+.circle-1,
+.circle-2 {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
