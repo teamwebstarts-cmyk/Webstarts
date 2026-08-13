@@ -61,6 +61,28 @@
     box-shadow: 0 0 0 3px rgba(253, 63, 0, 0.15);
 }
 
+/* Reset / Cross Filter Button */
+.ws-filter-reset {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: #fd3f00;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 4px 14px rgba(253, 63, 0, 0.22);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    flex-shrink: 0;
+}
+.ws-filter-reset:hover {
+    background: #e03700;
+    transform: scale(1.08);
+}
+
 /* Dynamic Project Count */
 .ws-filter-count {
     text-align: center;
@@ -372,17 +394,18 @@
 /* RIGHT media */
 .ws-detail-media { display: flex; flex-direction: column; gap: 16px; }
 .ws-detail-main-img {
-    border-radius: 16px; overflow: hidden; background: #fff;
-    box-shadow: 0 8px 30px rgba(17,24,39,.08); aspect-ratio: 16/10;
+    border-radius: 16px; overflow: hidden; background: #0f172a;
+    box-shadow: 0 8px 30px rgba(17,24,39,.08); height: 480px;
+    display: flex; align-items: center; justify-content: center;
 }
-.ws-detail-main-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ws-detail-main-img img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block; }
 .ws-detail-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .ws-thumb {
-    border-radius: 12px; overflow: hidden; cursor: pointer; aspect-ratio: 4/3;
-    border: 2px solid transparent; transition: border-color .2s, transform .2s; background:#fff;
+    border-radius: 12px; overflow: hidden; cursor: pointer; height: 110px;
+    border: 2px solid transparent; transition: border-color .2s, transform .2s; background: #0f172a;
+    display: flex; align-items: center; justify-content: center;
 }
-.ws-thumb img, .ws-thumb { width: 100%; }
-.ws-thumb { object-fit: cover; }
+.ws-thumb img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
 .ws-thumb.is-active { border-color: #fd3f00; }
 .ws-thumb:hover { transform: translateY(-3px); }
 

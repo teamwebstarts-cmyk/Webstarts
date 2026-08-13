@@ -26,7 +26,7 @@
             <div class="ag-preloader-1-wrap" role="status" aria-label="Loading Webstarts">
                 <div class="ag-preloader-1-core">
                     <svg class="ag-preloader-1-ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46"></circle></svg>
-                    <div class="ag-preloader-1-logo"><img src="../downloaded_images/logo-1.svg" alt="WebStarts logo"></div>
+                    <div class="ag-preloader-1-logo"><img src="../downloaded_images/webstarts-logo.webp" alt="WebStarts logo"></div>
                 </div>
                 <p class="ag-preloader-1-label">Loading</p>
             </div>
@@ -114,7 +114,6 @@
                     <img id="ws-hero" src="" alt="Project hero">
                 </div>
                 <div class="ws-detail-thumbs" id="ws-thumbs"></div>
-                <div class="ws-detail-stats" id="ws-stats"></div>
             </div>
 
         </div>
@@ -187,8 +186,8 @@ var WS_PROJECTS = {
         overview: "The WebStarts marketing site is the front door to everything we build — a hand-crafted, blazing-fast static showcase for our software, mobile and AI services. Rebranded from a generic template into a confident WebStarts identity that turns visitors into conversations.",
         features: ["Rebranded template into a distinct WebStarts identity","Filterable portfolio across 4 dimensions (category, domain, tech, engagement)","Per-project case-study pages with real repo links","Pixel-tuned responsive layout for desktop & mobile","Zero-backend static hosting for instant load"],
         tech: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-        hero: "../downloaded_images/grid-website.jpg",
-        thumbs: ["../downloaded_images/grid-website.jpg", "../downloaded_images/grid-landing.png", "../downloaded_images/grid-seo.jpg"],
+        hero: "../downloaded_images/webstart_mockup.png",
+        thumbs: ["../downloaded_images/webstarts_team_section.png", "../downloaded_images/webstarts_process_section.png", "../downloaded_images/services_saas_product.png"],
         cta: "https://github.com/teamwebstarts-cmyk/Webstarts",
         live: "",
         stats: [["Language","HTML"],["Size","46 MB"]]
@@ -199,8 +198,8 @@ var WS_PROJECTS = {
         overview: "Samyoj turns a business WhatsApp number into a full customer-operation hub. Built on the official Meta Cloud API with a PERN stack, it handles multi-number inboxes, broadcast campaigns and chatbots — so SMBs can automate support without losing the human touch.",
         features: ["JWT auth with org-based, multi-team accounts","Meta Embedded Signup + webhook verification","Shared team inbox with realtime Socket.IO messaging","Keyword replies & business-hours automation","Queue-based broadcasts via BullMQ (no rate-limit bans)","Delivery / read-rate analytics dashboard"],
         tech: ["TypeScript", "React 18", "Node.js", "PostgreSQL", "Prisma", "Redis", "BullMQ", "Socket.IO"],
-        hero: "../downloaded_images/grid-crm.jpg",
-        thumbs: ["../downloaded_images/grid-crm.jpg", "../downloaded_images/grid-api.jpg", "../downloaded_images/grid-cloud.jpg"],
+        hero: "../downloaded_images/mockup_image_samyoj.png",
+        thumbs: ["../downloaded_images/samyoj_ai_chatbot.png", "../downloaded_images/samyoj_broadcasts.png", "../downloaded_images/samyoj_industry.png"],
         cta: "https://github.com/teamwebstarts-cmyk/Samyoj",
         live: "",
         stats: [["Language","TypeScript"],["DB","PostgreSQL"]]
@@ -218,37 +217,37 @@ var WS_PROJECTS = {
         stats: [["Language","TypeScript"],["Memory","pgvector"]]
     },
     aiworker: {
-        name: "AI-worker-2 — Automation Engine", tag: "AI / Automation", subtitle: "Autonomous background worker for AI tasks",
+        name: "Verbotix-GEO AI Agent", tag: "AI / Automation", subtitle: "Autonomous background worker for AI tasks",
         category: "AI / Automation", domain: "Backend / Tooling", year: "2026", stack: "Python + TS",
         overview: "AI-worker-2 is the autonomous engine behind our product suite — a containerised background worker that plans and runs AI tasks end-to-end, orchestrating LLM calls, job queues and tool use so features just work.",
         features: ["LLM orchestration with tool calling","Queue-based, fault-tolerant job processing","Dockerised for reproducible runs anywhere","Pluggable task definitions","Structured logs & live status observability"],
         tech: ["Python", "TypeScript", "Docker", "Shell"],
-        hero: "../downloaded_images/grid-api.jpg",
-        thumbs: ["../downloaded_images/grid-api.jpg", "../downloaded_images/grid-cloud.jpg", "../downloaded_images/grid-ai.jpg"],
+        hero: "../downloaded_images/verbotix_mockup_image.png",
+        thumbs: ["../downloaded_images/verbotix_process.png", "../downloaded_images/verbotix_dashboard.png", "../downloaded_images/verbotix_features.png"],
         cta: "https://github.com/teamwebstarts-cmyk/AI-worker-2",
         live: "",
         stats: [["Language","Python"],["Packaging","Docker"]]
     },
     samyojweb: {
-        name: "Samyoj Website v0.2", tag: "Marketing Site", subtitle: "Public landing page for the Samyoj CRM",
-        category: "Marketing Site", domain: "Web / Brand", year: "2026", stack: "Static",
-        overview: "The public face of Samyoj — a conversion-focused landing site that turns curious visitors into trial sign-ups. Clean feature tours, transparent pricing and lead-capture forms, all delivered as a fast static site.",
-        features: ["Guided feature-tour sections","Pricing & CTA blocks that convert","Lead-capture forms wired to the CRM","SEO-ready structure & metadata","Instant static delivery worldwide"],
-        tech: ["HTML", "CSS", "JavaScript"],
-        hero: "../downloaded_images/grid-landing.png",
-        thumbs: ["../downloaded_images/grid-landing.png", "../downloaded_images/grid-website.jpg", "../downloaded_images/grid-seo.jpg"],
-        cta: "https://github.com/teamwebstarts-cmyk/samyoj-website-0.2",
-        live: "",
-        stats: [["Language","HTML"],["Size","172 MB"]]
+        name: "Fyngo — Find Anything Nearby", tag: "Mobile App", subtitle: "Hyperlocal search & discovery mobile application",
+        category: "Mobile App", domain: "Hyperlocal / Discovery", year: "2026", stack: "React Native + Node",
+        overview: "Fyngo is a mobile app designed to help users instantly find local businesses, services, products, and deals around them. Built with React Native and a high-performance geolocation backend, Fyngo bridges the gap between nearby merchants and local consumers.",
+        features: ["Realtime geolocation-based nearby search","Interactive map view with category filters","Merchant profiles with ratings & direct contact","Instant deal & offer notifications","Lightweight cross-platform mobile architecture"],
+        tech: ["React Native", "Android", "Node.js", "Express", "MongoDB", "Google Maps API"],
+        hero: "../downloaded_images/fyngo_mockup.png",
+        thumbs: ["../downloaded_images/fyngo_deals.png", "../downloaded_images/fyngo_map.png", "../downloaded_images/fyngo_location.png"],
+        cta: "#",
+        live: "https://play.google.com/store/apps/details?id=com.anonymous.find&hl=en_IN",
+        stats: [["Platform","Android"],["Stack","React Native"]]
     },
     exora: {
-        name: "Exora — Client Website", tag: "Client Project", subtitle: "Corporate website for the Exora brand",
+        name: "Exora — Ambiance", tag: "Client Project", subtitle: "Corporate website for the Exora brand",
         category: "Client Project", domain: "Web / Brand", year: "2026", stack: "Static",
         overview: "A corporate website and brand presence for the Exora client — fast, responsive and CMS-driven, engineered to capture leads and look sharp on every screen.",
         features: ["Responsive marketing site, mobile-first","CMS-driven content the client controls","Lead-capture forms with validation","Analytics & event tracking wired in","Brand-consistent visual system"],
         tech: ["HTML", "CSS", "JavaScript", "Python"],
-        hero: "../downloaded_images/grid-website.jpg",
-        thumbs: ["../downloaded_images/grid-website.jpg", "../downloaded_images/grid-landing.png", "../downloaded_images/grid-uiux.png"],
+        hero: "../downloaded_images/mockup_image_exora.png",
+        thumbs: ["../downloaded_images/exora_about.png", "../downloaded_images/exora_services.png", "../downloaded_images/exora_events.png"],
         cta: "https://github.com/teamwebstarts-cmyk/clint-website-exora",
         live: "",
         stats: [["Language","HTML/CSS"],["Size","71 MB"]]
@@ -266,16 +265,16 @@ var WS_PROJECTS = {
         stats: [["Frontend","React+Vite"],["Backend","Express"]]
     },
     raceservice: {
-        name: "RACE Service — Towing App", tag: "Mobile App", subtitle: "Premium roadside assistance platform",
-        category: "Mobile App", domain: "Mobility / Services", year: "2026", stack: "Expo RN",
-        overview: "A premium roadside-assistance / towing platform built with Expo (React Native). The foundation layer ships a complete design system, hand-rolled inline-SVG icon set and illustrations, file-based routing (expo-router), a Zustand auth store and a floating-nav shell — ready for downstream feature subagents to build real screens on top.",
-        features: ["Expo SDK 52 + expo-router (typed routes)","TypeScript strict mode","Zustand auth store","Hand-rolled inline-SVG icons & illustrations","react-native-reanimated ready","Floating nav shell (expo-blur)"],
-        tech: ["TypeScript", "React Native", "Expo", "Zustand", "react-native-svg", "expo-router"],
-        hero: "../downloaded_images/grid-mobile.jpg",
-        thumbs: ["../downloaded_images/grid-mobile.jpg", "../downloaded_images/grid-uiux.png", "../downloaded_images/grid-cloud.jpg"],
+        name: "Adipeli — Cart Sync App", tag: "Mobile App", subtitle: "E-commerce cart synchronization & deals mobile application",
+        category: "Mobile App", domain: "E-Commerce / Sync", year: "2026", stack: "React Native + Node",
+        overview: "Adipeli is a mobile app engineered to streamline e-commerce shopping by synchronizing carts across devices, tracking deals, and managing rewards in real time. Built with React Native and a secure API backend, it delivers a fast and intuitive shopping experience.",
+        features: ["Cross-device realtime cart synchronization","Instant discount & deal tracking","Merchant reward & voucher manager","Secure authentication & push notifications","Clean, responsive cross-platform UI"],
+        tech: ["React Native", "Android", "Node.js", "Express", "MongoDB", "REST API"],
+        hero: "../downloaded_images/adipeli_mockup.png",
+        thumbs: ["../downloaded_images/adipeli_shot1.png", "../downloaded_images/adipeli_shot2.png", "../downloaded_images/adipeli_shot3.png"],
         cta: "#",
-        live: "",
-        stats: [["Framework","Expo SDK 52"],["Language","TypeScript"]]
+        live: "https://play.google.com/store/apps/details?id=com.anonymous.cartSync&hl=en_IN",
+        stats: [["Platform","Android"],["Stack","React Native"]]
     },
     shopipharm: {
         name: "Pharmacy Shopify Store", tag: "Client Project", subtitle: "Shopify pharmacy on the Ella theme",
@@ -337,13 +336,16 @@ var WS_PROJECTS = {
             var s = document.createElement('span'); s.textContent = t; tt.appendChild(s);
         });
 
-        var st = document.getElementById('ws-stats'); st.innerHTML = '';
-        (p.stats || []).forEach(function (row) {
-            var d = document.createElement('div');
-            d.className = 'ws-stat';
-            d.innerHTML = '<span class="ws-stat-v">' + row[1] + '</span><span class="ws-stat-k">' + row[0] + '</span>';
-            st.appendChild(d);
-        });
+        var st = document.getElementById('ws-stats');
+        if (st) {
+            st.innerHTML = '';
+            (p.stats || []).forEach(function (row) {
+                var d = document.createElement('div');
+                d.className = 'ws-stat';
+                d.innerHTML = '<span class="ws-stat-v">' + row[1] + '</span><span class="ws-stat-k">' + row[0] + '</span>';
+                st.appendChild(d);
+            });
+        }
 
         document.getElementById('ws-hero').setAttribute('src', p.hero);
         document.getElementById('ws-hero').setAttribute('alt', p.name + ' hero');
@@ -351,7 +353,7 @@ var WS_PROJECTS = {
         (p.thumbs || []).forEach(function (src, i) {
             var img = document.createElement('img');
             img.src = src; img.alt = p.name + ' screenshot ' + (i + 1);
-            img.className = 'ws-thumb' + (i === 0 ? ' is-active' : '');
+            img.className = 'ws-thumb' + (src === p.hero ? ' is-active' : '');
             img.addEventListener('click', function () {
                 document.getElementById('ws-hero').src = src;
                 th.querySelectorAll('.ws-thumb').forEach(function (x) { x.classList.remove('is-active'); });

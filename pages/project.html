@@ -32,7 +32,7 @@
                         <circle cx="50" cy="50" r="46"></circle>
                     </svg>
                                             <div class="ag-preloader-1-logo">
-                            <img src="../downloaded_images/logo-1.svg" alt="WebStarts logo">
+                            <img src="../downloaded_images/webstarts-logo.webp" alt="WebStarts logo">
                         </div>
                                     </div>
 
@@ -48,34 +48,91 @@
             </svg>
         </div>
         <header class="ag-header-1-area wa_sticky_header">
-    <div class="container">
-        <div class="ag-header-1-wrap">
-            <div class="ag-header-1-main">
-                <div class="ag-header-1-logo">
-                    <a href="../index.html">
-                        <img class="logo_site-size" src="../downloaded_images/webstarts-logo.webp"
-                            alt="WebStarts logo">
-                    </a>
+            <div class="container">
+                <div class="ag-header-1-wrap">
+                    <div class="ag-header-1-main">
+                        <!-- logo -->
+                        <div class="ag-header-1-logo">
+                            <a href="../index.html">
+                                <img class="logo_site-size" src="../downloaded_images/webstarts-logo.webp"
+                                    alt="WebStarts logo">
+                            </a>
+                        </div>
+                        <!-- offcanvas-btn -->
+                        <button type="button" aria-label="Toggle Navigation Menu"
+                            class="ag-offcanvas-btn-1 offcanvas_toggle">
+                            <i class="ph ph-list"></i>
+                            <i class="ph ph-x"></i>
+                        </button>
+
+                        <a href="../index.html#contact" aria-label="Contact Webstarts" class="ag-pr-btn-1">
+                            <span class="icon">
+                                <i class="ph ph-arrow-right"></i>
+                                <i class="ph ph-arrow-right"></i>
+                            </span>
+                            <span class="text">
+                                Let's Talk </span>
+                        </a>
+                    </div>
+
+                    <!-- menu -->
+                    <div class="ag-header-1-menu">
+                        <nav class="ag-main-navigation">
+                            <ul id="main-nav" class="nav navbar-nav">
+                                <li class="menu-item">
+                                    <a href="../index.html#home">Home</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="../index.html#about">About Us</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="../index.html#services">Services</a>
+                                </li>
+                                <li class="menu-item dropdown">
+                                    <a href="#">Products</a>
+                                    <ul class="dropdown-menu clearfix">
+                                        <li class="menu-item">
+                                            <a href="https://samyoj.com/" target="_blank"
+                                                rel="noopener noreferrer">Samyoj</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item current-menu-item">
+                                    <a href="project.html">Portfolio</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="../index.html#contact">Contact Us</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
                 </div>
-                <button type="button" aria-label="Toggle Navigation Menu"
-                    class="ag-offcanvas-btn-1 offcanvas_toggle">
-                    <i class="ph ph-list"></i>
-                    <i class="ph ph-x"></i>
-                </button>
-
-                <a href="../index.html#contact" aria-label="Contact Webstarts" class="ag-pr-btn-1">
-                    <span class="icon">
-                        <i class="ph ph-arrow-right"></i>
-                        <i class="ph ph-arrow-right"></i>
-                    </span>
-                    <span class="text">
-                        Let's Talk </span>
-                </a>
             </div>
+        </header>
 
-            <div class="ag-header-1-menu">
-                <nav class="ag-main-navigation">
-                    <ul id="main-nav" class="nav navbar-nav">
+        <!-- Mobile Offcanvas Menu -->
+        <div class="wa-offcanvas-area offcanvas_box_active lenis lenis-smooth d-xl-none">
+            <div class="wa-offcanvas-wrap">
+
+                <!-- top -->
+                <div class="wa-offcanvas-top">
+                    <!-- logo -->
+                    <a href="../index.html" class="wa-offcanvas-top-logo" aria-label="Webstarts Home">
+                        <img class="logo_site-m-size" src="../downloaded_images/webstarts-logo.webp"
+                            alt="Webstarts logo">
+                    </a>
+                    <!-- close-btn -->
+                    <button class="wa-offcanvas-close offcanvas_box_close"
+                        aria-label="Close Navigation Menu">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <!-- mobile-menu-list -->
+                <nav class="mobile-main-navigation mb-50 d-block d-xxl-none">
+                    <ul id="m-main-nav" class="navbar-nav">
                         <li class="menu-item">
                             <a href="../index.html#home">Home</a>
                         </li>
@@ -85,6 +142,15 @@
                         <li class="menu-item">
                             <a href="../index.html#services">Services</a>
                         </li>
+                        <li class="menu-item dropdown">
+                            <a href="#">Products</a>
+                            <ul class="dropdown-menu clearfix">
+                                <li class="menu-item">
+                                    <a href="https://samyoj.com/" target="_blank"
+                                        rel="noopener noreferrer">Samyoj</a>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="menu-item current-menu-item">
                             <a href="project.html">Portfolio</a>
                         </li>
@@ -93,11 +159,9 @@
                         </li>
                     </ul>
                 </nav>
-            </div>
 
+            </div>
         </div>
-    </div>
-</header>
 
 	<section class="ag-breadcrumb-area wa-p-relative wa-fix" data-mask-image="../downloaded_images/breadcrumb.png">
 					<div class="ag-breadcrumb-bg-img wa-fix wa-img-cover">
@@ -125,24 +189,26 @@
             <p class="ws-portfolio-intro">A selection of digital products, platforms and experiences we've designed and built.</p>
         </div>
 
-        <!-- FILTER BAR (3 dropdowns: Category, Domain, Technology) -->
+        <!-- FILTER BAR (3 dropdowns + Reset button) -->
         <div class="ws-filter-bar">
             <span class="ws-filter-icon" aria-hidden="true"><i class="ph ph-funnel"></i></span>
             <select class="ws-filter-select" id="f-category" aria-label="Filter by Category">
                 <option value="all">All Categories</option>
-                <option value="saas">SaaS Platform</option>
                 <option value="web">Web App</option>
+                <option value="saas">SaaS Platform</option>
+                <option value="ai">AI & Automation</option>
                 <option value="mobile">Mobile App</option>
-                <option value="ai">AI Product</option>
                 <option value="client">Client Project</option>
             </select>
             <select class="ws-filter-select" id="f-domain" aria-label="Filter by Domain">
                 <option value="all">All Domains</option>
-                <option value="avatar">Realtime Avatar Companion</option>
-                <option value="crm">CRM / Business</option>
-                <option value="erp">Education / ERP</option>
-                <option value="fintech">Finance / Trading</option>
-                <option value="geo">SEO / GEO</option>
+                <option value="brand">Brand & Showcase</option>
+                <option value="crm">CRM & Business</option>
+                <option value="companion">AI Companion</option>
+                <option value="geo">AI & Automation</option>
+                <option value="location">Local Discovery</option>
+                <option value="pharma">Healthcare & Pharmacy</option>
+                <option value="ecommerce">E-Commerce & Sync</option>
             </select>
             <select class="ws-filter-select" id="f-tech" aria-label="Filter by Technology">
                 <option value="all">All Technologies</option>
@@ -156,14 +222,13 @@
                 <option value="postgres">PostgreSQL</option>
                 <option value="mongodb">MongoDB</option>
                 <option value="shopify">Shopify</option>
-                <option value="expo">Expo</option>
             </select>
+            <button type="button" class="ws-filter-reset" id="ws-filter-reset" aria-label="Reset Filters" title="Reset Filters" style="display: none;">
+                <i class="ph ph-x"></i>
+            </button>
         </div>
 
-        <!-- PROJECT COUNT -->
-        <div class="ws-filter-count" id="ws-filter-count">
-            Showing <span id="ws-count-visible">9</span> of <span id="ws-count-total">9</span> projects
-        </div>
+
 
         <!-- GRID — 6 REAL GitHub projects (teamwebstarts-cmyk) -->
         <div class="ws-portfolio-grid" id="ws-grid">
@@ -176,7 +241,7 @@
                     <span class="ws-pcard-sub">Agency Website & Brand</span>
                 </div>
                 <div class="ws-pcard-body">
-                    <h3 class="ws-pcard-title">Webstarts — Agency Site</h3>
+                    <h3 class="ws-pcard-title">Webstarts - Agency Site</h3>
                     <p class="ws-pcard-desc">The WebStarts marketing site you are on — a hand-built static showcase for our software, mobile and AI services.</p>
                     <div class="ws-pcard-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
                     <a href="project-detail.html#webstarts" class="ws-pcard-link">View Project <span class="arrow">&rarr;</span></a>
@@ -191,7 +256,7 @@
                     <span class="ws-pcard-sub">WhatsApp Business Cloud</span>
                 </div>
                 <div class="ws-pcard-body">
-                    <h3 class="ws-pcard-title">Samyoj — WhatsApp CRM</h3>
+                    <h3 class="ws-pcard-title">Samyoj - WhatsApp CRM</h3>
                     <p class="ws-pcard-desc">Production-grade WhatsApp automation platform: shared inbox, broadcasts, chatbots and analytics on the official Meta Cloud API.</p>
                     <div class="ws-pcard-tags"><span>TypeScript</span><span>React</span><span>PostgreSQL</span><span>+4</span></div>
                     <a href="project-detail.html#samyoj" class="ws-pcard-link">View Project <span class="arrow">&rarr;</span></a>
@@ -205,7 +270,7 @@
                     <span class="ws-pcard-sub">Realtime Avatar Companion</span>
                 </div>
                 <div class="ws-pcard-body">
-                    <h3 class="ws-pcard-title">AURA — AI Companion</h3>
+                    <h3 class="ws-pcard-title">AURA - AI Companion</h3>
                     <p class="ws-pcard-desc">Multi-persona voice companion with a photorealistic realtime avatar — listens, thinks, expresses emotion and remembers context.</p>
                     <div class="ws-pcard-tags"><span>TypeScript</span><span>React Native</span><span>Supabase</span><span>+3</span></div>
                     <a href="project-detail.html#aura" class="ws-pcard-link">View Project <span class="arrow">&rarr;</span></a>
@@ -214,28 +279,30 @@
 
             <!-- 4: AI-worker-2 -->
             <article class="ws-pcard" data-category="ai" data-domain="geo" data-tech="python typescript" data-engagement="product">
-                <div class="ws-pcard-img ws-theme-green">
+                <div class="ws-pcard-img has-img">
+                    <img src="../downloaded_images/verbotix_mockup_image.png" alt="Verbotix-GEO AI Agent" class="ws-pcard-bg-img">
                     <span class="ws-pcard-tag">AI / Automation</span>
                     <span class="ws-pcard-sub">Autonomous Worker</span>
                 </div>
                 <div class="ws-pcard-body">
-                    <h3 class="ws-pcard-title">AI-worker-2 — Automation Engine</h3>
+                    <h3 class="ws-pcard-title">Verbotix-GEO AI Agent</h3>
                     <p class="ws-pcard-desc">Background worker that runs autonomous AI tasks — orchestrating LLM calls, queues and tool use for our product suite.</p>
                     <div class="ws-pcard-tags"><span>Python</span><span>TypeScript</span><span>Docker</span></div>
                     <a href="project-detail.html#aiworker" class="ws-pcard-link">View Project <span class="arrow">&rarr;</span></a>
                 </div>
             </article>
 
-            <!-- 5: samyoj-website-0.2 -->
-            <article class="ws-pcard" data-category="web" data-domain="crm" data-tech="html css" data-engagement="product">
-                <div class="ws-pcard-img ws-theme-light">
-                    <span class="ws-pcard-tag">Marketing Site</span>
-                    <span class="ws-pcard-sub">Product Landing Page</span>
+            <!-- 5: Fyngo App -->
+            <article class="ws-pcard" data-category="mobile" data-domain="location" data-tech="react-native android" data-engagement="product">
+                <div class="ws-pcard-img has-img">
+                    <img src="../downloaded_images/fyngo_mockup.png" alt="Fyngo — Local Discovery App" class="ws-pcard-bg-img">
+                    <span class="ws-pcard-tag">Mobile App</span>
+                    <span class="ws-pcard-sub">Local Search & Discovery</span>
                 </div>
                 <div class="ws-pcard-body">
-                    <h3 class="ws-pcard-title">Samyoj Website v0.2</h3>
-                    <p class="ws-pcard-desc">Public marketing site for the Samyoj WhatsApp CRM — conversion-focused landing with feature tours and pricing.</p>
-                    <div class="ws-pcard-tags"><span>HTML</span><span>CSS</span></div>
+                    <h3 class="ws-pcard-title">Fyngo - Find Anything Nearby</h3>
+                    <p class="ws-pcard-desc">Hyperlocal discovery & search app — find local businesses, services, products and deals around you in real time.</p>
+                    <div class="ws-pcard-tags"><span>React Native</span><span>Android</span><span>Node.js</span></div>
                     <a href="project-detail.html#samyojweb" class="ws-pcard-link">View Project <span class="arrow">&rarr;</span></a>
                 </div>
             </article>
@@ -243,12 +310,12 @@
             <!-- 6: clint-website-exora -->
             <article class="ws-pcard" data-category="client" data-domain="crm" data-tech="html css javascript" data-engagement="client">
                 <div class="ws-pcard-img has-img">
-                    <img src="../downloaded_images/mockup_image_exora.png" alt="Exora — Client Website" class="ws-pcard-bg-img">
+                    <img src="../downloaded_images/mockup_image_exora.png" alt="Exora — Ambiance" class="ws-pcard-bg-img">
                     <span class="ws-pcard-tag">Client Project</span>
                     <span class="ws-pcard-sub">Corporate Website</span>
                 </div>
                 <div class="ws-pcard-body">
-                    <h3 class="ws-pcard-title">Exora — Client Website</h3>
+                    <h3 class="ws-pcard-title">Exora - Ambiance</h3>
                     <p class="ws-pcard-desc">Corporate website and brand presence for the Exora client — fast, responsive and CMS-driven.</p>
                     <div class="ws-pcard-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
                     <a href="project-detail.html#exora" class="ws-pcard-link">View Project <span class="arrow">&rarr;</span></a>
@@ -262,23 +329,24 @@
                     <span class="ws-pcard-sub">Pharmacy Vendor Portal</span>
                 </div>
                 <div class="ws-pcard-body">
-                    <h3 class="ws-pcard-title">Pharma Audit — Vendor Portal</h3>
+                    <h3 class="ws-pcard-title">Pharma Audit - Vendor Portal</h3>
                     <p class="ws-pcard-desc">Pharmacy vendor & compliance portal: Node/Express API + React/Vite frontend with a Cal.com-inspired design system for vendor onboarding and audits.</p>
                     <div class="ws-pcard-tags"><span>TypeScript</span><span>React</span><span>Node.js</span><span>+2</span></div>
                     <a href="project-detail.html#pharmaaudit" class="ws-pcard-link">View Project <span class="arrow">&rarr;</span></a>
                 </div>
             </article>
 
-            <!-- 8: race-service -->
-            <article class="ws-pcard" data-category="mobile" data-domain="crm" data-tech="typescript react reactnative expo" data-engagement="product">
-                <div class="ws-pcard-img ws-theme-green">
+            <!-- 8: Adipeli App -->
+            <article class="ws-pcard" data-category="mobile" data-domain="ecommerce" data-tech="reactnative android node" data-engagement="product">
+                <div class="ws-pcard-img has-img">
+                    <img src="../downloaded_images/adipeli_mockup.png" alt="Adipeli — E-Commerce Cart Sync" class="ws-pcard-bg-img">
                     <span class="ws-pcard-tag">Mobile App</span>
-                    <span class="ws-pcard-sub">Roadside Assistance</span>
+                    <span class="ws-pcard-sub">E-Commerce & Cart Sync</span>
                 </div>
                 <div class="ws-pcard-body">
-                    <h3 class="ws-pcard-title">RACE Service — Towing App</h3>
-                    <p class="ws-pcard-desc">Premium roadside-assistance / towing platform built with Expo (React Native): design system, component library, icon set and auth store.</p>
-                    <div class="ws-pcard-tags"><span>TypeScript</span><span>React Native</span><span>Expo</span><span>Zustand</span></div>
+                    <h3 class="ws-pcard-title">Adipeli - Cart Sync App</h3>
+                    <p class="ws-pcard-desc">Smart e-commerce cart synchronization & deal management app — sync carts across devices and track shopping rewards in real time.</p>
+                    <div class="ws-pcard-tags"><span>React Native</span><span>Android</span><span>Node.js</span></div>
                     <a href="project-detail.html#raceservice" class="ws-pcard-link">View Project <span class="arrow">&rarr;</span></a>
                 </div>
             </article>
@@ -315,31 +383,114 @@
             <div class="ag-footer-1-top">
 
                 <div class="ag-footer-1-widget">
+                    <!-- brand -->
                     <div class="ag-footer-1-brand">
-                                                    <a href="../index.html"><img class="logo logo_site-size"
-                                    src="../downloaded_images/webstarts-logo.webp" alt="WebStarts logo"></a>
-                                                <p class="ag-p-1 disc">We craft impactful digital experiences that help brands grow globally</p>
-                                                    <div class="ag-footer-1-social">
-                                                                    <a target="_self" rel="" href="#" aria-label="Facebook" class="ag-footer-1-social-link"><i aria-hidden="true" class="fab fa-facebook-f"></i></a>
-                                                                    <a target="_self" rel="" href="#" aria-label="X" class="ag-footer-1-social-link"><i aria-hidden="true" class="fab fa-x-twitter"></i></a>
-                                                                    <a target="_self" rel="" href="#" aria-label="LinkedIn" class="ag-footer-1-social-link"><i aria-hidden="true" class="fab fa-linkedin-in"></i></a>
-                                                                    <a target="_self" rel="" href="#" aria-label="Instagram" class="ag-footer-1-social-link"><i aria-hidden="true" class="fab fa-instagram"></i></a>
-                                                            </div>
-                                            </div>
+                        <a href="../index.html"><img class="logo"
+                                src="../downloaded_images/webstarts-logo.webp"
+                                alt="WebStarts logo"></a>
+                        <p class="ag-p-1 disc">We craft impactful digital experiences that help brands grow globally.</p>
+                        <div class="ag-footer-1-social">
+                            <a target="_blank" rel="noopener noreferrer"
+                                href="https://www.facebook.com/" aria-label="Facebook"
+                                class="ag-footer-1-social-link">
+                                <i aria-hidden="true" class="fab fa-facebook-f"></i> </a>
+                            <a target="_blank" rel="noopener noreferrer"
+                                href="https://api.whatsapp.com/send/?phone=918305369467&text&type=phone_number&app_absent=0"
+                                aria-label="WhatsApp" class="ag-footer-1-social-link">
+                                <i aria-hidden="true" class="fab fa-whatsapp"></i> </a>
+                            <a target="_blank" rel="noopener noreferrer"
+                                href="https://www.linkedin.com/company/webstarts-in/"
+                                aria-label="LinkedIn" class="ag-footer-1-social-link">
+                                <i aria-hidden="true" class="fab fa-linkedin-in"></i> </a>
+                            <a target="_blank" rel="noopener noreferrer"
+                                href="https://www.instagram.com/webstarts.in?igsh=aWxsdXFmcTZvczMy"
+                                aria-label="Instagram" class="ag-footer-1-social-link">
+                                <i aria-hidden="true" class="fab fa-instagram"></i> </a>
+                        </div>
+                    </div>
                 </div>
 
-                                    <div class="ag-footer-1-widget">
-                                                    <h4 class="ag-h-1 ag-footer-1-widget-title">Useful Links <span></span><span></span></h4>
-                                                <ul><li><a href="about.html">About Us</a></li><li><a href="project.html">Our Portfolio</a></li><li><a href="blog.html">Articles</a></li><li><a href="contact.html">Contact Us</a></li></ul>                    </div>
-                                    <div class="ag-footer-1-widget">
-                                                    <h4 class="ag-h-1 ag-footer-1-widget-title">Services <span></span><span></span></h4>
-                                                <ul><li><a href="service.html">AI Workflow Automation</a></li><li><a href="service.html">Support Triage &amp; Ticketing</a></li><li><a href="service.html">Data Pipelines</a></li><li><a href="service.html">Support &amp; Monitoring</a></li></ul>                    </div>
-                        </div>
+                <div class="ag-footer-1-widget">
+                    <h4 class="ag-h-1 ag-footer-1-widget-title">
+                        Useful Links <span></span>
+                        <span></span>
+                    </h4>
+                    <ul>
+                        <li><a href="../index.html#about">About Us</a></li>
+                        <li><a href="../index.html#services">Services</a></li>
+                        <li><a href="project.html">Our Portfolio</a></li>
+                        <li><a href="../index.html#team">Our Team</a></li>
+                        <li><a href="../index.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="ag-footer-1-widget">
+                    <h4 class="ag-h-1 ag-footer-1-widget-title">
+                        Services <span></span>
+                        <span></span>
+                    </h4>
+                    <ul>
+                        <li><a href="../index.html#services">Website Development</a></li>
+                        <li><a href="../index.html#services">Mobile App Development</a></li>
+                        <li><a href="../index.html#services">AI &amp; Automation</a></li>
+                        <li><a href="../index.html#services">UI &amp; UX Design</a></li>
+                        <li><a href="../index.html#services">SEO Optimization</a></li>
+                    </ul>
+                </div>
+                <!-- contact info -->
+                <div class="ag-footer-1-widget">
+                    <h4 class="ag-h-1 ag-footer-1-widget-title">
+                        Contact Info <span></span>
+                        <span></span>
+                    </h4>
+                    <ul class="footer-contact-info mt-3" style="list-style: none; padding: 0;">
+                        <li class="ag-p-1 mb-2 d-flex align-items-center gap-2">
+                            <i class="ph-fill ph-phone-call"
+                                style="color: #E94625; font-size: 18px;"></i>
+                            <a href="tel:+919303618219" style="color: inherit;">+91 9303618219</a>
+                        </li>
+                        <li class="ag-p-1 mb-2 d-flex align-items-center gap-2">
+                            <i class="ph-fill ph-envelope"
+                                style="color: #E94625; font-size: 18px;"></i>
+                            <a href="mailto:support@webstart.in"
+                                style="color: inherit;">support@webstart.in</a>
+                        </li>
+                        <li class="ag-p-1 d-flex align-items-center gap-2">
+                            <i class="ph-fill ph-map-pin"
+                                style="color: #E94625; font-size: 18px;"></i>
+                            <span>Indore, Madhya Pradesh, India</span>
+                        </li>
+                    </ul>
+                </div>
 
-                            <div class="ag-footer-1-bottom">
-                    <p class="ag-p-1 copyright">Copyright © 2026 <a href="../index.html">WebStarts</a>.</p><p class="ag-p-1 rights">All rights reserved.</p>                </div>
+                <div class="ag-footer-1-widget ag-footer-booking-widget">
+                    <div class="ag-faqs-2-booking wa-p-relative wa-fix">
+                        <h4 class="ag-h-1 title">
+                            Still not sure? <br> Book a free <span>discovery call.</span>
+                        </h4>
+                        <p class="ag-p-1 disc">
+                            Learn more about how we work and how we can help you &amp; your business take the next step.
+                        </p>
+                        <div class="btn-wrap">
+                            <a href="../index.html#contact" aria-label="Schedule Call" class="ag-pr-btn-2">
+                                <span class="icon"><i class="ph ph-plus"></i></span>
+                                <span class="text" data-back="Schedule Now" data-front="Schedule Now"></span>
+                            </a>
+                            <a href="tel:+919303618219" class="ag-p-1 phone-btn">
+                                +91 9303618219
+                            </a>
+                        </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="ag-footer-1-bottom">
+                <p class="ag-p-1 copyright">Copyright © 2026 <a href="../index.html">WebStarts</a>.</p>
+                <p class="ag-p-1 rights">All rights reserved.</p>
+            </div>
+        </div>
     </div>
+    <h3 class="ag-footer-1-watermark wow slideInUp" data-wow-duration="1s">
+        WebStarts </h3>
 </footer>
 </div>
 
@@ -367,6 +518,7 @@ window.setTimeout(function () {
     var countVis = document.getElementById('ws-count-visible');
     var countTotal = document.getElementById('ws-count-total');
     var clearBtn = document.getElementById('ws-clear-filters');
+    var resetIconBtn = document.getElementById('ws-filter-reset');
 
     if (!cat || !dom || !tech || !cards.length) return;
 
@@ -379,6 +531,12 @@ window.setTimeout(function () {
         var d = dom.value.toLowerCase();
         var t = tech.value.toLowerCase();
         var visible = 0;
+
+        // Show/Hide cross reset icon when filters are active
+        var isFiltered = (c !== 'all' || d !== 'all' || t !== 'all');
+        if (resetIconBtn) {
+            resetIconBtn.style.display = isFiltered ? 'inline-flex' : 'none';
+        }
 
         cards.forEach(function (card) {
             var cardCat = (card.dataset.category || '').toLowerCase();
@@ -412,18 +570,19 @@ window.setTimeout(function () {
         }
     }
 
+    function resetAllFilters() {
+        cat.value = 'all';
+        dom.value = 'all';
+        tech.value = 'all';
+        applyFilter();
+    }
+
     cat.addEventListener('change', applyFilter);
     dom.addEventListener('change', applyFilter);
     tech.addEventListener('change', applyFilter);
 
-    if (clearBtn) {
-        clearBtn.addEventListener('click', function() {
-            cat.value = 'all';
-            dom.value = 'all';
-            tech.value = 'all';
-            applyFilter();
-        });
-    }
+    if (clearBtn) clearBtn.addEventListener('click', resetAllFilters);
+    if (resetIconBtn) resetIconBtn.addEventListener('click', resetAllFilters);
 
     applyFilter();
 })();

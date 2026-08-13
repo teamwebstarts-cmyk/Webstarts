@@ -2523,8 +2523,8 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 .ag-main-navigation .navbar-nav li:is(.dropdown)>a::before {
   display: block;
   content: "\f107";
-  font-family: "Font Awesome 6 free";
-  font-weight: 700;
+  font-family: "Font Awesome 5 Free", "Font Awesome 6 Free", sans-serif;
+  font-weight: 900;
   position: absolute;
   font-size: 13px;
   right: 0;
