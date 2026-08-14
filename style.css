@@ -72,6 +72,7 @@ html, body {
   box-shadow: 0 0 30px rgba(233, 70, 37, 0.25);
 }
 .featured-img-wrap {
+  position: relative;
   border-radius: 18px;
   border: 1.5px solid rgba(233, 70, 37, 0.6);
   overflow: hidden;
@@ -81,6 +82,110 @@ html, body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Glassmorphism Transparent LinkedIn Overlay on Hover */
+.team-social-overlay {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%) translateY(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 6px 14px;
+  border-radius: 30px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 5;
+}
+
+.featured-img-wrap:hover .team-social-overlay,
+.compact-img-wrap:hover .team-social-overlay,
+.team-featured-card:hover .team-social-overlay,
+.team-compact-card:hover .team-social-overlay {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.featured-img-wrap:hover img,
+.compact-img-wrap:hover img,
+.team-featured-card:hover .featured-img-wrap img,
+.team-compact-card:hover .compact-img-wrap img {
+  transform: scale(1.05);
+}
+
+.team-social-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.team-social-btn:hover {
+  background: #E94625;
+  color: #ffffff;
+  transform: scale(1.15);
+  box-shadow: 0 0 14px rgba(233, 70, 37, 0.6);
+}
+
+/* Official X (Twitter) Logo Vector Mask */
+.fa-x-twitter,
+.fab.fa-x-twitter,
+.fa-brands.fa-x-twitter {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='white' d='M12.6 1h2.454l-5.36 6.126L16 15h-4.937l-3.867-5.07-4.425 5.07H0.317l5.733-6.554L0 1h5.063l3.495 4.617L12.6 1zm-.86 12.528h1.36L4.323 2.376H2.863l8.877 11.152z'/%3E%3C/svg%3E") no-repeat center / contain;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='white' d='M12.6 1h2.454l-5.36 6.126L16 15h-4.937l-3.867-5.07-4.425 5.07H0.317l5.733-6.554L0 1h5.063l3.495 4.617L12.6 1zm-.86 12.528h1.36L4.323 2.376H2.863l8.877 11.152z'/%3E%3C/svg%3E") no-repeat center / contain;
+  background-color: currentColor;
+  vertical-align: -0.125em;
+}
+
+/* Global Footer Social Icon Box Absolute 50/50 Center Alignment */
+.ag-footer-1-social-link {
+  width: 40px !important;
+  height: 40px !important;
+  position: relative !important;
+  display: inline-block !important;
+  border: 1px solid rgba(234, 234, 234, 0.4) !important;
+  border-radius: 12px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+  overflow: hidden !important;
+}
+
+.ag-footer-1-social-link i,
+.ag-footer-1-social-link svg,
+.ag-footer-1-social-link i::before {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  font-size: 16px !important;
+  display: block !important;
+  float: none !important;
+  text-align: center !important;
 }
 .role-icon-badge {
   width: 36px;
@@ -174,6 +279,7 @@ html, body {
   font-size: 13px;
 }
 .compact-img-wrap {
+  position: relative;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
@@ -183,6 +289,7 @@ html, body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.4s ease;
 }
 .compact-name {
   font-size: 17px;
@@ -261,4 +368,14 @@ html, body {
 .circle-1,
 .circle-2 {
   display: none !important;
+}
+
+/* Remove white box icon from Schedule Now button in Footer Booking Cards */
+.ag-faqs-2-booking .ag-pr-btn-2 .icon {
+  display: none !important;
+}
+
+.ag-faqs-2-booking .ag-pr-btn-2 {
+  padding: 12px 24px !important;
+  justify-content: center !important;
 }

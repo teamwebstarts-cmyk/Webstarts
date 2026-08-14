@@ -9922,7 +9922,17 @@ only screen and (min-width: 768px) and (max-width: 991px),
   border-radius: 12px;
   color: var(--ag-clr-h-1);
   font-size: 16px;
+  line-height: 1;
   transition: 0.4s var(--ag-cube-1);
+}
+
+.ag-footer-1-social-link i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
 }
 
 .ag-footer-1-social-link:hover {
