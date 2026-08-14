@@ -3147,23 +3147,20 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
 .ag-hero-1-bottom-social .link-elm-single:nth-child(1) {
 
-  transform: translateX(-55px);
+  transform: translateX(-35px);
 }
 
 .ag-hero-1-bottom-social .link-elm-single:nth-child(2) {
-  margin-top: 32px;
-  transform: translateX(-10px);
-}
-
-.ag-hero-1-bottom-social .link-elm-single:nth-child(3) {
-  margin-top: 48px;
+  margin-top: 50px;
   transform: translateX(-8px);
 }
 
-.ag-hero-1-bottom-social .link-elm-single:nth-child(4) {
-  margin-top: 42px;
-  transform: translateX(-58px);
+.ag-hero-1-bottom-social .link-elm-single:nth-child(3) {
+  margin-top: 50px;
+  transform: translateX(-35px);
 }
+
+
 
 
 
@@ -10627,15 +10624,15 @@ only screen and (min-width: 768px) and (max-width: 991px),
 }
 
 .ag-breadcrumb-list a::after {
-  content: "";
+  content: "\f101";
+  font-family: "Font Awesome 6 Free", "Font Awesome 5 Free";
+  font-weight: 900;
+  color: var(--ag-clr-pr-1, #E94625);
+  font-size: 14px;
   position: absolute;
-  background-image: url(../fonts/right-arrow.svg);
-  width: 14px;
-  height: 14px;
-  right: 0px;
-  top: 8px;
+  right: 6px;
+  top: 50%;
   transform: translateY(-50%);
-  font-size: 20px;
 }
 
 .ag-breadcrumb-list span {

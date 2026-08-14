@@ -391,10 +391,6 @@
                         <p class="ag-p-1 disc">We craft impactful digital experiences that help brands grow globally.</p>
                         <div class="ag-footer-1-social">
                             <a target="_blank" rel="noopener noreferrer"
-                                href="https://www.facebook.com/" aria-label="Facebook"
-                                class="ag-footer-1-social-link">
-                                <i aria-hidden="true" class="fab fa-facebook-f"></i> </a>
-                            <a target="_blank" rel="noopener noreferrer"
                                 href="https://api.whatsapp.com/send/?phone=918305369467&text&type=phone_number&app_absent=0"
                                 aria-label="WhatsApp" class="ag-footer-1-social-link">
                                 <i aria-hidden="true" class="fab fa-whatsapp"></i> </a>
@@ -581,8 +577,19 @@ window.setTimeout(function () {
     dom.addEventListener('change', applyFilter);
     tech.addEventListener('change', applyFilter);
 
-    if (clearBtn) clearBtn.addEventListener('click', resetAllFilters);
-    if (resetIconBtn) resetIconBtn.addEventListener('click', resetAllFilters);
+    // Check URL parameters (e.g. ?category=mobile or ?domain=ecommerce)
+    var urlParams = new URLSearchParams(window.location.search);
+    var categoryParam = urlParams.get('category') || urlParams.get('cat');
+    var domainParam = urlParams.get('domain');
+
+    if (categoryParam) {
+        var catOpt = cat.querySelector('option[value="' + categoryParam + '"]');
+        if (catOpt) cat.value = categoryParam;
+    }
+    if (domainParam) {
+        var domOpt = dom.querySelector('option[value="' + domainParam + '"]');
+        if (domOpt) dom.value = domainParam;
+    }
 
     applyFilter();
 })();
