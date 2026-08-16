@@ -1,0 +1,9 @@
+{
+  "name": "webstart",
+  "version": "1.0.0",
+  "description": "Static Website for Webstarts",
+  "scripts": {
+    "deploy": "vercel --prod",
+    "deploy:preview": "vercel"
+  }
+}
