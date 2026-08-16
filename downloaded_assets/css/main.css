@@ -7125,7 +7125,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 .skill-card-10 { top: 50%; left: calc(50% - 430px); }
 
 /* Ring 5 (r=530): 3 skills — skill-card-11..13 */
-.skill-card-11 { top: calc(50% - 530px); left: 50%; }
+.skill-card-11 { top: calc(50% - 304px); left: calc(50% - 304px); }
 .skill-card-12 { top: calc(50% + 265px); left: calc(50% + 459px); }
 .skill-card-13 { top: calc(50% + 265px); left: calc(50% - 459px); }
 
