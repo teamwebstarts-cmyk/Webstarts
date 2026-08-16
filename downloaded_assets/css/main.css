@@ -1175,20 +1175,14 @@ only screen and (min-width: 1400px) and (max-width: 1599px) {
   font-weight: 600;
   border-radius: 8px;
   padding: 11px 12px;
-  padding-left: 25px;
+  padding-left: 12px;
   margin-bottom: 12px;
   position: relative;
   z-index: 1;
 }
 
 .ag-subtitle-1::after {
-  content: "";
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background-color: #fff;
-  top: 18px;
-  left: 12px;
+  display:none;
 }
 
 .ag-subtitle-1:is(.has-v3) {
@@ -2048,8 +2042,8 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 .ag-preloader-1-logo {
   position: relative;
   z-index: 1;
-  width: 60px;
-  height: 40px;
+  width: 85px;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -91,19 +91,10 @@
     align-items: flex-start !important;
     justify-content: space-between !important;
     flex-wrap: wrap !important;
-    gap: 30px 25px !important;
-}
-
-.ag-footer-1-widget:nth-child(1) {
-    margin-right: 10px !important;
-}
-
-.ag-footer-1-widget:nth-child(2) {
-    margin-left: 0 !important;
+    gap: 30px 20px !important;
 }
 
 .ag-footer-booking-widget {
-    margin-left: auto !important;
     max-width: 320px !important;
 }
 
