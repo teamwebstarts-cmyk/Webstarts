@@ -199,7 +199,8 @@
                 <option value="saas">SaaS Platform</option>
                 <option value="ai">AI & Automation</option>
                 <option value="mobile">Mobile App</option>
-                <option value="client">Client Project</option>
+                <option value="cloud">Cloud Services</option>
+                <option value="ecommerce">Shopify & E-Commerce</option>
             </select>
             <select class="ws-filter-select" id="f-domain" aria-label="Filter by Domain">
                 <option value="all">All Domains</option>
@@ -231,69 +232,10 @@
 
 
 
-        <!-- GRID — 6 REAL GitHub projects (teamwebstarts-cmyk) -->
+        <!-- GRID — 11 REAL GitHub & Client Projects -->
         <div class="ws-portfolio-grid" id="ws-grid">
 
-            <!-- 1: Webstarts -->
-            <article class="ws-pcard" data-category="web" data-domain="crm" data-tech="html css javascript" data-engagement="product">
-                <div class="ws-pcard-img has-img">
-                    <img src="../downloaded_images/webstart_mockup.png" alt="Webstarts — Agency Site Showcase" class="ws-pcard-bg-img">
-                    <span class="ws-pcard-tag">Company Site</span>
-                    <span class="ws-pcard-sub">Agency Website & Brand</span>
-                </div>
-                <div class="ws-pcard-body">
-                    <h3 class="ws-pcard-title">Webstarts - Agency Site</h3>
-                    <p class="ws-pcard-desc">The WebStarts marketing site you are on — a hand-built static showcase for our software, mobile and AI services.</p>
-                    <div class="ws-pcard-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-                    <a href="project-detail.html#webstarts" class="ws-pcard-link">View Project <span class="arrow">&rarr;</span></a>
-                </div>
-            </article>
-
-            <!-- 2: Samyoj -->
-            <article class="ws-pcard" data-category="saas" data-domain="crm" data-tech="typescript react node postgres redis" data-engagement="product">
-                <div class="ws-pcard-img has-img">
-                    <img src="../downloaded_images/mockup_image_samyoj.png" alt="Samyoj — WhatsApp CRM Showcase" class="ws-pcard-bg-img">
-                    <span class="ws-pcard-tag">SaaS Platform</span>
-                    <span class="ws-pcard-sub">WhatsApp Business Cloud</span>
-                </div>
-                <div class="ws-pcard-body">
-                    <h3 class="ws-pcard-title">Samyoj - WhatsApp CRM</h3>
-                    <p class="ws-pcard-desc">Production-grade WhatsApp automation platform: shared inbox, broadcasts, chatbots and analytics on the official Meta Cloud API.</p>
-                    <div class="ws-pcard-tags"><span>TypeScript</span><span>React</span><span>PostgreSQL</span><span>+4</span></div>
-                    <a href="project-detail.html#samyoj" class="ws-pcard-link">View Project <span class="arrow">&rarr;</span></a>
-                </div>
-            </article>
-
-            <!-- 3: AI-Companion / AURA -->
-            <article class="ws-pcard" data-category="ai" data-domain="avatar" data-tech="typescript react python supabase webrtc" data-engagement="product">
-                <div class="ws-pcard-img ws-theme-orange">
-                    <span class="ws-pcard-tag">AI Product</span>
-                    <span class="ws-pcard-sub">Realtime Avatar Companion</span>
-                </div>
-                <div class="ws-pcard-body">
-                    <h3 class="ws-pcard-title">AURA - AI Companion</h3>
-                    <p class="ws-pcard-desc">Multi-persona voice companion with a photorealistic realtime avatar — listens, thinks, expresses emotion and remembers context.</p>
-                    <div class="ws-pcard-tags"><span>TypeScript</span><span>React Native</span><span>Supabase</span><span>+3</span></div>
-                    <a href="project-detail.html#aura" class="ws-pcard-link">View Project <span class="arrow">&rarr;</span></a>
-                </div>
-            </article>
-
-            <!-- 4: AI-worker-2 -->
-            <article class="ws-pcard" data-category="ai" data-domain="geo" data-tech="python typescript" data-engagement="product">
-                <div class="ws-pcard-img has-img">
-                    <img src="../downloaded_images/verbotix_mockup_image.png" alt="Verbotix-GEO AI Agent" class="ws-pcard-bg-img">
-                    <span class="ws-pcard-tag">AI / Automation</span>
-                    <span class="ws-pcard-sub">Autonomous Worker</span>
-                </div>
-                <div class="ws-pcard-body">
-                    <h3 class="ws-pcard-title">Verbotix-GEO AI Agent</h3>
-                    <p class="ws-pcard-desc">Background worker that runs autonomous AI tasks — orchestrating LLM calls, queues and tool use for our product suite.</p>
-                    <div class="ws-pcard-tags"><span>Python</span><span>TypeScript</span><span>Docker</span></div>
-                    <a href="project-detail.html#aiworker" class="ws-pcard-link">View Project <span class="arrow">&rarr;</span></a>
-                </div>
-            </article>
-
-            <!-- 5: Fyngo App -->
+            <!-- 1: Fyngo App -->
             <article class="ws-pcard" data-category="mobile" data-domain="location" data-tech="react-native android" data-engagement="product">
                 <div class="ws-pcard-img has-img">
                     <img src="../downloaded_images/fyngo_mockup.png" alt="Fyngo — Local Discovery App" class="ws-pcard-bg-img">
@@ -308,11 +250,56 @@
                 </div>
             </article>
 
-            <!-- 6: clint-website-exora -->
-            <article class="ws-pcard" data-category="client" data-domain="crm" data-tech="html css javascript" data-engagement="client">
+            <!-- 2: AI-Companion / AURA -->
+            <article class="ws-pcard" data-category="ai" data-domain="avatar" data-tech="typescript react python supabase webrtc" data-engagement="product">
+                <div class="ws-pcard-img has-img">
+                    <img src="../downloaded_images/mockup_AI_Companion.png" alt="AURA — AI Companion Showcase" class="ws-pcard-bg-img">
+                    <span class="ws-pcard-tag">AI Product</span>
+                    <span class="ws-pcard-sub">Realtime Avatar Companion</span>
+                </div>
+                <div class="ws-pcard-body">
+                    <h3 class="ws-pcard-title">AURA - AI Companion</h3>
+                    <p class="ws-pcard-desc">Multi-persona voice companion with a photorealistic realtime avatar — listens, thinks, expresses emotion and remembers context.</p>
+                    <div class="ws-pcard-tags"><span>TypeScript</span><span>React Native</span><span>Supabase</span><span>+3</span></div>
+                    <a href="project-detail.html#aura" class="ws-pcard-link">View Project <span class="arrow">&rarr;</span></a>
+                </div>
+            </article>
+
+            <!-- 3: Verbotix-GEO AI Agent -->
+            <article class="ws-pcard" data-category="ai" data-domain="geo" data-tech="python typescript" data-engagement="product">
+                <div class="ws-pcard-img has-img">
+                    <img src="../downloaded_images/verbotix_mockup_image.png" alt="Verbotix-GEO AI Agent" class="ws-pcard-bg-img">
+                    <span class="ws-pcard-tag">AI / Automation</span>
+                    <span class="ws-pcard-sub">Autonomous Worker</span>
+                </div>
+                <div class="ws-pcard-body">
+                    <h3 class="ws-pcard-title">Verbotix-GEO AI Agent</h3>
+                    <p class="ws-pcard-desc">Background worker that runs autonomous AI tasks — orchestrating LLM calls, queues and tool use for our product suite.</p>
+                    <div class="ws-pcard-tags"><span>Python</span><span>TypeScript</span><span>Docker</span></div>
+                    <a href="project-detail.html#aiworker" class="ws-pcard-link">View Project <span class="arrow">&rarr;</span></a>
+                </div>
+            </article>
+
+            <!-- 4: Samyoj -->
+            <article class="ws-pcard" data-category="saas" data-domain="crm" data-tech="typescript react node postgres redis" data-engagement="product">
+                <div class="ws-pcard-img has-img">
+                    <img src="../downloaded_images/mockup_image_samyoj.png" alt="Samyoj — WhatsApp CRM Showcase" class="ws-pcard-bg-img">
+                    <span class="ws-pcard-tag">SaaS Platform</span>
+                    <span class="ws-pcard-sub">WhatsApp Business Cloud</span>
+                </div>
+                <div class="ws-pcard-body">
+                    <h3 class="ws-pcard-title">Samyoj - WhatsApp CRM</h3>
+                    <p class="ws-pcard-desc">Production-grade WhatsApp automation platform: shared inbox, broadcasts, chatbots and analytics on the official Meta Cloud API.</p>
+                    <div class="ws-pcard-tags"><span>TypeScript</span><span>React</span><span>PostgreSQL</span><span>+4</span></div>
+                    <a href="project-detail.html#samyoj" class="ws-pcard-link">View Project <span class="arrow">&rarr;</span></a>
+                </div>
+            </article>
+
+            <!-- 5: Exora -->
+            <article class="ws-pcard" data-category="web" data-domain="crm" data-tech="html css javascript" data-engagement="client">
                 <div class="ws-pcard-img has-img">
                     <img src="../downloaded_images/mockup_image_exora.png" alt="Exora — Ambiance" class="ws-pcard-bg-img">
-                    <span class="ws-pcard-tag">Client Project</span>
+                    <span class="ws-pcard-tag">Web Design</span>
                     <span class="ws-pcard-sub">Corporate Website</span>
                 </div>
                 <div class="ws-pcard-body">
@@ -323,9 +310,10 @@
                 </div>
             </article>
 
-            <!-- 7: pharma-audit -->
+            <!-- 6: Pharma Audit -->
             <article class="ws-pcard" data-category="web" data-domain="erp" data-tech="typescript react node mongodb" data-engagement="product">
-                <div class="ws-pcard-img ws-theme-purple">
+                <div class="ws-pcard-img has-img">
+                    <img src="../downloaded_images/mockup_pharma_audit.png" alt="Pharma Audit — Vendor Portal Showcase" class="ws-pcard-bg-img">
                     <span class="ws-pcard-tag">Web App</span>
                     <span class="ws-pcard-sub">Pharmacy Vendor Portal</span>
                 </div>
@@ -334,6 +322,21 @@
                     <p class="ws-pcard-desc">Pharmacy vendor & compliance portal: Node/Express API + React/Vite frontend with a Cal.com-inspired design system for vendor onboarding and audits.</p>
                     <div class="ws-pcard-tags"><span>TypeScript</span><span>React</span><span>Node.js</span><span>+2</span></div>
                     <a href="project-detail.html#pharmaaudit" class="ws-pcard-link">View Project <span class="arrow">&rarr;</span></a>
+                </div>
+            </article>
+
+            <!-- 7: Pharmacy Shopify Store -->
+            <article class="ws-pcard" data-category="ecommerce" data-domain="fintech" data-tech="shopify python" data-engagement="client">
+                <div class="ws-pcard-img has-img">
+                    <img src="../downloaded_images/mockup_pharma_shopify.png" alt="Pharmacy Shopify Store Showcase" class="ws-pcard-bg-img">
+                    <span class="ws-pcard-tag">Shopify Store</span>
+                    <span class="ws-pcard-sub">Shopify Pharmacy Store</span>
+                </div>
+                <div class="ws-pcard-body">
+                    <h3 class="ws-pcard-title">Pharmacy Shopify Store</h3>
+                    <p class="ws-pcard-desc">End-to-end Shopify pharmacy build on the Ella theme — Ranbaxy/Sun Pharma catalogue (45 groups), prescription workflow & compliance docs via Python automation.</p>
+                    <div class="ws-pcard-tags"><span>Shopify</span><span>Python</span><span>Liquid</span></div>
+                    <a href="project-detail.html#shopipharm" class="ws-pcard-link">View Project <span class="arrow">&rarr;</span></a>
                 </div>
             </article>
 
@@ -352,17 +355,48 @@
                 </div>
             </article>
 
-            <!-- 9: shopify pharmacy -->
-            <article class="ws-pcard" data-category="client" data-domain="fintech" data-tech="shopify python" data-engagement="client">
-                <div class="ws-pcard-img ws-theme-orange">
-                    <span class="ws-pcard-tag">Client Project</span>
-                    <span class="ws-pcard-sub">Shopify Pharmacy Store</span>
+            <!-- 9: Anyway Carpet -->
+            <article class="ws-pcard" data-category="ecommerce" data-domain="fintech" data-tech="shopify python" data-engagement="client">
+                <div class="ws-pcard-img has-img">
+                    <img src="../downloaded_images/mockup_anywayCarpet.png" alt="Anyway Carpet — Premium Rugs Showcase" class="ws-pcard-bg-img">
+                    <span class="ws-pcard-tag">Shopify Store</span>
+                    <span class="ws-pcard-sub">Shopify E-Commerce Store</span>
                 </div>
                 <div class="ws-pcard-body">
-                    <h3 class="ws-pcard-title">Pharmacy Shopify Store</h3>
-                    <p class="ws-pcard-desc">End-to-end Shopify pharmacy build on the Ella theme — Ranbaxy/Sun Pharma catalogue (45 groups), prescription workflow & compliance docs via Python automation.</p>
-                    <div class="ws-pcard-tags"><span>Shopify</span><span>Python</span><span>Liquid</span></div>
-                    <a href="project-detail.html#shopipharm" class="ws-pcard-link">View Project <span class="arrow">&rarr;</span></a>
+                    <h3 class="ws-pcard-title">Anyway Carpet — Premium Rugs</h3>
+                    <p class="ws-pcard-desc">Shopify e-commerce brand for handcrafted, modern, Persian & luxury carpets in India — custom theme engineering, curated collections & fast checkout flow.</p>
+                    <div class="ws-pcard-tags"><span>Shopify</span><span>Liquid</span><span>JavaScript</span></div>
+                    <a href="project-detail.html#anywaycarpet" class="ws-pcard-link">View Project <span class="arrow">&rarr;</span></a>
+                </div>
+            </article>
+
+            <!-- 10: Milestone Exhibition Studio -->
+            <article class="ws-pcard" data-category="web" data-domain="crm" data-tech="html css javascript" data-engagement="client">
+                <div class="ws-pcard-img has-img">
+                    <img src="../downloaded_images/mockup_image_milestone.png" alt="Milestone Exhibition Studio Showcase" class="ws-pcard-bg-img">
+                    <span class="ws-pcard-tag">Web Design</span>
+                    <span class="ws-pcard-sub">Exhibition Stall Design</span>
+                </div>
+                <div class="ws-pcard-body">
+                    <h3 class="ws-pcard-title">Milestone Exhibition Studio</h3>
+                    <p class="ws-pcard-desc">Bespoke exhibition stall design & turnkey booth fabrication website — 12+ years of expertise in 3D stand design, in-house production, and brand activations across India.</p>
+                    <div class="ws-pcard-tags"><span>HTML5</span><span>Bootstrap</span><span>JavaScript</span></div>
+                    <a href="project-detail.html#milestone" class="ws-pcard-link">View Project <span class="arrow">&rarr;</span></a>
+                </div>
+            </article>
+
+            <!-- 11: Webstarts -->
+            <article class="ws-pcard" data-category="web" data-domain="crm" data-tech="html css javascript" data-engagement="product">
+                <div class="ws-pcard-img has-img">
+                    <img src="../downloaded_images/webstart_mockup.png" alt="Webstarts — Agency Site Showcase" class="ws-pcard-bg-img">
+                    <span class="ws-pcard-tag">Company Site</span>
+                    <span class="ws-pcard-sub">Agency Website & Brand</span>
+                </div>
+                <div class="ws-pcard-body">
+                    <h3 class="ws-pcard-title">Webstarts - Agency Site</h3>
+                    <p class="ws-pcard-desc">The WebStarts marketing site you are on — a hand-built static showcase for our software, mobile and AI services.</p>
+                    <div class="ws-pcard-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                    <a href="project-detail.html#webstarts" class="ws-pcard-link">View Project <span class="arrow">&rarr;</span></a>
                 </div>
             </article>
 

@@ -257,7 +257,7 @@ window.setTimeout(function () {
 
 <script>
 /* ===== Real projects (teamwebstarts-cmyk GitHub repos) ===== */
-var WS_ORDER = ["webstarts","samyoj","aura","aiworker","samyojweb","exora","pharmaaudit","raceservice","shopipharm"];
+var WS_ORDER = ["samyojweb","aura","aiworker","samyoj","exora","pharmaaudit","shopipharm","raceservice","anywaycarpet","milestone","webstarts"];
 var WS_PROJECTS = {
     webstarts: {
         name: "Webstarts — Agency Site", tag: "Company Site", subtitle: "Marketing website & brand for WebStarts",
@@ -289,8 +289,8 @@ var WS_PROJECTS = {
         overview: "AURA is a companion you can actually talk to — a photorealistic, realtime avatar that listens, thinks, shows emotion and remembers who you are across sessions. Built as a monorepo spanning a React Native client, Express gateway, Next.js admin and a pgvector memory store.",
         features: ["Face-to-face avatar via Anam WebRTC pipeline","Multi-persona memory backed by pgvector","Voice + text multimodal conversation","Express orchestration with BullMQ workers","Next.js 15 admin portal for content & config","Firebase push (FCM) for always-on reach"],
         tech: ["TypeScript", "React Native", "Express", "Next.js", "Supabase", "pgvector", "WebRTC", "OpenAI"],
-        hero: "../downloaded_images/grid-ai.jpg",
-        thumbs: ["../downloaded_images/grid-ai.jpg", "../downloaded_images/ai_automation_clean_ui.png", "../downloaded_images/grid-cloud.jpg"],
+        hero: "../downloaded_images/mockup_AI_Companion.png",
+        thumbs: ["../downloaded_images/mockup_AI_Companion.png", "../downloaded_images/AI_companion_grid1.png", "../downloaded_images/AI_companion_grid2.png"],
         cta: "https://github.com/teamwebstarts-cmyk/AI-Companion",
         live: "",
         stats: [["Language","TypeScript"],["Memory","pgvector"]]
@@ -320,8 +320,8 @@ var WS_PROJECTS = {
         stats: [["Platform","Android"],["Stack","React Native"]]
     },
     exora: {
-        name: "Exora — Ambiance", tag: "Client Project", subtitle: "Corporate website for the Exora brand",
-        category: "Client Project", domain: "Web / Brand", year: "2026", stack: "Static",
+        name: "Exora — Ambiance", tag: "Web Design", subtitle: "Corporate website for the Exora brand",
+        category: "Web App", domain: "Web / Brand", year: "2026", stack: "Static",
         overview: "A corporate website and brand presence for the Exora client — fast, responsive and CMS-driven, engineered to capture leads and look sharp on every screen.",
         features: ["Responsive marketing site, mobile-first","CMS-driven content the client controls","Lead-capture forms with validation","Analytics & event tracking wired in","Brand-consistent visual system"],
         tech: ["HTML", "CSS", "JavaScript", "Python"],
@@ -337,8 +337,8 @@ var WS_PROJECTS = {
         overview: "A pharmacy vendor & compliance portal built as a client/server monorepo. The backend is a Node/Express + Mongoose API; the frontend is a Vite/React SPA with a clean, Cal.com-inspired design system — white canvas, soft-rounded cards, product UI shown in-card. Designed for vendor onboarding, document audits and compliance tracking.",
         features: ["Node/Express API with controllers & routes","Mongoose schemas for vendors/products","React + Vite frontend (Tailwind)","Cal.com-inspired design system","Vendor onboarding & audit workflows","Role-scoped access (auth middleware)"],
         tech: ["TypeScript", "React", "Vite", "Node.js", "Express", "MongoDB", "Mongoose", "Tailwind"],
-        hero: "../downloaded_images/grid-erp.jpg",
-        thumbs: ["../downloaded_images/grid-erp.jpg", "../downloaded_images/grid-cloud.jpg", "../downloaded_images/grid-website.jpg"],
+        hero: "../downloaded_images/mockup_pharma_audit.png",
+        thumbs: ["../downloaded_images/mockup_pharma_audit.png"],
         cta: "#",
         live: "",
         stats: [["Frontend","React+Vite"],["Backend","Express"]]
@@ -356,16 +356,51 @@ var WS_PROJECTS = {
         stats: [["Platform","Android"],["Stack","React Native"]]
     },
     shopipharm: {
-        name: "Pharmacy Shopify Store", tag: "Client Project", subtitle: "Shopify pharmacy on the Ella theme",
-        category: "Client Project", domain: "E-commerce / Pharmacy", year: "2026", stack: "Shopify",
+        name: "Pharmacy Shopify Store", tag: "Shopify Store", subtitle: "Shopify pharmacy on the Ella theme",
+        category: "Shopify & E-Commerce", domain: "E-commerce / Pharmacy", year: "2026", stack: "Shopify",
         overview: "End-to-end Shopify pharmacy build on the Ella theme. We structured a Ranbaxy / Sun Pharmaceuticals / Ranbaxy Generic Division catalogue (45 product groups, 58 product/variant rows), defined a safe prescription-vs-OTC workflow, authored legal/compliance pages and generated clean product content — all driven by Python automation scripts for bulk CSV import and image mapping.",
         features: ["Ella Shopify theme setup","Ranbaxy/Sun Pharma catalogue (45 groups)","Prescription vs OTC dual-flow workflow","Compliance & legal pages","Python bulk-import & image-mapping scripts","Razorpay pharmacy KYC guidance"],
         tech: ["Shopify", "Liquid", "Python", "CSV", "Razorpay"],
-        hero: "../downloaded_images/grid_ecommerce.png",
-        thumbs: ["../downloaded_images/grid_ecommerce.png", "../downloaded_images/grid-website.jpg", "../downloaded_images/grid-landing.png"],
+        hero: "../downloaded_images/pharma_shopify_grid1.png",
+        thumbs: ["../downloaded_images/pharma_shopify_grid1.png", "../downloaded_images/mockup_pharma_shopify.png"],
         cta: "#",
         live: "",
         stats: [["Catalogue","45 groups"],["Import rows","58"]]
+    },
+    milestone: {
+        name: "Milestone Exhibition Studio", tag: "Web Design", subtitle: "Exhibition Stall Design & Fabrication",
+        category: "Web App", domain: "Exhibition / Brand", year: "2026", stack: "Bootstrap / JS",
+        overview: "Milestone Exhibition Studio is a premier exhibition stall design and fabrication studio in India with 12+ years of industry expertise. We deliver bespoke exhibition stand designs, 3D visualization, in-house precision fabrication, turnkey booth assembly, and brand activations for corporate clients across trade shows and events.",
+        features: ["Bespoke Exhibition Stall Design & 3D Planning", "Seamless Turnkey Execution & On-Site Installation", "In-House Quality Fabrication & Superior Craftsmanship", "Engaging Brand Activations & Experiential Marketing", "Complete Project Management for Trade Shows Across India"],
+        tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "3D Rendering"],
+        hero: "../downloaded_images/mockup_image_milestone.png",
+        thumbs: [
+            "../downloaded_images/mockup_image_milestone.png",
+            "../downloaded_images/milestone_grid1.png",
+            "../downloaded_images/milestone_grid2.png",
+            "../downloaded_images/milestone_grid3.png"
+        ],
+        cta: "#",
+        live: "https://msestudio.in/",
+        stats: [["Experience","12+ Years"],["Services","Turnkey Stall"]]
+    },
+    anywaycarpet: {
+        name: "Anyway Carpet — Premium Rugs", tag: "Shopify Store", subtitle: "Shopify E-Commerce Store for Luxury Carpets & Rugs",
+        category: "Shopify & E-Commerce", domain: "E-Commerce / Luxury", year: "2026", stack: "Shopify / Liquid",
+        overview: "Anyway Carpet is a premium Shopify e-commerce brand offering handcrafted, modern, Persian, and luxury carpets across India. Engineered with custom Shopify theme customization (Rokan), categorized collections (Hand Knotted, Heritage, Modern Living, Cozy Home), sustainable luxury positioning, and streamlined mobile checkout flow.",
+        features: ["Custom Shopify Storefront & Liquid Theme Engineering", "Curated Collections (Hand Knotted, Heritage, Modern & Cozy)", "Atelier-Grade Materials & Sustainable Luxury Messaging", "Customer Review & Rating Showcase Integration", "Mobile-First E-Commerce Shopping & Fast Checkout Flow"],
+        tech: ["Shopify", "Liquid", "JavaScript", "CSS3", "HTML5"],
+        hero: "../downloaded_images/mockup_anywayCarpet.png",
+        thumbs: [
+            "../downloaded_images/mockup_anywayCarpet.png",
+            "../downloaded_images/anywayCarpet_grid.png",
+            "../downloaded_images/anywaycarpet_grid1.png",
+            "../downloaded_images/anywaycarpet_grid2.png",
+            "../downloaded_images/anywaycarpet_grid3.png"
+        ],
+        cta: "#",
+        live: "https://anywaycarpet.com/",
+        stats: [["Platform","Shopify"],["Collections","Luxury Rugs"]]
     }
 };
 
