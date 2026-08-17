@@ -1979,7 +1979,7 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
   align-items: center;
   justify-content: center;
   background: #fff;
-  transition: opacity 0.55s var(--ag-cube-1), visibility 0.55s var(--ag-cube-1);
+  transition: opacity 0.25s var(--ag-cube-1), visibility 0.25s var(--ag-cube-1);
   opacity: 1;
   visibility: visible;
 }

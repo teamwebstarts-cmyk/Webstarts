@@ -14,7 +14,7 @@
 */
 
 
-window.addEventListener('load', function(){
+window.addEventListener('DOMContentLoaded', function(){
 
 
 	if (document.querySelectorAll(".ag-preloader-1").length) {
@@ -26,7 +26,7 @@ window.addEventListener('load', function(){
 		});
 		setTimeout(function () {
 			loader.remove();
-		}, 1500);
+		}, 400);
 
 	} else {
 		afterPreloader();

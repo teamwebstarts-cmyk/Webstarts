@@ -228,7 +228,7 @@ i.fa-plus,
 .ag-hero-1-title {
     margin-bottom: 50px !important;
 }
-
+@media only screen and (min-width: 992px) {
 .ag-hero-1-title-elm:nth-child(1) {
     font-size: 72px !important;
     line-height: 1.1 !important;
@@ -238,6 +238,20 @@ i.fa-plus,
 .ag-hero-1-title-elm:nth-child(2) {
     font-size: 88px !important;
     line-height: 1.1 !important;
+}
+}
+
+/* Mobile Screens (767px and narrower) */
+@media only screen and (max-width: 767px) {
+    .ag-hero-1-title-elm:nth-child(1) {
+        font-size: 26px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 8px !important;
+    }
+    .ag-hero-1-title-elm:nth-child(2) {
+        font-size: 30px !important;
+        line-height: 1.2 !important;
+    }
 }
 
 /* 3. Fix Robot Image Position (Peeche overlap hona band) */
