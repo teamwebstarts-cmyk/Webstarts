@@ -546,6 +546,63 @@ if (document.readyState === 'loading') {
 	initAigoraScrollAnimation();
 }
 
+// Technology Ecosystem — reveal animation & ambient micro-interactions
+function initTechEcosystemAnimation() {
+	const section = document.querySelector('#technologies');
+	if (!section || typeof gsap === 'undefined') return;
+
+	if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+	if (typeof ScrollTrigger !== 'undefined') gsap.registerPlugin(ScrollTrigger);
+
+	// 1. Reveal Timeline on Scroll
+	const reveal = gsap.timeline({
+		scrollTrigger: {
+			trigger: "#technologies",
+			start: "top 78%",
+			once: true
+		}
+	});
+
+	reveal
+		.from(".ws-head [data-reveal]", {
+			y: 24, opacity: 0, duration: 0.65, ease: "power3.out", stagger: 0.08
+		})
+		.from(".ws-card", {
+			y: 22, opacity: 0, duration: 0.62, ease: "power3.out", stagger: 0.08
+		}, "-=0.22")
+		.from(".ws-center", {
+			scale: 0.88, opacity: 0, duration: 0.85, ease: "expo.out"
+		}, "-=0.5")
+		.from(".ws-stats", {
+			y: 18, opacity: 0, duration: 0.62, ease: "power3.out"
+		}, "-=0.36");
+
+	// 2. Ambient Continuous Animations
+	gsap.to(".ws-center-redring", {
+		rotation: "+=360",
+		duration: 16,
+		repeat: -1,
+		ease: "none"
+	});
+
+	gsap.to(".ws-node", {
+		scale: 1.2,
+		transformOrigin: "center center",
+		duration: 1.6,
+		repeat: -1,
+		yoyo: true,
+		ease: "sine.inOut",
+		stagger: 0.15
+	});
+}
+
+// Initialize Tech Ecosystem animation
+if (document.readyState === 'loading') {
+	document.addEventListener('DOMContentLoaded', initTechEcosystemAnimation);
+} else {
+	initTechEcosystemAnimation();
+}
+
 // projects-1-animation
 if (window.matchMedia("(min-width: 1200px)").matches) { 
 	const project1tl = gsap.timeline({
