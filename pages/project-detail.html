@@ -257,7 +257,7 @@ window.setTimeout(function () {
 
 <script>
 /* ===== Real projects (teamwebstarts-cmyk GitHub repos) ===== */
-var WS_ORDER = ["samyojweb","aura","aiworker","samyoj","exora","pharmaaudit","shopipharm","raceservice","anywaycarpet","milestone","webstarts"];
+var WS_ORDER = ["samyojweb","raceservice","adipeli","adipeliadmin","adipellimain","aura","aiworker","samyoj","exora","pharmaaudit","shopipharm","anywaycarpet","milestone","webstarts"];
 var WS_PROJECTS = {
     webstarts: {
         name: "Webstarts — Agency Site", tag: "Company Site", subtitle: "Marketing website & brand for WebStarts",
@@ -344,9 +344,9 @@ var WS_PROJECTS = {
         stats: [["Frontend","React+Vite"],["Backend","Express"]]
     },
     raceservice: {
-        name: "Adipeli — Cart Sync App", tag: "Mobile App", subtitle: "E-commerce cart synchronization & deals mobile application",
+        name: "Link Stores", tag: "Mobile App", subtitle: "E-commerce cart synchronization & deals mobile application",
         category: "Mobile App", domain: "E-Commerce / Sync", year: "2026", stack: "React Native + Node",
-        overview: "Adipeli is a mobile app engineered to streamline e-commerce shopping by synchronizing carts across devices, tracking deals, and managing rewards in real time. Built with React Native and a secure API backend, it delivers a fast and intuitive shopping experience.",
+        overview: "Link Stores is a mobile app engineered to streamline e-commerce shopping by synchronizing carts across devices, tracking deals, and managing rewards in real time. Built with React Native and a secure API backend, it delivers a fast and intuitive shopping experience.",
         features: ["Cross-device realtime cart synchronization","Instant discount & deal tracking","Merchant reward & voucher manager","Secure authentication & push notifications","Clean, responsive cross-platform UI"],
         tech: ["React Native", "Android", "Node.js", "Express", "MongoDB", "REST API"],
         hero: "../downloaded_images/adipeli_mockup.png",
@@ -354,6 +354,45 @@ var WS_PROJECTS = {
         cta: "#",
         live: "https://play.google.com/store/apps/details?id=com.anonymous.cartSync&hl=en_IN",
         stats: [["Platform","Android"],["Stack","React Native"]]
+    },
+    adipeli: {
+        name: "Adipeli — Partner Portal", tag: "Web App / SaaS", subtitle: "B2B merchant inventory & partner management portal",
+        category: "Web App / SaaS", domain: "E-Commerce / B2B", year: "2026", stack: "React + TypeScript + Node",
+        overview: "Adipeli Partner Portal (Web Warehouse) is a B2B merchant & partner management portal engineered to streamline inventory tracking, order fulfillment, catalog synchronization, and real-time sales metrics for merchant partners.",
+        features: ["B2B Merchant & Partner Dashboard","Real-time Warehouse Inventory Sync","Order Management & Multi-store Catalog Sync","Role-based Partner Access & Analytics","Clean Responsive React SPA UI"],
+        tech: ["React", "TypeScript", "Node.js", "Express", "REST API"],
+        hero: "../downloaded_images/adipeli.webp",
+        thumbs: ["../downloaded_images/adipeli.webp", "../downloaded_images/adipeli_ui_shot_1.png", "../downloaded_images/adipeli_ui_shot_2.png"],
+        cta: "#",
+        live: "https://partners.adipelli.com/",
+        liveLabel: "Live Site",
+        stats: [["Platform","Web App"],["Type","B2B Portal"]]
+    },
+    adipeliadmin: {
+        name: "Adipeli — Admin Console", tag: "SaaS / Admin", subtitle: "Centralized administration & super-admin control console",
+        category: "SaaS / Admin", domain: "Platform / Admin", year: "2026", stack: "React + TypeScript + Node",
+        overview: "Adipeli Admin Console is a centralized administration portal built for platform super-admins to oversee merchant onboarding, monitor global transaction analytics, manage system configurations, and enforce role-based access control across the Adipeli platform.",
+        features: ["Super-Admin Platform Control Center","Merchant Onboarding & Approval Workflows","Global Transaction & Analytics Dashboard","Role-Based Access Control (RBAC) & Audit Logs","Clean Responsive React SPA Interface"],
+        tech: ["React", "TypeScript", "Node.js", "Express", "REST API"],
+        hero: "../downloaded_images/adipeli_ui_shot_4.png",
+        thumbs: ["../downloaded_images/adipeli_ui_shot_4.png", "../downloaded_images/adipeli_ui_shot_2.png", "../downloaded_images/adipeli_ui_shot_3.png"],
+        cta: "#",
+        live: "http://admin.adipelli.com/",
+        liveLabel: "Live Site",
+        stats: [["Platform","Web Admin"],["Type","Super-Admin Console"]]
+    },
+    adipellimain: {
+        name: "Adipeli — Retail Platform", tag: "Corporate / Retail", subtitle: "Real-time convenience retail & store ecosystem platform",
+        category: "Web App / Brand", domain: "E-Commerce / Retail", year: "2026", stack: "HTML + CSS + JavaScript",
+        overview: "Adipeli Retail Platform is an innovative digital retail ecosystem engineered to revolutionize convenience stores. It connects store owners, shoppers, brands, and warehouses into one unified real-time network that reduces stockouts and increases retail sales.",
+        features: ["Convenience Store Ecosystem Integration","Real-time Inventory & Stockout Reduction","Brand & Merchant Collaboration Tools","Responsive High-Performance Web Platform","Clean Interactive UI System"],
+        tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Swiper"],
+        hero: "../downloaded_images/adipeli_shot1.png",
+        thumbs: ["../downloaded_images/adipeli_shot1.png", "../downloaded_images/adipeli_shot2.png", "../downloaded_images/adipeli_shot3.png"],
+        cta: "#",
+        live: "https://adipelli.com/",
+        liveLabel: "Live Site",
+        stats: [["Industry","Retail Tech"],["Type","Corporate Platform"]]
     },
     shopipharm: {
         name: "Pharmacy Shopify Store", tag: "Shopify Store", subtitle: "Shopify pharmacy on the Ella theme",
@@ -432,11 +471,15 @@ var WS_PROJECTS = {
             lk.appendChild(gh);
         }
         if (p.live && p.live !== '') {
-            var lv = document.createElement('a');
-            lv.className = 'ws-detail-cta ws-detail-cta-ghost'; lv.href = p.live; lv.target = '_blank'; lv.rel = 'noopener';
-            lv.innerHTML = '<i class="ph ph-arrow-square-out"></i> Live Site <span class="arrow">&rarr;</span>';
-            lk.appendChild(lv);
-        }
+    var lv = document.createElement('a');
+    lv.className = 'ws-detail-cta ws-detail-cta-ghost'; lv.href = p.live; lv.target = '_blank'; lv.rel = 'noopener';
+    var isPlayStore = p.live.includes('play.google.com');
+    var label = p.liveLabel || (isPlayStore ? 'View on Play Store' : 'Live Site');
+    var icon = isPlayStore ? 'fab fa-google-play' : 'ph ph-arrow-square-out';
+    lv.innerHTML = '<i class="' + icon + '"></i> ' + label + ' <span class="arrow">&rarr;</span>';
+    lk.appendChild(lv);
+}
+
 
         var fl = document.getElementById('ws-features'); fl.innerHTML = '';
         (p.features || []).forEach(function (f) {
@@ -477,14 +520,24 @@ var WS_PROJECTS = {
         });
 
         document.getElementById('ws-next-name').textContent = next.name;
-        document.getElementById('ws-next-link').setAttribute('href', 'project-detail.html#' + nextKey);
+        var nextBtn = document.getElementById('ws-next-link');
+        nextBtn.setAttribute('href', '#' + nextKey);
+        nextBtn.onclick = function (e) {
+            e.preventDefault();
+            location.hash = '#' + nextKey;
+        };
 
         document.title = p.name + ' — WebStarts';
         window.scrollTo(0, 0);
     }
-    var key = (location.hash || '').replace('#', '') || WS_ORDER[0];
-    render(key);
+    function loadFromHash() {
+        var key = (location.hash || '').replace('#', '') || WS_ORDER[0];
+        render(key);
+    }
+    loadFromHash();
+    window.addEventListener('hashchange', loadFromHash);
 })();
+
 </script>
 </body>
 </html>
