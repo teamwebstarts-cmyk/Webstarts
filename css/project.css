@@ -115,6 +115,8 @@
     flex-direction: column;
     box-shadow: 0 4px 20px rgba(17,24,39,.06);
     transition: transform .25s ease, box-shadow .25s ease;
+    position:relative;
+    cursor:pointer;
 }
 .ws-pcard:hover {
     transform: translateY(-6px);
@@ -220,6 +222,12 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
+}
+.ws-pcard-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
 }
 .ws-pcard-link:hover { gap: 10px; }
 .ws-pcard-link .arrow { transition: transform .2s; }
