@@ -354,8 +354,8 @@ html, body {
   align-items: center;
   gap: 10px;
   height: 32px;
-  padding: 0 18px;
-  border-radius: 16px;
+  padding: 0 16px;
+  border-radius: 6px;
   background: #151515;
   color: #ffffff;
   font-size: 13px;
@@ -375,9 +375,10 @@ html, body {
   margin: 14px 0 10px;
   font-size: clamp(48px, 5.5vw, 76px);
   line-height: 1.05;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
   font-weight: 900;
   color: var(--ws-ink);
+  text-transform: uppercase;
 }
 .ws-title span { color: var(--ws-red); }
 
