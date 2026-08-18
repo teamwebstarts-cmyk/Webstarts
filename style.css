@@ -614,34 +614,22 @@ html, body {
   text-align: center;
 }
 
-/* WebStarts Logo Mark */
-.ws-mark {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* WebStarts Central Hub Logo */
+.ws-center-logo {
+  width: 175px;
+  max-width: 82%;
+  height: auto;
+  object-fit: contain;
   margin-bottom: 6px;
-}
-
-.ws-mark-svg {
   display: block;
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.08));
 }
-
-.ws-brand {
-  font-size: 26px;
-  line-height: 1.1;
-  font-weight: 900;
-  letter-spacing: -0.03em;
-  color: var(--ws-ink);
-}
-.ws-brand span { color: var(--ws-red); }
 
 .ws-brand-sub {
-  margin-top: 6px;
+  margin-top: 4px;
   font-size: 13px;
   line-height: 1.35;
   font-weight: 600;
-  color: #222222;
+  color: #333333;
 }
 
 /* Bottom Stats Bar */
@@ -743,7 +731,7 @@ html, body {
   .ws-card.cloud { width: 440px; right: -20px; }
   .ws-center { width: 260px; height: 260px; }
   .ws-center-card { width: 210px; height: 210px; }
-  .ws-brand { font-size: 22px; }
+  .ws-center-logo { width: 145px; }
   .ws-brand-sub { font-size: 11px; }
   .ws-stats { grid-template-columns: repeat(2, 1fr) repeat(2, 1fr) auto; gap: 10px; }
 }
@@ -842,9 +830,8 @@ html, body {
   .ws-center-ring { width: 220px; height: 220px; }
   .ws-center-redring { inset: 8px; }
   .ws-center-card { width: 180px; height: 180px; }
-  .ws-mark-svg { width: 50px; height: 36px; }
-  .ws-brand { font-size: 19px; }
-  .ws-brand-sub { font-size: 10px; margin-top: 4px; }
+  .ws-center-logo { width: 125px; }
+  .ws-brand-sub { font-size: 10px; margin-top: 2px; }
   .ws-card,
   .ws-card.frontend,
   .ws-card.backend,
