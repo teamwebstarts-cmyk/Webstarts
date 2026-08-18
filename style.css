@@ -280,10 +280,10 @@ html, body {
 }
 .compact-img-wrap {
   position: relative;
-  border-radius: 16px;
+  border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
-  height: 200px;
+  height: 260px;
 }
 .compact-img-wrap img {
   width: 100%;
