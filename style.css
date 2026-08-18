@@ -628,8 +628,8 @@ html, body {
 }
 
 .ws-brand-img {
-  width: 140px;
-  max-width: 78%;
+  width: 165px;
+  max-width: 86%;
   height: auto;
   object-fit: contain;
   margin-bottom: 4px;
@@ -743,7 +743,7 @@ html, body {
   .ws-card.cloud { width: 440px; right: -20px; }
   .ws-center { width: 260px; height: 260px; }
   .ws-center-card { width: 210px; height: 210px; }
-  .ws-brand-img { width: 120px; }
+  .ws-brand-img { width: 140px; }
   .ws-brand-sub { font-size: 11px; }
   .ws-stats { grid-template-columns: repeat(2, 1fr) repeat(2, 1fr) auto; gap: 10px; }
 }
@@ -843,7 +843,7 @@ html, body {
   .ws-center-redring { inset: 8px; }
   .ws-center-card { width: 180px; height: 180px; }
   .ws-mark-svg { width: 50px; height: 36px; }
-  .ws-brand-img { width: 105px; }
+  .ws-brand-img { width: 120px; }
   .ws-brand-sub { font-size: 10px; margin-top: 2px; }
   .ws-card,
   .ws-card.frontend,
