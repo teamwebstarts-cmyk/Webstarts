@@ -58,6 +58,12 @@ html, body {
   scroll-behavior: auto !important;
 }
 
+/* About Section Heading Accent Highlight */
+.ag-about-1-sec-title .ag-sec-title-1 span {
+  color: #E94625 !important;
+  opacity: 1 !important;
+}
+
 /* Custom Hierarchy Split Team Section Layout (Matching Mockup Design) */
 .team-featured-card {
   background: rgba(255, 255, 255, 0.03);
