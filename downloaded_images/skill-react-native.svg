@@ -1,8 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-11.5 -10.23174 23 20.46348" width="36" height="36">
-  <circle r="2.05" fill="#61DAFB"/>
-  <g stroke="#61DAFB" stroke-width="1" fill="none">
-    <ellipse rx="11" ry="4.2"/>
-    <ellipse rx="11" ry="4.2" transform="rotate(60)"/>
-    <ellipse rx="11" ry="4.2" transform="rotate(120)"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+  <!-- Mobile Device Frame -->
+  <rect x="10" y="4" width="28" height="40" rx="6" fill="#0E1726" stroke="#61DAFB" stroke-width="2"/>
+  <!-- Top speaker pill -->
+  <rect x="20" y="8" width="8" height="2" rx="1" fill="#61DAFB" opacity="0.7"/>
+  <!-- Bottom home bar -->
+  <rect x="18" y="39" width="12" height="2" rx="1" fill="#61DAFB" opacity="0.7"/>
+  <!-- React Atom in Center -->
+  <g transform="translate(24, 24) scale(0.65)">
+    <circle r="3.2" fill="#61DAFB"/>
+    <g stroke="#61DAFB" stroke-width="1.8" fill="none">
+      <ellipse rx="16" ry="6.2"/>
+      <ellipse rx="16" ry="6.2" transform="rotate(60)"/>
+      <ellipse rx="16" ry="6.2" transform="rotate(120)"/>
+    </g>
   </g>
 </svg>
