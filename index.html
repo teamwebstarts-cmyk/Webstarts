@@ -1524,7 +1524,38 @@
                             <div class="ws-center-ring"></div>
                             <div class="ws-center-redring"></div>
                             <div class="ws-center-card">
-                                <img src="downloaded_images/webstarts-official-logo.png" alt="WebStarts" class="ws-center-logo">
+                                <div class="ws-mark" aria-label="WebStarts mark">
+                                    <svg class="ws-mark-svg" viewBox="0 0 84 62" width="72" height="52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <defs>
+                                            <linearGradient id="wsRedMain" x1="10%" y1="0%" x2="90%" y2="100%">
+                                                <stop offset="0%" stop-color="#FF4D36"/>
+                                                <stop offset="50%" stop-color="#EF2B1D"/>
+                                                <stop offset="100%" stop-color="#C51608"/>
+                                            </linearGradient>
+                                            <linearGradient id="wsDarkMain" x1="10%" y1="0%" x2="90%" y2="100%">
+                                                <stop offset="0%" stop-color="#303035"/>
+                                                <stop offset="50%" stop-color="#18181B"/>
+                                                <stop offset="100%" stop-color="#08080A"/>
+                                            </linearGradient>
+                                            <filter id="wsRibbonShadow" x="-20%" y="-20%" width="140%" height="140%">
+                                                <feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#000000" flood-opacity="0.18"/>
+                                            </filter>
+                                        </defs>
+                                        <!-- Left Bold Chevron (Dark) -->
+                                        <g filter="url(#wsRibbonShadow)">
+                                            <path d="M 12 10 L 25 10 L 33 36 L 41 10 L 51 10 L 39.5 48 C 37.5 54, 29.5 54, 27 48 L 12 10 Z" fill="url(#wsDarkMain)"/>
+                                            <!-- Left Highlight Edge -->
+                                            <path d="M 12 10 L 25 10 L 27 18 L 15 18 Z" fill="#404046" opacity="0.6"/>
+                                        </g>
+                                        <!-- Right Bold Chevron (Vibrant Red) -->
+                                        <g filter="url(#wsRibbonShadow)">
+                                            <path d="M 33 10 L 45 10 L 53 36 L 61 10 L 73 10 L 60 48 C 58 54, 50 54, 47.5 48 L 33 10 Z" fill="url(#wsRedMain)"/>
+                                            <!-- Right Highlight Edge -->
+                                            <path d="M 61 10 L 73 10 L 71 18 L 59 18 Z" fill="#FF8373" opacity="0.6"/>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="ws-brand">Web<span>Starts</span></div>
                                 <div class="ws-brand-sub">Digital Engineering<br>&amp; Innovation</div>
                             </div>
                         </div>
