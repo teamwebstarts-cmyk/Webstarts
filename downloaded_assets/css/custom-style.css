@@ -85,43 +85,61 @@
     text-align: left !important;
 }
 
-/* Footer Top Layout & Right-Side Booking Card */
-.ag-footer-1-top {
-    display: flex !important;
-    align-items: flex-start !important;
-    justify-content: space-between !important;
-    flex-wrap: wrap !important;
-    gap: 30px 20px !important;
+/* Footer Top Layout & Right-Side Booking Card (5 Columns Side-by-Side on 100% Desktop Screens) */
+@media (min-width: 992px) {
+    .ag-footer-1-top {
+        display: grid !important;
+        grid-template-columns: 1.2fr 0.8fr 1.1fr 1.2fr 1.5fr !important;
+        gap: 30px 18px !important;
+        align-items: start !important;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 576px) {
+    .ag-footer-1-top {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 30px 20px !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .ag-footer-1-top {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
 }
 
 .ag-footer-booking-widget {
-    max-width: 320px !important;
+    max-width: 100% !important;
+    width: 100% !important;
 }
 
 .ag-footer-booking-widget .ag-faqs-2-booking {
     background-color: #F8F8F8 !important;
     border: 1px solid #EAEAEA !important;
-    border-radius: 20px !important;
-    padding: 24px 20px !important;
+    border-radius: 18px !important;
+    padding: 20px 16px !important;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.04) !important;
 }
 
 .ag-footer-booking-widget .ag-faqs-2-booking .title {
-    font-size: 18px !important;
+    font-size: 16px !important;
     line-height: 1.3 !important;
     color: #111111 !important;
-    margin-bottom: 8px !important;
+    margin-bottom: 6px !important;
 }
 
 .ag-footer-booking-widget .ag-faqs-2-booking .disc {
-    font-size: 12.5px !important;
+    font-size: 12px !important;
     line-height: 1.4 !important;
     color: #555555 !important;
-    margin-bottom: 16px !important;
+    margin-bottom: 14px !important;
 }
 
 .ag-footer-booking-widget .ag-faqs-2-booking .btn-wrap {
-    gap: 10px !important;
+    gap: 8px !important;
 }
 
 /* Remove Plus (+) Icon & Hover Overlay from all Grids, Gallery and Card Hovers */
@@ -175,12 +193,12 @@ i.fa-plus,
     color: #e94625 !important;
 }
 
-/* Sub-Dropdown Menu Container Card (Increased Width & Clean Single Line Text) */
+/* Sub-Dropdown Menu Container Card (Compact Width) */
 .ag-main-navigation .navbar-nav li .dropdown-menu {
-    min-width: 270px !important;
+    min-width: 130px !important;
     width: max-content !important;
-    padding: 10px !important;
-    border-radius: 14px !important;
+    padding: 6px !important;
+    border-radius: 12px !important;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08) !important;
     border: none !important;
     background: #ffffff !important;
@@ -188,7 +206,7 @@ i.fa-plus,
 
 /* Sub-Dropdown Menu List Items */
 .ag-main-navigation .navbar-nav li .dropdown-menu li {
-    margin-bottom: 3px !important;
+    margin-bottom: 0px !important;
     border-radius: 8px !important;
     transition: all 0.2s ease !important;
 }
@@ -203,9 +221,11 @@ i.fa-plus,
     font-size: 14px !important;
     font-weight: 500 !important;
     color: #1b1c1e !important;
-    padding: 10px 18px !important;
+    padding: 8px 16px !important;
     border-radius: 8px !important;
     transition: all 0.2s ease !important;
+    text-align: center !important;
+    display: block !important;
 }
 
 /* Sub-Dropdown Item Hover State (Orange Pill + White Text) */
@@ -504,4 +524,124 @@ i.fa-plus,
     height: 100%;
     overflow: visible;
     pointer-events: none;
+}
+
+/* ==========================================================================
+   GLOBAL MOBILE RESPONSIVENESS & OVERFLOW LOCK
+   ========================================================================== */
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    position: relative !important;
+}
+
+body {
+    width: 100% !important;
+}
+
+/* Mobile Hero Section & Graphic Adjustments */
+@media only screen and (max-width: 991px) {
+    .ag-header-1-main {
+        max-width: 100% !important;
+        margin: 0 10px !important;
+    }
+    
+    .ag-hero-1-img {
+        position: relative !important;
+        width: 75% !important;
+        max-width: 380px !important;
+        margin: 35px auto 0 !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        transform: none !important;
+        display: block !important;
+    }
+    
+    .ag-hero-1-area {
+        padding-top: 110px !important;
+        padding-bottom: 60px !important;
+        overflow: hidden !important;
+    }
+
+    .concentric-rings {
+        width: 100vw !important;
+        height: 100vw !important;
+        max-width: 100vw !important;
+        max-height: 100vw !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .ag-hero-1-title-elm:nth-child(1) {
+        font-size: 24px !important;
+        line-height: 1.25 !important;
+        margin-bottom: 8px !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+    
+    .ag-hero-1-title-elm:nth-child(2) {
+        font-size: 28px !important;
+        line-height: 1.25 !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+
+    .ag-hero-1-title {
+        margin-bottom: 30px !important;
+    }
+
+    .ag-hero-1-disc {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+    }
+
+    .ag-hero-1-btn-wrap {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 12px !important;
+    }
+
+    .ag-hero-1-btn-wrap a {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    /* Filter Bar Stacking on Mobile */
+    .ws-filter-bar {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 12px !important;
+        padding: 16px !important;
+    }
+
+    .ws-filter-select {
+        width: 100% !important;
+    }
+
+    .ws-filter-icon {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .container, .ag-container-1, .ag-container-2 {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .ag-hero-1-title-elm:nth-child(1) {
+        font-size: 21px !important;
+    }
+
+    .ag-hero-1-title-elm:nth-child(2) {
+        font-size: 24px !important;
+    }
+    
+    .ag-sec-title-1 {
+        font-size: 26px !important;
+        line-height: 1.2 !important;
+    }
 }
