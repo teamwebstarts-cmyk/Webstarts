@@ -18,13 +18,14 @@
 }
 
 .ag-header-1-logo img,
-.ag-header-1-logo .logo_site-size {
+.ag-header-1-logo .logo_site-size,
+.ag-preloader-1-logo img {
     max-height: 32px !important;
     height: 32px !important;
     width: auto !important;
     object-fit: contain !important;
     display: block !important;
-    filter: brightness(0) !important;
+    filter: none !important;
     margin: 0 !important;
 }
 
@@ -43,7 +44,7 @@
     margin-bottom: 16px !important;
     margin-left: -15px !important;
     display: block !important;
-    filter: brightness(0) !important;
+    filter: none !important;
 }
 
 /* Decrease description content size under logo */
