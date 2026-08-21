@@ -14,27 +14,30 @@
 */
 
 
-window.addEventListener('DOMContentLoaded', function(){
+function hidePreloader() {
+    if (document.querySelectorAll(".ag-preloader-1").length) {
+        const loader = document.querySelector(".ag-preloader-1");
+        if (loader && !loader.classList.contains("loaded")) {
+            loader.classList.add("loaded");
+            afterPreloader();
+            setTimeout(function () {
+                loader.remove();
+            }, 400);
+        }
+    } else {
+        afterPreloader();
+    }
+    afterPageLoad();
+}
 
+if (document.readyState === 'loading') {
+    window.addEventListener('DOMContentLoaded', hidePreloader);
+} else {
+    hidePreloader();
+}
 
-	if (document.querySelectorAll(".ag-preloader-1").length) {
-		const loader = document.querySelector(".ag-preloader-1");
-		
-		setTimeout(() => {
-			loader.classList.add("loaded");
-			afterPreloader();
-		});
-		setTimeout(function () {
-			loader.remove();
-		}, 400);
-
-	} else {
-		afterPreloader();
-	}
-
-	afterPageLoad();
-
-})
+// Safety Fallback: Max 1.5s me preloader force-hide ho jayega
+setTimeout(hidePreloader, 1500);
 
 
 
@@ -779,23 +782,80 @@ var ag_t3_slider = new Swiper(".ag_t3_slider", {
 		el: ".ag_t3_slider_pagination",
 		clickable: true,
 	},
-
 });
 
+// Contact Form AJAX Submission with Thank You Modal
+const contactForm = document.querySelector('.contact-form-box');
+const thankYouModal = document.getElementById('thankyou-modal');
 
+if (contactForm && thankYouModal) {
+    const closeModalElements = thankYouModal.querySelectorAll('#close-modal-btn, .ag-thankyou-modal-close, .ag-thankyou-modal-overlay, .ag-thankyou-modal-btn');
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const submitBtnText = submitBtn ? submitBtn.querySelector('.text') : null;
+    const originalText = submitBtnText ? submitBtnText.textContent.trim() : 'Send Message';
 
+    function openModal() {
+        thankYouModal.style.display = 'flex';
+        thankYouModal.classList.add('active');
+        thankYouModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
 
+    function closeModal() {
+        thankYouModal.style.display = 'none';
+        thankYouModal.classList.remove('active');
+        thankYouModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
 
+    closeModalElements.forEach(el => {
+        el.addEventListener('click', closeModal);
+    });
 
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && thankYouModal.style.display === 'flex') {
+            closeModal();
+        }
+    });
 
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
 
+        if (submitBtnText) {
+            submitBtnText.textContent = 'Sending...';
+        }
+        if (submitBtn) {
+            submitBtn.disabled = true;
+        }
 
+        const formData = new FormData(contactForm);
 
-
-
-
-
-
-
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                openModal();
+                contactForm.reset();
+            } else {
+                alert(data.message || 'Something went wrong. Please try again.');
+            }
+        })
+        .catch(error => {
+            console.error('Submission error:', error);
+            alert('Form submission failed. Please try again.');
+        })
+        .finally(() => {
+            if (submitBtnText) {
+                submitBtnText.textContent = originalText;
+            }
+            if (submitBtn) {
+                submitBtn.disabled = false;
+            }
+        });
+    });
+}
 
 })(jQuery);
