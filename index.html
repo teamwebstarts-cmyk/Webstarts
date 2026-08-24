@@ -16,6 +16,7 @@
     <link rel="icon" type="image/svg+xml" href="downloaded_images/favicon.svg">
     <link rel="alternate icon" type="image/png" href="downloaded_images/favicon.png">
     <link rel="apple-touch-icon" href="downloaded_images/favicon.png">
+    <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#0d0e13" media="(prefers-color-scheme: dark)" />
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
     <meta name="color-scheme" content="dark light" />
@@ -43,7 +44,8 @@
     <meta name="twitter:description"
         content="Custom software, mobile apps, and scalable web applications built by WebStarts." />
     <meta name="twitter:image" content="https://webstarts.in/downloaded_images/webstarts-logo.webp" />
-    <meta name="twitter:image:alt" content="WebStarts Agency Logo" />
+    <meta name="twitter:image:alt" content="WebStarts Agency Logo & Branding" />
+    <meta name='robots' content='max-image-preview:large' />
     <link rel='dns-prefetch' href='https://fonts.googleapis.com' />
     <link rel='dns-prefetch' href='https://api.fontshare.com' />
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
@@ -125,6 +127,24 @@
         "opens": "09:30",
         "closes": "19:30"
       },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-9303618219",
+          "contactType": "customer support",
+          "email": "support@webstarts.in",
+          "areaServed": ["IN", "US", "AE", "GB"],
+          "availableLanguage": ["English", "Hindi"]
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5.0",
+        "worstRating": "1.0",
+        "ratingCount": "14",
+        "reviewCount": "14"
+      },
       "sameAs": [
         "https://www.linkedin.com/company/webstarts-in/",
         "https://www.instagram.com/webstarts.in",
@@ -191,6 +211,43 @@
           }
         ]
       }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://webstarts.in/#site-navigation",
+      "name": "WebStarts Primary Navigation",
+      "itemListElement": [
+        {
+          "@type": "SiteNavigationElement",
+          "position": 1,
+          "name": "Home",
+          "url": "https://webstarts.in/"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 2,
+          "name": "Services",
+          "url": "https://webstarts.in/#services"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 3,
+          "name": "Portfolio",
+          "url": "https://webstarts.in/pages/project"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 4,
+          "name": "About",
+          "url": "https://webstarts.in/#about"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 5,
+          "name": "Contact",
+          "url": "https://webstarts.in/#contact"
+        }
+      ]
     },
     {
       "@type": "FAQPage",

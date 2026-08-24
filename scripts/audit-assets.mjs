@@ -43,7 +43,7 @@ for (const file of files) {
     checkedAssets++;
     let target = match[1];
     if (target.startsWith('http') || target.startsWith('//') || target.startsWith('#')) continue;
-    let resolved = path.resolve(dir, target);
+    let resolved = target.startsWith('/') ? path.join(process.cwd(), target.slice(1)) : path.resolve(dir, target);
     if (!fs.existsSync(resolved)) {
       missingAssets.push({ file, asset: target, resolved });
     }
@@ -54,7 +54,7 @@ for (const file of files) {
     checkedLinks++;
     let target = match[1].split('#')[0].split('?')[0];
     if (!target || target.startsWith('http') || target.startsWith('mailto:') || target.startsWith('tel:')) continue;
-    let resolved = path.resolve(dir, target);
+    let resolved = target.startsWith('/') ? path.join(process.cwd(), target.slice(1)) : path.resolve(dir, target);
     // If target has no extension and clean URLs are used, check with .html
     if (!fs.existsSync(resolved) && !fs.existsSync(resolved + '.html')) {
       missingLinks.push({ file, link: match[1], resolved });

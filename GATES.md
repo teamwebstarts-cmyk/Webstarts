@@ -58,3 +58,9 @@ Scope: Complete end-to-end execution of the Master SEO, GEO, Technical, Performa
   CHECK: node scripts/verify-blueprint.mjs --gate G11
   EXPECT: G11_PASS: vercel.json configuration verified
   EVIDENCE: Passed. Added 1-year immutable caching for static assets and enterprise security headers (X-Content-Type-Options, X-Frame-Options, CSP/Permissions-Policy).
+
+- [x] G12: PWA Web App Manifest, root favicons, and RFC 9116 security.txt deployed
+  CHECK: node scripts/verify-blueprint.mjs --gate G12
+  EXPECT: G12_PASS: PWA manifest, root favicons, and RFC 9116 security.txt verified
+  EVIDENCE: Passed. Deployed site.webmanifest, root favicon.svg / favicon.ico, and RFC 9116 .well-known/security.txt vulnerability disclosure policy.
+

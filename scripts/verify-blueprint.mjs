@@ -123,6 +123,22 @@ function checkG11() {
   console.log('G11_PASS: vercel.json configuration verified');
 }
 
+function checkG12() {
+  if (!fs.existsSync('site.webmanifest')) throw new Error('Missing site.webmanifest');
+  const manifest = JSON.parse(fs.readFileSync('site.webmanifest', 'utf8'));
+  if (!manifest.name || !manifest.icons || manifest.icons.length === 0) throw new Error('Invalid site.webmanifest');
+
+  if (!fs.existsSync('.well-known/security.txt')) throw new Error('Missing .well-known/security.txt');
+  if (!fs.existsSync('security.txt')) throw new Error('Missing security.txt');
+  const secTxt = fs.readFileSync('.well-known/security.txt', 'utf8');
+  if (!secTxt.includes('Contact:') || !secTxt.includes('Expires:')) throw new Error('.well-known/security.txt invalid RFC 9116');
+
+  if (!fs.existsSync('favicon.svg')) throw new Error('Missing root favicon.svg');
+  if (!fs.existsSync('favicon.ico')) throw new Error('Missing root favicon.ico');
+
+  console.log('G12_PASS: PWA manifest, root favicons, and RFC 9116 security.txt verified');
+}
+
 const gates = {
   G1: checkG1,
   G2: checkG2,
@@ -135,6 +151,7 @@ const gates = {
   G9: checkG9,
   G10: checkG10,
   G11: checkG11,
+  G12: checkG12,
 };
 
 if (gateArg && gates[gateArg]) {

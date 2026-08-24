@@ -1,0 +1,9 @@
+# WebStarts Vulnerability Disclosure Policy (RFC 9116)
+# Canonical URL: https://webstarts.in/.well-known/security.txt
+Contact: mailto:support@webstarts.in
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: en, hi
+Canonical: https://webstarts.in/.well-known/security.txt
+Policy: https://webstarts.in/pages/privacy-policy
+Acknowledgments: https://webstarts.in/pages/terms-of-service
+Hiring: https://webstarts.in/#contact

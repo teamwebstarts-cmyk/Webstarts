@@ -1,0 +1,32 @@
+{
+  "name": "WebStarts — Elite Custom Software & Web Engineering",
+  "short_name": "WebStarts",
+  "description": "Full-stack custom software development, high-scale web platforms, React Native mobile apps, and enterprise AI engineering agency based in Indore, India.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d0e13",
+  "theme_color": "#0d0e13",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/downloaded_images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/downloaded_images/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "business",
+    "productivity",
+    "developer tools"
+  ],
+  "lang": "en-IN",
+  "dir": "ltr",
+  "scope": "/"
+}
