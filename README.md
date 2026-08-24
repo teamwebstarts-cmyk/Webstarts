@@ -20,18 +20,49 @@ WebStarts is a custom software development, mobile application engineering, and 
 
 ---
 
-## 🛠️ Stack & Deployment
+## 🛠️ Stack & Developer Workflows
 
-* **Architecture:** Static HTML5 / CSS3 / Vanilla JS
-* **Form Engine:** Web3Forms API Integration
-* **Hosting & CDN:** Vercel Global Edge Network
-* **Production Deployment:**
-  ```bash
-  # Deploy directly to Vercel production
-  npm run deploy
-  ```
+* **Architecture:** Static HTML5 / Semantic CSS3 / Vanilla JS (Zero CMS bloat)
+* **Form Engine:** Web3Forms API with Honeypot (`botcheck`) & DPDP Act 2023 Compliance
+* **PWA & Security:** Progressive Web App (`site.webmanifest`), RFC 9116 (`/.well-known/security.txt`), Vector Favicons
+* **AI & GEO Grounding:** Jeremy Howard `llms.txt`, Encyclopedic `llms-full.txt`, 2026 AI Bot `robots.txt`, Schema.org Graph
+* **Hosting & CDN:** Vercel Global Edge Network with HSTS and 1-Year Immutable Asset Caching
+
+### 🧪 Automated Verification & Testing
+
+Run the full 6-suite verification harness (14 Acceptance Gates, 159 assets, 254 links, CSS `url()` audit, JS syntax parser):
+
+```bash
+# Run all automated tests & gates
+npm test
+
+# Run local development server (port 5000)
+npm run dev
+
+# Deploy to Vercel production
+npm run deploy
+```
+
+---
+
+## 🌐 Live Canonical Endpoints
+
+| Route / Spec | Purpose |
+| :--- | :--- |
+| `/` | Main Agency Landing Page |
+| `/pages/project` | Portfolio Hub with Dynamic Category Filter |
+| `/pages/project-detail` | 14 Verified Case Studies Showcase |
+| `/pages/privacy-policy` | DPDP Act 2023 Privacy Notice |
+| `/pages/terms-of-service` | Agency Commercial Terms & SLA |
+| `/site.webmanifest` | PWA Web App Manifest |
+| `/.well-known/security.txt` | RFC 9116 Vulnerability Disclosure Policy |
+| `/llms.txt` | Short AI Capability Spec (Jeremy Howard standard) |
+| `/llms-full.txt` | Full Encyclopedic AI Knowledge Base |
+| `/robots.txt` | 2026 AI Search Crawler Rules |
+| `/sitemap.xml` | Canonical XML Index |
 
 ---
 
 ## ⚖️ Legal & Copyright
 © 2026 WebStarts LLP. All rights reserved.
+
