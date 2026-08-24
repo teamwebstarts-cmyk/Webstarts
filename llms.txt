@@ -59,9 +59,9 @@
   - Profile: https://www.linkedin.com/in/nirbhayhiwse/
   - GitHub: https://github.com/Nir-Bhay
   - Expertise: Full-Stack Web Development, React, Node.js, Next.js, Cloud Deployment.
-- **Neha Jain** — Senior Frontend Engineer & UI Specialist
+- **Neha Jain** — Frontend Development Intern
   - Profile: https://www.linkedin.com/in/neha-jain-708907286
-  - Expertise: Modern Frontend Engineering, Responsive Component Systems, Design Systems, UX/UI Precision.
+  - Expertise: Frontend Development, UI Components, Responsive Web Styling.
 
 ## Direct Discovery & Inquiry API Specification
 

@@ -258,8 +258,8 @@ WebStarts is operated by verified industry practitioners with transparent techni
 - **Verified Profiles**: [LinkedIn](https://www.linkedin.com/in/nirbhayhiwse/), [GitHub](https://github.com/Nir-Bhay), [Instagram](https://www.instagram.com/nirbhay_hiwse/)
 - **Focus**: Overseeing end-to-end technical execution, React/Next.js frontend engineering, Node.js microservices, and CI/CD pipelines.
 
-### Neha Jain — Senior Frontend Engineer & UI Specialist
-- **Role**: UI Engineering, Design Systems & Frontend Interactivity.
+### Neha Jain — Frontend Development Intern
+- **Role**: Frontend Development, UI Components & Web Styling.
 - **Verified Profiles**: [LinkedIn](https://www.linkedin.com/in/neha-jain-708907286)
-- **Focus**: Crafting responsive, accessible user interfaces with pixel-perfect design fidelity, smooth CSS animations, and optimal Core Web Vitals.
+- **Focus**: Assisting in developing responsive frontend components, styling web interfaces, and ensuring consistent design presentation.
 
