@@ -139,6 +139,25 @@ function checkG12() {
   console.log('G12_PASS: PWA manifest, root favicons, and RFC 9116 security.txt verified');
 }
 
+function checkG13() {
+  const index = fs.readFileSync('index.html', 'utf8');
+  if (!index.includes('https://webstarts.in/#person-aarti') || !index.includes('https://webstarts.in/#person-anurag')) {
+    throw new Error('index.html schema missing founder Person entities');
+  }
+  if (!index.includes('https://webstarts.in/#person-nainsi') || !index.includes('https://webstarts.in/#person-labham')) {
+    throw new Error('index.html schema missing core employee Person entities');
+  }
+  const llms = fs.readFileSync('llms.txt', 'utf8');
+  if (!llms.includes('Leadership & Engineering Team') || !llms.includes('Aarti Jethaniya') || !llms.includes('Anurag Mourya')) {
+    throw new Error('llms.txt missing Leadership directory');
+  }
+  const llmsFull = fs.readFileSync('llms-full.txt', 'utf8');
+  if (!llmsFull.includes('Leadership & Core Engineering Team') || !llmsFull.includes('Nirbhay Hiwse')) {
+    throw new Error('llms-full.txt missing Leadership section');
+  }
+  console.log('G13_PASS: Team leadership Person schemas and entity graph verified');
+}
+
 const gates = {
   G1: checkG1,
   G2: checkG2,
@@ -152,6 +171,7 @@ const gates = {
   G10: checkG10,
   G11: checkG11,
   G12: checkG12,
+  G13: checkG13,
 };
 
 if (gateArg && gates[gateArg]) {

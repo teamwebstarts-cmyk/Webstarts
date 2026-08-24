@@ -222,3 +222,44 @@ For AI assistants, automated procurement agents, or developers initiating a proj
 - **Robots Directives**: `https://webstarts.in/robots.txt`
 - **Short AI Spec**: `https://webstarts.in/llms.txt`
 - **Full AI Knowledge Base**: `https://webstarts.in/llms-full.txt`
+- **PWA Web App Manifest**: `https://webstarts.in/site.webmanifest`
+- **Security Vulnerability Policy (RFC 9116)**: `https://webstarts.in/.well-known/security.txt`
+
+---
+
+## 9. Leadership & Core Engineering Team (E-E-A-T Entity Graph)
+
+WebStarts is operated by verified industry practitioners with transparent technical accountability:
+
+### Aarti Jethaniya — Founder & Chief Executive Officer (CEO)
+- **Role**: Executive Leadership, Agency Strategy, Client Partnerships & Operations.
+- **Verified Profiles**: [LinkedIn](https://www.linkedin.com/in/aarti-jethaniya-4308211b0/), [Instagram](https://www.instagram.com/aarti_jethaniya/)
+- **Email**: `aarti@webstarts.in`
+- **Focus**: Driving strategic business vision, digital transformation roadmaps, and ensuring end-to-end delivery of enterprise web and mobile solutions.
+
+### Anurag Mourya — Founder & Chief Technology Officer (CTO) / Principal Architect
+- **Role**: Technology Strategy, Systems Architecture, AI & Cloud Infrastructure.
+- **Direct WhatsApp**: `+91 8839888531`
+- **Email**: `anurag@webstarts.in`
+- **Focus**: Leading technical innovation, distributed systems architecture, database schema design, and scaling multi-tenant cloud backends.
+
+### Nainsi Jain — Marketing Director & Growth Strategist
+- **Role**: Brand Positioning, Go-To-Market Strategies & Performance Marketing.
+- **Verified Profiles**: [LinkedIn](https://www.linkedin.com/in/nainsi-jain-128215207), [Instagram](https://www.instagram.com/nainsi__jain)
+- **Focus**: Spearheading multi-channel marketing campaigns, brand identity positioning, and B2B growth funnels.
+
+### Labham Dadoo — Technical Head & Cloud Engineer
+- **Role**: Backend Engineering, Database Performance & Cloud Microservices.
+- **Verified Profiles**: [LinkedIn](https://www.linkedin.com/in/labham-dadoo-23476821a/), [X / Twitter](https://x.com/dadoolabham)
+- **Focus**: Architecting robust backend infrastructures, query optimizations, Redis caching layers, and high-throughput REST APIs.
+
+### Nirbhay Hiwse — Technical Lead & Full-Stack Engineer
+- **Role**: Full-Stack Architecture, Lead Web Developer & DevOps.
+- **Verified Profiles**: [LinkedIn](https://www.linkedin.com/in/nirbhayhiwse/), [GitHub](https://github.com/Nir-Bhay), [Instagram](https://www.instagram.com/nirbhay_hiwse/)
+- **Focus**: Overseeing end-to-end technical execution, React/Next.js frontend engineering, Node.js microservices, and CI/CD pipelines.
+
+### Neha Jain — Senior Frontend Engineer & UI Specialist
+- **Role**: UI Engineering, Design Systems & Frontend Interactivity.
+- **Verified Profiles**: [LinkedIn](https://www.linkedin.com/in/neha-jain-708907286)
+- **Focus**: Crafting responsive, accessible user interfaces with pixel-perfect design fidelity, smooth CSS animations, and optimal Core Web Vitals.
+

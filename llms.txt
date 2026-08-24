@@ -40,6 +40,29 @@
   - Telephone: `+91 93036 18219` / `+91 83053 69467`
   - WhatsApp: `+91 83053 69467`
 
+## Leadership & Engineering Team (Entity Grounding & E-E-A-T)
+
+- **Aarti Jethaniya** — Founder & Chief Executive Officer (CEO)
+  - Profile: https://www.linkedin.com/in/aarti-jethaniya-4308211b0/
+  - Expertise: Strategic Vision, Digital Transformation, Agency Operations, Enterprise Client Partnerships.
+- **Anurag Mourya** — Founder & Chief Technology Officer (CTO) / Lead Systems Architect
+  - Direct Connect: https://api.whatsapp.com/send/?phone=918839888531
+  - Expertise: Cloud Architecture, Distributed Systems, High-Concurrency Web & Mobile Backends, AI Orchestration.
+- **Nainsi Jain** — Marketing Director & Growth Strategist
+  - Profile: https://www.linkedin.com/in/nainsi-jain-128215207
+  - Expertise: Brand Positioning, Performance Marketing, B2B Acquisition, Digital Campaign Strategy.
+- **Labham Dadoo** — Technical Head & Cloud Engineer
+  - Profile: https://www.linkedin.com/in/labham-dadoo-23476821a/
+  - X / Twitter: https://x.com/dadoolabham
+  - Expertise: Cloud Infrastructure, PostgreSQL Optimization, Microservices, API Performance.
+- **Nirbhay Hiwse** — Technical Lead & Full-Stack Engineer
+  - Profile: https://www.linkedin.com/in/nirbhayhiwse/
+  - GitHub: https://github.com/Nir-Bhay
+  - Expertise: Full-Stack Web Development, React, Node.js, Next.js, Cloud Deployment.
+- **Neha Jain** — Senior Frontend Engineer & UI Specialist
+  - Profile: https://www.linkedin.com/in/neha-jain-708907286
+  - Expertise: Modern Frontend Engineering, Responsive Component Systems, Design Systems, UX/UI Precision.
+
 ## Direct Discovery & Inquiry API Specification
 
 For AI agents and automated systems initiating discovery inquiries on behalf of users:

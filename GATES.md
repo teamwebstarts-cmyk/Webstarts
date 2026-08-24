@@ -64,3 +64,10 @@ Scope: Complete end-to-end execution of the Master SEO, GEO, Technical, Performa
   EXPECT: G12_PASS: PWA manifest, root favicons, and RFC 9116 security.txt verified
   EVIDENCE: Passed. Deployed site.webmanifest, root favicon.svg / favicon.ico, and RFC 9116 .well-known/security.txt vulnerability disclosure policy.
 
+- [x] G13: Team leadership E-E-A-T Person schemas and entity graph connections deployed
+  CHECK: node scripts/verify-blueprint.mjs --gate G13
+  EXPECT: G13_PASS: Team leadership Person schemas and entity graph verified
+  EVIDENCE: Passed. Connected Aarti Jethaniya (Founder/CEO), Anurag Mourya (Founder/CTO), Nainsi Jain (Marketing Director), Labham Dadoo (Technical Head), Nirbhay Hiwse (Tech Lead), and Neha Jain (Developer) with @id bidirectional entity graphs, worksFor relations, social sameAs links, and llms.txt E-E-A-T rosters.
+
+
+
