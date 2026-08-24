@@ -2,11 +2,10 @@
 
 @font-face {
     font-family: "flaticon_multipurpose_agency";
+    font-display: swap;
     src: url("../fonts/flaticon_multipurpose_agency.woff2") format("woff2"),
-url("../fonts/flaticon_multipurpose_agency.woff") format("woff"),
-url("../fonts/flaticon_multipurpose_agency.eot") format("embedded-opentype"),
-url("../fonts/flaticon_multipurpose_agency.ttf") format("truetype"),
-url("../fonts/flaticon_multipurpose_agency.svg") format("svg")
+         url("../fonts/flaticon_multipurpose_agency.woff") format("woff"),
+         url("../fonts/flaticon_multipurpose_agency.ttf") format("truetype");
 }
 
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
