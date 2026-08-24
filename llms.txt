@@ -1,0 +1,19 @@
+# WebStarts
+
+> WebStarts is a premier software engineering, mobile app development, and custom web architecture agency based in Indore, Madhya Pradesh, India.
+
+## Core Capabilities
+- **Custom Web Applications:** React, Next.js, Node.js, TypeScript, Python/Django, scalable SaaS architecture.
+- **Mobile App Development:** React Native, Flutter, native iOS (Swift) & Android (Kotlin) development.
+- **UI/UX Design & Prototyping:** User research, wireframing, high-fidelity Figma designs, enterprise design systems.
+- **AI Solutions & Workflow Automation:** Custom LLM integrations, AI chatbots, automated business pipelines.
+- **Cloud & DevOps:** AWS, Azure, GCP, Docker, Kubernetes, CI/CD pipelines, serverless infrastructure.
+
+## Key Information
+- **Entity Name:** WebStarts
+- **Location:** Indore, Madhya Pradesh, India (PIN: 452010)
+- **Official Website:** https://webstarts.in/
+- **Primary Contact:** support@webstarts.in | +91 93036 18219
+- **Portfolio & Case Studies:** https://webstarts.in/pages/project
+- **Sitemap:** https://webstarts.in/sitemap.xml
+- **Full Capabilities Doc:** https://webstarts.in/llms-full.txt

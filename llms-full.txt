@@ -1,0 +1,42 @@
+# WebStarts — Comprehensive AI Documentation & Capability Specification
+
+## Organization Overview
+- **Name:** WebStarts
+- **Domain:** webstarts.in
+- **Headquarters:** Indore, Madhya Pradesh, India
+- **Coordinates:** 22.719568 N, 75.857727 E
+- **Service Regions:** Domestic India (Indore, Bhopal, Delhi NCR, Mumbai, Bengaluru) & Global Markets (USA, UK, UAE)
+- **Primary Email:** support@webstarts.in
+- **Phone:** +91-9303618219
+
+## Technical Capabilities & Engineering Stack
+
+### Frontend & Web Architecture
+- React.js, Next.js, Vue.js, Tailwind CSS, TypeScript
+- High-performance Core Web Vitals optimization, static site generation, SSR
+
+### Backend & API Engineering
+- Node.js, Express, NestJS, Python (Django, FastAPI), Golang
+- REST APIs, GraphQL, WebSockets, microservices architecture, serverless functions
+
+### Mobile Development
+- Cross-platform: React Native, Flutter
+- Native: Swift (iOS), Kotlin (Android)
+- App Store & Google Play deployment, offline-first sync, push notifications
+
+### Cloud & DevOps Infrastructure
+- Cloud Providers: Amazon Web Services (AWS), Google Cloud Platform (GCP), Microsoft Azure, Vercel
+- Containerization & CI/CD: Docker, Kubernetes, GitHub Actions, Terraform
+
+### AI Engineering & Intelligent Automation
+- LLM fine-tuning, RAG (Retrieval-Augmented Generation) systems, vector databases (Pinecone, Qdrant)
+- Autonomous AI agents, automated workflow orchestration, CRM & ERP integrations
+
+## Featured Products & Case Studies
+- **Samyoj:** Intelligent real estate aggregation & CRM platform (https://samyoj.com/)
+- **Adipelli Admin:** Scalable enterprise management portal
+- **Fintech & Healthcare Dashboards:** High-security, role-based analytics portals
+
+## Privacy, Security & Legal Compliance
+- Full compliance with India Digital Personal Data Protection (DPDP) Act 2023/2026.
+- Data Protection & Grievance Officer Contact: grievance@webstarts.in / support@webstarts.in.
