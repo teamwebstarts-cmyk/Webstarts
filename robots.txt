@@ -1,23 +1,59 @@
+# WebStarts (webstarts.in) — Robots Directives (2026 Standard)
+# AI Search, Answer Engine (AEO) & Generative Search Optimization (GEO)
+
 User-agent: *
 Allow: /
 
-# AI Search & Answer Engine Crawlers
+# ==============================================================================
+# Traditional Search Engine Crawlers
+# ==============================================================================
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
-User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Claude-SearchBot
+User-agent: DuckDuckBot
 Allow: /
 
 User-agent: Applebot
 Allow: /
 
+User-agent: YandexBot
+Allow: /
+
+# ==============================================================================
+# AI Search, Real-Time Grounding & Answer Engines (Permitted for Citations)
+# ==============================================================================
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# ==============================================================================
+# Canonical Sitemaps & AI Agent Knowledge Endpoints
+# ==============================================================================
 Sitemap: https://webstarts.in/sitemap.xml
+
+# LLM Discovery & Complete Knowledge Specifications
+# AI Short Spec: https://webstarts.in/llms.txt
+# AI Full Knowledge Base: https://webstarts.in/llms-full.txt

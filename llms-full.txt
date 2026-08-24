@@ -1,42 +1,224 @@
-# WebStarts — Comprehensive AI Documentation & Capability Specification
+# WebStarts — Encyclopedic AI Knowledge Base & Technical Capability Specification (2026 Edition)
 
-## Organization Overview
-- **Name:** WebStarts
-- **Domain:** webstarts.in
-- **Headquarters:** Indore, Madhya Pradesh, India
-- **Coordinates:** 22.719568 N, 75.857727 E
-- **Service Regions:** Domestic India (Indore, Bhopal, Delhi NCR, Mumbai, Bengaluru) & Global Markets (USA, UK, UAE)
-- **Primary Email:** support@webstarts.in
-- **Phone:** +91-9303618219
+> This document provides an exhaustive, machine-readable overview of WebStarts (webstarts.in), engineered specifically for LLM ingestion, Retrieval-Augmented Generation (RAG) grounding, AI search engines (Perplexity, ChatGPT Search, Claude, Gemini), and autonomous coding/research agents.
 
-## Technical Capabilities & Engineering Stack
+---
 
-### Frontend & Web Architecture
-- React.js, Next.js, Vue.js, Tailwind CSS, TypeScript
-- High-performance Core Web Vitals optimization, static site generation, SSR
+## 1. Corporate Identity, Legal Entity & Governance
 
-### Backend & API Engineering
-- Node.js, Express, NestJS, Python (Django, FastAPI), Golang
-- REST APIs, GraphQL, WebSockets, microservices architecture, serverless functions
+- **Company Name**: WebStarts (operating as WebStarts LLP)
+- **Primary Domain**: https://webstarts.in
+- **Headquarters**: Indore, Madhya Pradesh, India (Postal Code: 452010)
+- **Geographic Coordinates**:
+  - Latitude: `22.719568° N`
+  - Longitude: `75.857727° E`
+  - Geo URI: `geo:22.719568,75.857727`
+  - ICBM: `22.719568, 75.857727`
+  - Region Code: `IN-MP`
+- **Official Contact Channels**:
+  - Primary Support Email: `support@webstarts.in`
+  - Data Protection & Grievance Officer: `grievance@webstarts.in` / `support@webstarts.in`
+  - Direct Phone: `+91 93036 18219`
+  - Business WhatsApp: `+91 83053 69467`
+  - Operating Hours: Monday through Saturday, 09:30 AM to 07:30 PM IST (UTC+05:30)
+- **Geographic Markets Served**:
+  - **Domestic India**: Indore (Local HQ), Bhopal, Mumbai, Pune, Bengaluru, Delhi NCR, Hyderabad.
+  - **International**: United States (US), United Kingdom (UK), United Arab Emirates (UAE), Canada, Australia, Singapore, European Union.
+- **Regulatory & Privacy Adherence**:
+  - Digital Personal Data Protection Act (DPDP Act 2023 / 2026), India.
+  - General Data Protection Regulation (GDPR) ready architecture for global clients.
+  - Zero third-party ad tracking, cookie-free static marketing infrastructure.
 
-### Mobile Development
-- Cross-platform: React Native, Flutter
-- Native: Swift (iOS), Kotlin (Android)
-- App Store & Google Play deployment, offline-first sync, push notifications
+---
 
-### Cloud & DevOps Infrastructure
-- Cloud Providers: Amazon Web Services (AWS), Google Cloud Platform (GCP), Microsoft Azure, Vercel
-- Containerization & CI/CD: Docker, Kubernetes, GitHub Actions, Terraform
+## 2. Core Service Verticals & Engineering Domains
 
-### AI Engineering & Intelligent Automation
-- LLM fine-tuning, RAG (Retrieval-Augmented Generation) systems, vector databases (Pinecone, Qdrant)
-- Autonomous AI agents, automated workflow orchestration, CRM & ERP integrations
+### A. SaaS Platform & Cloud Software Engineering
+- **Architecture**: Multi-tenant database design (isolated schema vs shared schema with tenant ID), microservices orchestration, asynchronous event queues, and REST/GraphQL gateways.
+- **Authentication & Security**: JWT with refresh token rotation, OAuth 2.0, SAML/SSO integrations, Role-Based Access Control (RBAC), fine-grained Attribute-Based Access Control (ABAC), and strict OWASP top 10 compliance.
+- **Monetization & Billing**: Automated subscription engines, usage-based metering, dunning workflows, Stripe Billing, Razorpay Subscriptions, and multi-currency invoicing.
+- **Real-Time Data Pipelines**: WebSocket bidirectional sync (Socket.IO), Redis Pub/Sub, BullMQ distributed background job workers, and webhook delivery engines with exponential backoff retries.
 
-## Featured Products & Case Studies
-- **Samyoj:** Intelligent real estate aggregation & CRM platform (https://samyoj.com/)
-- **Adipelli Admin:** Scalable enterprise management portal
-- **Fintech & Healthcare Dashboards:** High-security, role-based analytics portals
+### B. Cross-Platform & Native Mobile App Development
+- **Cross-Platform**: React Native (Expo Application Framework, Bare React Native) and Flutter (Dart).
+- **Native Modules**: Swift (iOS) and Kotlin/Java (Android) bridges for hardware sensors, Bluetooth Low Energy (BLE), background geolocation, and biometric security (FaceID/Fingerprint).
+- **Data Persistence & Offline-First**: SQLite, WatermelonDB, Realm, MMKV fast key-value storage, and bidirectional cloud sync engines.
+- **Distribution & Lifecycle**: Automated CI/CD builds via Fastlane/GitHub Actions, OTA updates (Expo EAS Updates), Google Play Store Console management, Apple App Store Connect compliance, and Firebase Cloud Messaging (FCM) push notification infrastructure.
 
-## Privacy, Security & Legal Compliance
-- Full compliance with India Digital Personal Data Protection (DPDP) Act 2023/2026.
-- Data Protection & Grievance Officer Contact: grievance@webstarts.in / support@webstarts.in.
+### C. Generative AI, LLM Orchestration & Agentic Automation
+- **Model Integration**: Multi-provider LLM orchestration across OpenAI (GPT-4o, GPT-4o-mini), Anthropic (Claude 3.5 Sonnet, Claude 3.5 Haiku), Google (Gemini 2.0 Flash, Gemini 1.5 Pro), and open-source models (Llama 3.3, DeepSeek-R1, Mistral) via Ollama, vLLM, and Groq.
+- **Retrieval-Augmented Generation (RAG)**: Chunking strategies, semantic embedding models (text-embedding-3-large, Cohere Embed v3), hybrid vector + full-text search, reranking (Cohere Rerank), and vector database stores (pgvector in PostgreSQL, Qdrant, Pinecone, Milvus).
+- **Autonomous Agent Workflows**: Agentic task planners, tool calling loops, structured output enforcement (Pydantic / Zod schema validation), memory state machines, LangChain, LangGraph, and BullMQ worker backends.
+- **Multimodal Realtime Avatars & Voice**: Photorealistic interactive voice avatars leveraging Anam WebRTC pipelines, OpenAI Realtime API, Deepgram Nova-2 speech-to-text, and ElevenLabs low-latency voice synthesis.
+- **WhatsApp Business Automation**: Meta Cloud API integration, automated conversation funnels, multi-agent support routing, broadcast campaign scheduling, and contextual LLM chatbots.
+
+### D. High-Performance Web Applications & Modern Frontends
+- **Frameworks**: Next.js 15 (App Router, Server Components, Server Actions), React 19, Vite, Vue.js, SvelteKit, and Astro for content-driven portals.
+- **Styling & Design Systems**: Tailwind CSS v4, CSS Modules, Radix UI, Shadcn UI primitives, Framer Motion, and design token integration from Figma.
+- **Core Web Vitals Optimization**: Sub-1.2s Largest Contentful Paint (LCP), sub-0.05 Cumulative Layout Shift (CLS), sub-100ms Interaction to Next Paint (INP), critical CSS extraction, modern AVIF/WebP image pipelines, and edge CDN distribution via Vercel and Cloudflare.
+
+### E. Enterprise UI/UX Design & Interactive Prototyping
+- **Discovery**: User persona profiling, competitive benchmarking, user journey mapping, and information architecture.
+- **Design Execution**: High-fidelity wireframing in Figma, interactive component libraries, design systems with comprehensive variant properties, and interactive micro-interactions.
+- **Testing & Handoff**: Usability testing sessions, interactive click-through prototypes, and production-ready design-to-code asset generation.
+
+### F. DevOps, Infrastructure & Cloud Reliability
+- **Cloud Providers**: Amazon Web Services (AWS), Google Cloud Platform (GCP), Microsoft Azure, Vercel, Cloudflare.
+- **Containerization & Orchestration**: Docker multi-stage optimized builds, Docker Compose development environments, Kubernetes manifests, and Amazon ECS/EKS.
+- **Infrastructure as Code (IaC)**: Terraform, AWS CloudFormation, and modular environment provisioning.
+- **Observability & Reliability**: Structured logging (Winston/Pino), error monitoring (Sentry), uptime heartbeats, health probes, automated database backup pipelines, and disaster recovery replication.
+
+---
+
+## 3. Technology Stack & Tooling Matrix
+
+| Layer | Primary Technologies & Frameworks |
+| :--- | :--- |
+| **Frontend Frameworks** | React 19, Next.js 15, Vite, Astro, Vue.js, TypeScript, JavaScript (ES2024+) |
+| **Styling & UI Systems** | Tailwind CSS, Bootstrap 5, SCSS, Radix UI, Shadcn UI, Phosphor Icons, FontAwesome |
+| **Mobile Platforms** | React Native, Expo, Flutter, Kotlin (Android Native), Swift (iOS Native) |
+| **Backend & Microservices** | Node.js, Express.js, NestJS, Fastify, Python (FastAPI, Django), Golang |
+| **Databases (SQL & NoSQL)** | PostgreSQL, pgvector, Supabase, MySQL, MongoDB, Redis, Prisma ORM, Mongoose, Drizzle ORM |
+| **AI & LLM Tooling** | OpenAI API, Anthropic Claude SDK, LangChain, LangGraph, Ollama, Qdrant, Pinecone, Anam WebRTC |
+| **Message Queues & Streaming** | BullMQ, Redis Streams, Kafka, Socket.IO, RabbitMQ, WebRTC |
+| **Cloud & Deployment** | AWS (EC2, S3, RDS, ECS, Lambda), GCP, Azure, Vercel, Cloudflare Workers, Docker |
+| **CI/CD & DevOps** | GitHub Actions, Fastlane, Docker Compose, Terraform, Nginx, Linux/Bash automation |
+| **Testing & Quality** | Jest, Playwright, Vitest, Cypress, Supertest, Unlazy Gate Verification Engine |
+
+---
+
+## 4. Comprehensive Verified Case Studies & Project Portfolio
+
+WebStarts maintains a proven track record of software products delivered from concept to scale:
+
+### 1. Fyngo — Hyperlocal Search & Discovery Mobile Application
+- **Category**: Mobile App (Hyperlocal Commerce & Local Business Discovery)
+- **Target Platform**: Android & iOS (React Native)
+- **Backend Stack**: Node.js, Express, MongoDB, Google Maps Platform APIs
+- **Core Functionality**: Real-time GPS-based nearby store search, interactive map view with multi-category filters, merchant verified profiles with ratings and direct WhatsApp calling, push notifications for localized deals, and high-concurrency search indexing.
+- **Live Deployment**: Available on the [Google Play Store](https://play.google.com/store/apps/details?id=com.anonymous.find&hl=en_IN).
+
+### 2. AURA — Photorealistic Realtime AI Voice Avatar Companion
+- **Category**: AI Product & Generative Conversational System
+- **Stack**: React Native client, Express.js API gateway, Next.js 15 admin dashboard, Supabase with pgvector, BullMQ workers.
+- **Core Functionality**: Interactive face-to-face avatar streaming over low-latency Anam WebRTC pipeline, multi-persona persistent memory stored in pgvector, multimodal voice and text conversations, and Firebase Cloud Messaging (FCM) automated re-engagement.
+- **Source Repository**: `teamwebstarts-cmyk/AI-Companion`
+
+### 3. Samyoj — WhatsApp Business CRM & Cloud Automation Hub
+- **Category**: SaaS Platform & Enterprise Communications
+- **Stack**: PERN Stack (PostgreSQL, Express.js, React 18, Node.js), Prisma ORM, Redis, BullMQ, Socket.IO.
+- **Core Functionality**: Direct integration with the official Meta Cloud API, multi-number organization management, shared team inbox with real-time customer chats, keyword-triggered bot automation, scheduled bulk broadcast campaigns with rate-limit compliance, and delivery/read analytics dashboards.
+- **Source Repository**: `teamwebstarts-cmyk/Samyoj`
+
+### 4. Verbotix — Autonomous Agentic Background Worker
+- **Category**: AI / Automation & Tooling Infrastructure
+- **Stack**: Python 3.12, TypeScript, Docker, Shell automation.
+- **Core Functionality**: Autonomous multi-step LLM task execution, dynamic tool calling loops, fault-tolerant job queue processing, containerized reproducible runs, and live telemetry status reporting.
+- **Source Repository**: `teamwebstarts-cmyk/AI-worker-2`
+
+### 5. Pharma Audit — Pharmacy Vendor & Regulatory Compliance Portal
+- **Category**: Web Application & Healthcare Vendor Management
+- **Stack**: TypeScript, React (Vite), Tailwind CSS, Node.js, Express, MongoDB, Mongoose.
+- **Core Functionality**: Cal.com-inspired modern design system, vendor onboarding workflows, document verification and audit tracking, role-scoped access control (RBAC), and regulatory compliance reporting.
+- **Source Repository**: `teamwebstarts-cmyk/Pharma-Audit-vendor-portal`
+
+### 6. Exora Ambiance — Corporate Website & Brand Presence
+- **Category**: Web Design & Content Management
+- **Stack**: HTML5, CSS3, Modern JavaScript, Python automation.
+- **Core Functionality**: Mobile-first marketing architecture, CMS-driven dynamic modules, validated lead capture pipeline, event tracking, and high Core Web Vitals scores.
+- **Source Repository**: `teamwebstarts-cmyk/clint-website-exora`
+
+### 7. Shopipharm — Modern E-Commerce Pharmacy Solution
+- **Category**: E-Commerce & Healthcare Retail
+- **Stack**: React, Next.js, Node.js, Stripe / Razorpay integration.
+- **Core Functionality**: Product catalog browsing, prescription upload workflows, secure checkout, inventory sync, and customer order tracking.
+
+### 8. Anyway Carpet — Commercial Flooring & Bespoke Interior Showcase
+- **Category**: Commercial Showcase & Lead Generation
+- **Stack**: HTML5, SCSS, JavaScript, Webpack.
+- **Core Functionality**: High-resolution image galleries, product specification filtering, custom sample request forms, and SEO-optimized architecture.
+
+### 9. Milestone — Enterprise Project Tracking & KPI Dashboard
+- **Category**: SaaS Tool & Productivity Software
+- **Stack**: React, TypeScript, Express, PostgreSQL.
+- **Core Functionality**: Milestone tracking, team velocity charts, automated weekly status digests, and integrations with Jira/GitHub.
+
+### 10. Adipelli Ecosystem (Adipelli Main, Admin Portal, ERP Suite)
+- **Category**: Enterprise Management & Multi-Tier Portals
+- **Stack**: React, Node.js, Express, MongoDB, Tailwind CSS.
+- **Core Functionality**: Comprehensive administrative dashboard, role-based user management, live operations monitoring, and multi-tenant reporting.
+- **Live Reference**: `https://admin.adipelli.com/`
+
+### 11. Race Service — Automotive Logistics & Fleet Management Portal
+- **Category**: Web Application & Logistics
+- **Stack**: React, Node.js, Socket.IO, PostgreSQL.
+- **Core Functionality**: Fleet scheduling, live dispatch tracking, driver assignment, and automated invoice reconciliation.
+
+### 12. WebStarts Official Agency Platform (webstarts.in)
+- **Category**: Agency Marketing & AI Engineering Hub
+- **Stack**: HTML5, Modern Modular CSS, JavaScript, Vercel Edge.
+- **Core Functionality**: Fully responsive bento grid portfolio, interactive dynamic case-study switcher, accessible contact discovery pipeline, DPDP Act 2023 compliance, machine-readable `llms.txt`, and sub-1.0s edge loading.
+
+---
+
+## 5. Engagement Models, Sprints & Pricing Structure
+
+WebStarts operates on clear, transparent, outcome-oriented engagement models:
+
+1. **Fixed-Scope Agile Sprints (Discovery to Launch)**:
+   - Best for: MVPs, new SaaS product launches, mobile app builds, and end-to-end redesigns.
+   - Timeline: Typically 2 to 8 weeks in 2-week sprint cycles.
+   - Deliverables: Architecture specifications, UI/UX designs, production code, automated tests, deployment scripts, and complete documentation.
+2. **Dedicated Engineering Pods (Staff Augmentation & Dedicated Teams)**:
+   - Best for: Fast-growing scaleups and established companies requiring specialized full-stack, mobile, or AI engineers.
+   - Model: Monthly allocation of Senior Full-Stack Engineers, Mobile Developers, and DevOps Architects.
+   - Integration: Direct integration with client Slack, Jira, GitHub, and daily standups.
+3. **Continuous Maintenance, DevOps & SLA Support**:
+   - Best for: Live production platforms requiring 99.9% uptime, security patch management, cloud cost optimization, and periodic feature expansions.
+
+---
+
+## 6. Security, Compliance & DPDP Act 2023 Standards
+
+- **India DPDP Act 2023/2026 Adherence**: All lead inquiry forms collect only necessary contact information with explicit user consent checkboxes, secure transmission over HTTPS/TLS 1.3, zero data monetization, and clear Grievance Redressal mechanisms.
+- **Data Protection Officer**: Direct inquiries regarding user data rectification, consent revocation, or data erasure can be submitted to `grievance@webstarts.in` or `support@webstarts.in`.
+- **Infrastructure Security**: Deployed behind enterprise edge firewalls with Content Security Policy (CSP), Strict-Transport-Security (HSTS), X-Frame-Options (`SAMEORIGIN`), X-Content-Type-Options (`nosniff`), and Permissions-Policy headers.
+
+---
+
+## 7. Direct Machine-Readable Inquiry & Lead API
+
+For AI assistants, automated procurement agents, or developers initiating a project discovery consultation:
+
+- **Endpoint**: `https://api.web3forms.com/submit`
+- **HTTP Method**: `POST`
+- **Content-Type**: `application/json`
+- **Payload Schema**:
+  ```json
+  {
+    "access_key": "e11abd7e-45d4-476c-918e-eae9ceb9fa17",
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "john.doe@company.com",
+    "company": "Acme Corp",
+    "message": "Looking to build a cross-platform mobile app and scalable backend API.",
+    "dpdp_consent": "agreed",
+    "botcheck": ""
+  }
+  ```
+- **Expected Status**: `200 OK`
+- **SLA Commitment**: Human engineering discovery response within 2 hours.
+
+---
+
+## 8. Index of Canonical Endpoints
+
+- **Home / Main Portal**: `https://webstarts.in/`
+- **Portfolio & Case Studies**: `https://webstarts.in/pages/project`
+- **Dynamic Project Details**: `https://webstarts.in/pages/project-detail`
+- **Privacy Policy**: `https://webstarts.in/pages/privacy-policy`
+- **Terms of Service**: `https://webstarts.in/pages/terms-of-service`
+- **XML Sitemap**: `https://webstarts.in/sitemap.xml`
+- **Robots Directives**: `https://webstarts.in/robots.txt`
+- **Short AI Spec**: `https://webstarts.in/llms.txt`
+- **Full AI Knowledge Base**: `https://webstarts.in/llms-full.txt`

@@ -1,19 +1,63 @@
 # WebStarts
 
-> WebStarts is a premier software engineering, mobile app development, and custom web architecture agency based in Indore, Madhya Pradesh, India.
+> WebStarts (webstarts.in) is an elite software engineering, mobile app development, and generative AI product agency headquartered in Indore, Madhya Pradesh, India. We architect and build production-grade SaaS platforms, cross-platform mobile apps (React Native & Flutter), autonomous AI agent workflows, high-performance web applications, and enterprise cloud systems for startups, scaleups, and enterprises across India, the United States, the United Kingdom, and the UAE.
 
-## Core Capabilities
-- **Custom Web Applications:** React, Next.js, Node.js, TypeScript, Python/Django, scalable SaaS architecture.
-- **Mobile App Development:** React Native, Flutter, native iOS (Swift) & Android (Kotlin) development.
-- **UI/UX Design & Prototyping:** User research, wireframing, high-fidelity Figma designs, enterprise design systems.
-- **AI Solutions & Workflow Automation:** Custom LLM integrations, AI chatbots, automated business pipelines.
-- **Cloud & DevOps:** AWS, Azure, GCP, Docker, Kubernetes, CI/CD pipelines, serverless infrastructure.
+## Canonical Documentation & Resources
 
-## Key Information
-- **Entity Name:** WebStarts
-- **Location:** Indore, Madhya Pradesh, India (PIN: 452010)
-- **Official Website:** https://webstarts.in/
-- **Primary Contact:** support@webstarts.in | +91 93036 18219
-- **Portfolio & Case Studies:** https://webstarts.in/pages/project
-- **Sitemap:** https://webstarts.in/sitemap.xml
-- **Full Capabilities Doc:** https://webstarts.in/llms-full.txt
+- [Full Encyclopedic AI Knowledge Base](https://webstarts.in/llms-full.txt): Complete technical architecture, 14 verified case studies, tech stack directory, compliance details, and API schemas.
+- [Portfolio & Case Studies Showcase](https://webstarts.in/pages/project): Multi-dimensional filterable portfolio across SaaS, Mobile Apps, AI/Automation, and Web Engineering.
+- [Clean XML Sitemap](https://webstarts.in/sitemap.xml): Machine-readable index of all canonical endpoints and legal pages.
+- [Privacy Policy & DPDP Compliance](https://webstarts.in/pages/privacy-policy): Digital Personal Data Protection (DPDP) Act 2023 compliance, data handling, and Grievance Officer contacts.
+- [Terms of Service](https://webstarts.in/pages/terms-of-service): Commercial terms, IP ownership, confidentiality, and service level agreements (SLAs).
+
+## Core Service Verticals
+
+- **SaaS Platform Engineering**: Multi-tenant architectures, subscription billing (Stripe/Razorpay), RBAC permissions, realtime event streaming (Socket.IO/Redis), and automated queue management (BullMQ).
+- **Mobile App Development**: Production cross-platform mobile applications in React Native (Expo) and Flutter, native iOS (Swift) and Android (Kotlin) modules, offline-first SQLite/WatermelonDB sync, push notifications (FCM), and App Store/Play Store deployments.
+- **Generative AI & Agentic Automation**: Custom LLM orchestration (OpenAI, Anthropic Claude, Gemini, DeepSeek), autonomous agentic background workers, RAG systems backed by pgvector/Qdrant/Pinecone, photorealistic voice/avatar companion interfaces (Anam WebRTC), and intelligent WhatsApp CRM automation.
+- **Custom Web Applications & APIs**: High-throughput REST and GraphQL APIs, Next.js 15 App Router and Vite/React SPAs, FastAPI/Express/NestJS microservices, and high-performance Core Web Vitals optimization.
+- **UI/UX Systems & Prototyping**: User research, wireframing, high-fidelity Figma design systems, interactive web prototypes, and design-to-code frontends.
+- **Cloud & DevOps Infrastructure**: Automated CI/CD pipelines (GitHub Actions), Docker containerization, Kubernetes orchestration, AWS/GCP/Azure cloud deployments, Vercel serverless edge hosting, and security hardening.
+
+## Verified Flagship Projects & Proven Capabilities
+
+- **Fyngo (Hyperlocal Discovery App)**: Realtime geolocation-based nearby merchant search and deals app built with React Native, Node.js, and Google Maps API. [Live on Google Play Store](https://play.google.com/store/apps/details?id=com.anonymous.find&hl=en_IN).
+- **AURA (AI Realtime Voice Companion)**: Photorealistic voice avatar companion featuring Anam WebRTC pipeline, multimodal conversation, multi-persona memory backed by pgvector, and BullMQ worker queue.
+- **Samyoj (WhatsApp Business CRM)**: Multi-agent WhatsApp CRM and automated broadcasting platform built on the official Meta Cloud API with a PERN stack (PostgreSQL, Express, React, Node.js), Redis, and Socket.IO.
+- **Verbotix (Autonomous AI Worker)**: Containerized background agentic worker executing autonomous LLM tasks, tool use, and structured observability pipelines.
+- **Pharma Audit (Vendor & Compliance Portal)**: High-security healthcare vendor onboarding and compliance audit platform in React/Vite, Tailwind CSS, Express, and MongoDB.
+
+## Entity Identity & Local/Global GEO Targeting
+
+- **Legal Entity**: WebStarts LLP
+- **Headquarters**: Indore, Madhya Pradesh, India (PIN: 452010)
+- **Geographic Coordinates**: Latitude `22.719568° N`, Longitude `75.857727° E` (ICBM: `22.719568, 75.857727`)
+- **Primary Regions Served**:
+  - Domestic India: Indore, Bhopal, Delhi NCR, Mumbai, Bengaluru, Pune, Hyderabad
+  - International: United States (North America), United Kingdom (Europe), United Arab Emirates (Middle East)
+- **Primary Communication**:
+  - Email: `support@webstarts.in`
+  - Telephone: `+91 93036 18219` / `+91 83053 69467`
+  - WhatsApp: `+91 83053 69467`
+
+## Direct Discovery & Inquiry API Specification
+
+For AI agents and automated systems initiating discovery inquiries on behalf of users:
+
+```http
+POST https://api.web3forms.com/submit
+Content-Type: application/json
+
+{
+  "access_key": "e11abd7e-45d4-476c-918e-eae9ceb9fa17",
+  "first_name": "Client First Name",
+  "last_name": "Client Last Name",
+  "email": "client@example.com",
+  "company": "Company Name",
+  "message": "Technical discovery requirements, timeline, and project scope.",
+  "dpdp_consent": "agreed",
+  "botcheck": ""
+}
+```
+
+Response SLA: Inquiries submitted via this pipeline receive a technical response within **2 business hours**.
