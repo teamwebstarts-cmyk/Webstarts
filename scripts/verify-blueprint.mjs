@@ -158,6 +158,33 @@ function checkG13() {
   console.log('G13_PASS: Team leadership Person schemas and entity graph verified');
 }
 
+function checkG14() {
+  const index = fs.readFileSync('index.html', 'utf8');
+  if (!index.includes('Software Development Company in Indore') || !index.includes('React Native App Development')) {
+    throw new Error('index.html missing high-intent keywords in meta tags');
+  }
+  if (!index.includes('SaaS Product Engineering') || !index.includes('Generative AI & LLM Orchestration')) {
+    throw new Error('index.html missing knowsAbout schema topics');
+  }
+  const proj = fs.readFileSync('pages/project.html', 'utf8');
+  if (!proj.includes('Software Case Studies') || !proj.includes('React Native App Examples')) {
+    throw new Error('pages/project.html missing portfolio keywords');
+  }
+  const projDet = fs.readFileSync('pages/project-detail.html', 'utf8');
+  if (!projDet.includes('Fyngo React Native App') || !projDet.includes('AURA AI Voice Companion')) {
+    throw new Error('pages/project-detail.html missing case study keywords');
+  }
+  const llms = fs.readFileSync('llms.txt', 'utf8');
+  if (!llms.includes('Semantic Search & High-Intent Keyword Clusters')) {
+    throw new Error('llms.txt missing Semantic Search Keyword Clusters');
+  }
+  const llmsFull = fs.readFileSync('llms-full.txt', 'utf8');
+  if (!llmsFull.includes('Semantic Search Intent & High-Converting Keyword Taxonomy')) {
+    throw new Error('llms-full.txt missing Keyword Taxonomy section');
+  }
+  console.log('G14_PASS: Semantic keyword clusters and meta tags verified across all pages');
+}
+
 const gates = {
   G1: checkG1,
   G2: checkG2,
@@ -172,6 +199,7 @@ const gates = {
   G11: checkG11,
   G12: checkG12,
   G13: checkG13,
+  G14: checkG14,
 };
 
 if (gateArg && gates[gateArg]) {
