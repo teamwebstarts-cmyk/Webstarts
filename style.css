@@ -917,3 +917,9 @@ html, body {
   padding: 12px 24px !important;
   justify-content: center !important;
 }
+
+/* Font Awesome 6 compatibility alias for Font Awesome 5 */
+.fa-solid {
+  font-family: "Font Awesome 5 Free" !important;
+  font-weight: 900 !important;
+}

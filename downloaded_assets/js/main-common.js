@@ -111,7 +111,7 @@ $('.offcanvas_box_active a').on('click', function() {
 	mobile menu dropdown function
 */
 jQuery(".mobile-main-navigation li.dropdown").append(
-  '<span class="dropdown-btn"><i class="fa-solid fa-angle-right"></i></span>'
+  '<span class="dropdown-btn" aria-label="Toggle Submenu"><i class="fas fa-angle-right"></i></span>'
 );
 jQuery(".mobile-main-navigation li .dropdown-btn").on("click", function () {
   const $btn = jQuery(this);
