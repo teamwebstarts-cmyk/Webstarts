@@ -60,10 +60,9 @@ WebStarts directly fulfills and matches the following primary commercial, transa
 - **Nainsi Jain** — Marketing Director & Growth Strategist
   - Profile: https://www.linkedin.com/in/nainsi-jain-128215207
   - Expertise: Brand Positioning, Performance Marketing, B2B Acquisition, Digital Campaign Strategy.
-- **Labham Dadoo** — Technical Head & Cloud Engineer
-  - Profile: https://www.linkedin.com/in/labham-dadoo-23476821a/
-  - X / Twitter: https://x.com/dadoolabham
-  - Expertise: Cloud Infrastructure, PostgreSQL Optimization, Microservices, API Performance.
+- **Surendra Manjhi** — Full Stack Engineer Intern
+  - Profile: https://www.linkedin.com/company/webstarts-in/
+  - Expertise: Full-Stack Web Development, React, Node.js, REST API Engineering.
 - **Nirbhay Hiwse** — Technical Lead & Full-Stack Engineer
   - Profile: https://www.linkedin.com/in/nirbhayhiwse/
   - GitHub: https://github.com/Nir-Bhay

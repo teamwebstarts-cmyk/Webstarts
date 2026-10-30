@@ -144,7 +144,7 @@ function checkG13() {
   if (!index.includes('https://webstarts.in/#person-aarti') || !index.includes('https://webstarts.in/#person-anurag')) {
     throw new Error('index.html schema missing founder Person entities');
   }
-  if (!index.includes('https://webstarts.in/#person-nainsi') || !index.includes('https://webstarts.in/#person-labham')) {
+  if (!index.includes('https://webstarts.in/#person-nainsi') || !index.includes('https://webstarts.in/#person-surendra')) {
     throw new Error('index.html schema missing core employee Person entities');
   }
   const llms = fs.readFileSync('llms.txt', 'utf8');

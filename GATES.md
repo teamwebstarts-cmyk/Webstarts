@@ -67,7 +67,7 @@ Scope: Complete end-to-end execution of the Master SEO, GEO, Technical, Performa
 - [x] G13: Team leadership E-E-A-T Person schemas and entity graph connections deployed
   CHECK: node scripts/verify-blueprint.mjs --gate G13
   EXPECT: G13_PASS: Team leadership Person schemas and entity graph verified
-  EVIDENCE: Passed. Connected Aarti Jethaniya (Founder/CEO), Anurag Mourya (Founder/CTO), Nainsi Jain (Marketing Director), Labham Dadoo (Technical Head), Nirbhay Hiwse (Tech Lead), and Neha Jain (Developer) with @id bidirectional entity graphs, worksFor relations, social sameAs links, and llms.txt E-E-A-T rosters.
+  EVIDENCE: Passed. Connected Aarti Jethaniya (Founder/CEO), Anurag Mourya (Founder/CTO), Nainsi Jain (Marketing Director), Surendra Manjhi (Full Stack Intern), Nirbhay Hiwse (Tech Lead), and Neha Jain (Developer) with @id bidirectional entity graphs, worksFor relations, social sameAs links, and llms.txt E-E-A-T rosters.
 
 - [x] G14: High-intent semantic keyword clusters, meta tags, and knowsAbout entity topics deployed
   CHECK: node scripts/verify-blueprint.mjs --gate G14

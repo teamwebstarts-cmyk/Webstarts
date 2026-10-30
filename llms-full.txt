@@ -248,10 +248,10 @@ WebStarts is operated by verified industry practitioners with transparent techni
 - **Verified Profiles**: [LinkedIn](https://www.linkedin.com/in/nainsi-jain-128215207), [Instagram](https://www.instagram.com/nainsi__jain)
 - **Focus**: Spearheading multi-channel marketing campaigns, brand identity positioning, and B2B growth funnels.
 
-### Labham Dadoo — Technical Head & Cloud Engineer
-- **Role**: Backend Engineering, Database Performance & Cloud Microservices.
-- **Verified Profiles**: [LinkedIn](https://www.linkedin.com/in/labham-dadoo-23476821a/), [X / Twitter](https://x.com/dadoolabham)
-- **Focus**: Architecting robust backend infrastructures, query optimizations, Redis caching layers, and high-throughput REST APIs.
+### Surendra Manjhi — Full Stack Engineer Intern
+- **Role**: Full-Stack Web Engineering, API Development & Frontend Integration.
+- **Verified Profiles**: [LinkedIn](https://www.linkedin.com/company/webstarts-in/)
+- **Focus**: Developing scalable full-stack web applications, designing modular REST endpoints, and optimizing responsive user interfaces.
 
 ### Nirbhay Hiwse — Technical Lead & Full-Stack Engineer
 - **Role**: Full-Stack Architecture, Lead Web Developer & DevOps.
