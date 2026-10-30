@@ -63,10 +63,10 @@ WebStarts directly fulfills and matches the following primary commercial, transa
 - **Surendra Manjhi** — Full Stack Engineer Intern
   - Profile: https://www.linkedin.com/company/webstarts-in/
   - Expertise: Full-Stack Web Development, React, Node.js, REST API Engineering.
-- **Nirbhay Hiwse** — Technical Lead & Full-Stack Engineer
+- **Nirbhay Hiwse** — Technical Lead & Software Engineer
   - Profile: https://www.linkedin.com/in/nirbhayhiwse/
   - GitHub: https://github.com/Nir-Bhay
-  - Expertise: Full-Stack Web Development, React, Node.js, Next.js, Cloud Deployment.
+  - Expertise: Scalable Web Applications, Mobile Apps, Autonomous AI Automation Workflows, Full-Stack Architecture.
 - **Neha Jain** — Frontend Development Intern
   - Profile: https://www.linkedin.com/in/neha-jain-708907286
   - Expertise: Frontend Development, UI Components, Responsive Web Styling.

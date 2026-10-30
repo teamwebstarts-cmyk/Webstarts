@@ -253,10 +253,10 @@ WebStarts is operated by verified industry practitioners with transparent techni
 - **Verified Profiles**: [LinkedIn](https://www.linkedin.com/company/webstarts-in/)
 - **Focus**: Developing scalable full-stack web applications, designing modular REST endpoints, and optimizing responsive user interfaces.
 
-### Nirbhay Hiwse — Technical Lead & Full-Stack Engineer
-- **Role**: Full-Stack Architecture, Lead Web Developer & DevOps.
+### Nirbhay Hiwse — Technical Lead & Software Engineer
+- **Role**: Software Engineering Leadership, Web & Mobile App Architecture, AI Automation.
 - **Verified Profiles**: [LinkedIn](https://www.linkedin.com/in/nirbhayhiwse/), [GitHub](https://github.com/Nir-Bhay), [Instagram](https://www.instagram.com/nirbhay_hiwse/)
-- **Focus**: Overseeing end-to-end technical execution, React/Next.js frontend engineering, Node.js microservices, and CI/CD pipelines.
+- **Focus**: Leading end-to-end software engineering across scalable web platforms, high-performance mobile applications, and intelligent AI automation pipelines.
 
 ### Neha Jain — Frontend Development Intern
 - **Role**: Frontend Development, UI Components & Web Styling.
